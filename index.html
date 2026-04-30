@@ -1,28 +1,126 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <title>CGglobal</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CGglobal</title>
+
+<style>
+body {
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#0f172a;
+  color:white;
+}
+
+.container {
+  max-width:1100px;
+  margin:auto;
+  padding:40px 20px;
+}
+
+.hero {
+  text-align:center;
+  padding:100px 20px;
+}
+
+.hero h1 {
+  font-size:48px;
+  margin-bottom:20px;
+}
+
+.hero p {
+  font-size:20px;
+  color:#94a3b8;
+}
+
+.section {
+  margin-top:80px;
+}
+
+.section h2 {
+  font-size:32px;
+  margin-bottom:20px;
+}
+
+.cards {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.card {
+  background:#1e293b;
+  padding:20px;
+  border-radius:12px;
+}
+
+.cta {
+  text-align:center;
+  margin-top:100px;
+  padding:60px;
+  background:linear-gradient(45deg,#22d3ee,#3b82f6);
+  color:black;
+  border-radius:20px;
+}
+
+.footer {
+  text-align:center;
+  margin-top:80px;
+  color:#94a3b8;
+}
+</style>
+
 </head>
-<body style="font-family: Arial; text-align: center; padding: 50px;">
-  
+
+<body>
+
+<div class="hero">
   <h1>CGglobal</h1>
-  <h2>AI Trade · China Commerce · Influencer Growth</h2>
+  <p>좋은 제품을 콘텐츠로 만들고, 콘텐츠를 매출로 연결합니다</p>
+</div>
 
-  <p>
-    좋은 제품을 콘텐츠로 만들고,<br>
-    콘텐츠를 매출로 연결합니다.
-  </p>
+<div class="container">
 
-  <hr>
+  <div class="section">
+    <h2>What We Do</h2>
+    <div class="cards">
+      <div class="card">중국 시장 진출 전략</div>
+      <div class="card">도우인 / 샤오홍슈 운영</div>
+      <div class="card">인플루언서 라이브커머스</div>
+      <div class="card">크로스보더 유통</div>
+    </div>
+  </div>
 
-  <h3>Services</h3>
-  <p>중국 진출 · 인플루언서 · 크로스보더 유통 · AI 콘텐츠</p>
+  <div class="section">
+    <h2>Why CGglobal</h2>
+    <div class="cards">
+      <div class="card">한국 → 중국 실제 판매 경험</div>
+      <div class="card">콘텐츠 + 유통 통합 실행</div>
+      <div class="card">AI 기반 글로벌 확장</div>
+    </div>
+  </div>
 
-  <hr>
+  <div class="section">
+    <h2>How We Work</h2>
+    <div class="cards">
+      <div class="card">1. 시장 분석</div>
+      <div class="card">2. 콘텐츠 제작</div>
+      <div class="card">3. 판매 실행</div>
+      <div class="card">4. 데이터 기반 확장</div>
+    </div>
+  </div>
 
-  <h3>Contact</h3>
-  <p>contact@cgglobal.com</p>
+  <div class="cta">
+    <h2>지금 바로 글로벌 진출을 시작하세요</h2>
+    <p>contact@cgglobal.com</p>
+  </div>
+
+  <div class="footer">
+    <p>© CGglobal</p>
+  </div>
+
+</div>
 
 </body>
 </html>
