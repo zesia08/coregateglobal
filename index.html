@@ -1,490 +1,493 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CGglobal | Global Influencer Commerce Partner</title>
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-      color: #101828;
-      background: #ffffff;
-    }
-    a { text-decoration: none; color: inherit; }
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: rgba(255,255,255,0.88);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid #eef0f4;
-    }
-    .nav {
-      max-width: 1180px;
-      margin: 0 auto;
-      height: 72px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 24px;
-    }
-    .logo {
-      font-size: 24px;
-      font-weight: 900;
-      letter-spacing: -0.8px;
-    }
-    .logo span { color: #2563eb; }
-    .menu {
-      display: flex;
-      gap: 28px;
-      font-size: 15px;
-      color: #475467;
-    }
-    .btn {
-      display: inline-block;
-      padding: 14px 22px;
-      border-radius: 999px;
-      background: #111827;
-      color: #fff;
-      font-weight: 700;
-      font-size: 15px;
-    }
-    .btn.blue { background: #2563eb; }
-    .btn.light {
-      background: #eef4ff;
-      color: #2563eb;
-    }
-    .hero {
-      max-width: 1180px;
-      margin: 0 auto;
-      padding: 104px 24px 72px;
-      text-align: center;
-    }
-    .badge {
-      display: inline-block;
-      padding: 10px 16px;
-      border-radius: 999px;
-      background: #eef4ff;
-      color: #2563eb;
-      font-weight: 800;
-      font-size: 14px;
-      margin-bottom: 24px;
-    }
-    .hero h1 {
-      font-size: 64px;
-      line-height: 1.08;
-      letter-spacing: -3px;
-      margin: 0;
-    }
-    .hero h1 strong { color: #2563eb; }
-    .hero p {
-      max-width: 760px;
-      margin: 26px auto 36px;
-      font-size: 21px;
-      line-height: 1.7;
-      color: #475467;
-    }
-    .hero-actions {
-      display: flex;
-      justify-content: center;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-    .dashboard {
-      max-width: 1080px;
-      margin: 40px auto 0;
-      border: 1px solid #e5e7eb;
-      border-radius: 32px;
-      background: linear-gradient(180deg, #f8fbff, #ffffff);
-      box-shadow: 0 30px 80px rgba(16,24,40,0.12);
-      padding: 24px;
-      text-align: left;
-    }
-    .dash-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 18px;
-    }
-    .dot { width: 10px; height: 10px; border-radius: 50%; background: #2563eb; display:inline-block; margin-right: 6px; }
-    .dash-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 18px;
-    }
-    .panel {
-      background: #fff;
-      border: 1px solid #edf0f5;
-      border-radius: 24px;
-      padding: 24px;
-    }
-    .panel h3 { margin: 0 0 12px; font-size: 20px; }
-    .bars div {
-      height: 12px;
-      background: #e8eefc;
-      border-radius: 99px;
-      margin: 14px 0;
-      overflow: hidden;
-    }
-    .bars span {
-      display: block;
-      height: 100%;
-      background: #2563eb;
-      border-radius: 99px;
-    }
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(4,1fr);
-      gap: 18px;
-      max-width: 1180px;
-      margin: 40px auto;
-      padding: 0 24px;
-    }
-    .stat {
-      padding: 28px;
-      border-radius: 26px;
-      background: #f8fafc;
-      border: 1px solid #eef0f4;
-      text-align: center;
-    }
-    .stat h2 {
-      font-size: 42px;
-      margin: 0;
-      color: #2563eb;
-      letter-spacing: -1px;
-    }
-    .stat p {
-      margin: 8px 0 0;
-      color: #667085;
-      font-weight: 700;
-    }
-    section {
-      max-width: 1180px;
-      margin: 0 auto;
-      padding: 90px 24px;
-    }
-    .section-head {
-      text-align: center;
-      margin-bottom: 46px;
-    }
-    .section-head small {
-      color: #2563eb;
-      font-weight: 900;
-      letter-spacing: 0.5px;
-    }
-    .section-head h2 {
-      font-size: 44px;
-      line-height: 1.18;
-      letter-spacing: -2px;
-      margin: 14px 0;
-    }
-    .section-head p {
-      color: #667085;
-      font-size: 19px;
-      line-height: 1.7;
-      margin: 0 auto;
-      max-width: 720px;
-    }
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3,1fr);
-      gap: 22px;
-    }
-    .card {
-      min-height: 260px;
-      border-radius: 30px;
-      background: #f8fafc;
-      border: 1px solid #eef0f4;
-      padding: 30px;
-      transition: 0.25s;
-    }
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 20px 50px rgba(16,24,40,0.08);
-      background: #fff;
-    }
-    .icon {
-      width: 52px;
-      height: 52px;
-      border-radius: 18px;
-      background: #eef4ff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 26px;
-      margin-bottom: 22px;
-    }
-    .card h3 {
-      font-size: 24px;
-      margin: 0 0 12px;
-      letter-spacing: -0.8px;
-    }
-    .card p {
-      color: #667085;
-      line-height: 1.75;
-      margin: 0;
-      font-size: 16px;
-    }
-    .process {
-      display: grid;
-      grid-template-columns: repeat(4,1fr);
-      gap: 18px;
-    }
-    .step {
-      padding: 28px;
-      border-radius: 26px;
-      background: #111827;
-      color: #fff;
-    }
-    .step b {
-      color: #60a5fa;
-      font-size: 18px;
-    }
-    .step h3 {
-      font-size: 22px;
-      margin: 22px 0 10px;
-    }
-    .step p {
-      color: #cbd5e1;
-      line-height: 1.7;
-      margin: 0;
-    }
-    .cta {
-      margin: 70px auto;
-      max-width: 1120px;
-      border-radius: 36px;
-      background: linear-gradient(135deg, #2563eb, #06b6d4);
-      color: #fff;
-      padding: 70px 40px;
-      text-align: center;
-    }
-    .cta h2 {
-      font-size: 44px;
-      margin: 0 0 18px;
-      letter-spacing: -2px;
-    }
-    .cta p {
-      font-size: 19px;
-      opacity: 0.92;
-      margin-bottom: 30px;
-    }
-    footer {
-      border-top: 1px solid #eef0f4;
-      padding: 42px 24px;
-      color: #667085;
-    }
-    .footer-inner {
-      max-width: 1180px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-    @media(max-width: 900px) {
-      .hero h1 { font-size: 42px; }
-      .menu { display: none; }
-      .dash-grid, .cards, .process, .stats { grid-template-columns: 1fr; }
-      .section-head h2, .cta h2 { font-size: 34px; }
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CGglobal | Korea-China Global Commerce Partner</title>
+
+<style>
+* { box-sizing:border-box; }
+body {
+  margin:0;
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  color:#111827;
+  background:#ffffff;
+}
+a { text-decoration:none; color:inherit; }
+header {
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:rgba(255,255,255,.9);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid #eef0f4;
+}
+.nav {
+  max-width:1200px;
+  margin:auto;
+  height:74px;
+  padding:0 24px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.logo {
+  font-size:25px;
+  font-weight:900;
+  letter-spacing:-1px;
+}
+.logo span { color:#2563eb; }
+.menu {
+  display:flex;
+  gap:28px;
+  color:#475467;
+  font-size:15px;
+  font-weight:700;
+}
+.btn {
+  display:inline-block;
+  padding:14px 22px;
+  border-radius:999px;
+  background:#111827;
+  color:white;
+  font-weight:800;
+}
+.btn.blue { background:#2563eb; }
+.btn.light { background:#eef4ff; color:#2563eb; }
+
+.hero {
+  max-width:1200px;
+  margin:auto;
+  padding:105px 24px 70px;
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:54px;
+  align-items:center;
+}
+.badge {
+  display:inline-block;
+  padding:10px 16px;
+  border-radius:999px;
+  background:#eef4ff;
+  color:#2563eb;
+  font-weight:900;
+  font-size:14px;
+  margin-bottom:22px;
+}
+.hero h1 {
+  font-size:62px;
+  line-height:1.08;
+  letter-spacing:-3px;
+  margin:0;
+}
+.hero h1 strong { color:#2563eb; }
+.hero p {
+  font-size:20px;
+  line-height:1.75;
+  color:#475467;
+  margin:28px 0 34px;
+}
+.hero-actions { display:flex; gap:14px; flex-wrap:wrap; }
+
+.visual {
+  border-radius:36px;
+  background:linear-gradient(145deg,#eef4ff,#ffffff);
+  border:1px solid #e5e7eb;
+  box-shadow:0 30px 90px rgba(16,24,40,.13);
+  padding:26px;
+}
+.visual-card {
+  background:white;
+  border:1px solid #edf0f5;
+  border-radius:28px;
+  padding:24px;
+  margin-bottom:18px;
+}
+.visual-card h3 { margin:0 0 12px; font-size:22px; }
+.flow {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+}
+.flow div {
+  background:#f8fafc;
+  border-radius:18px;
+  padding:18px;
+  font-weight:800;
+}
+.bluebox {
+  background:linear-gradient(135deg,#2563eb,#06b6d4);
+  color:white;
+  border-radius:26px;
+  padding:28px;
+}
+.bluebox h3 { margin:0 0 10px; font-size:26px; }
+.bluebox p { margin:0; color:rgba(255,255,255,.9); line-height:1.7; }
+
+.stats {
+  max-width:1200px;
+  margin:10px auto 30px;
+  padding:0 24px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+.stat {
+  background:#f8fafc;
+  border:1px solid #eef0f4;
+  border-radius:26px;
+  padding:28px;
+  text-align:center;
+}
+.stat h2 { margin:0; font-size:38px; color:#2563eb; }
+.stat p { margin:8px 0 0; color:#667085; font-weight:800; }
+
+section {
+  max-width:1200px;
+  margin:auto;
+  padding:86px 24px;
+}
+.section-head {
+  text-align:center;
+  margin-bottom:44px;
+}
+.section-head small {
+  color:#2563eb;
+  font-weight:900;
+  letter-spacing:.7px;
+}
+.section-head h2 {
+  font-size:44px;
+  line-height:1.18;
+  letter-spacing:-2px;
+  margin:14px 0;
+}
+.section-head p {
+  max-width:760px;
+  margin:auto;
+  font-size:18px;
+  line-height:1.75;
+  color:#667085;
+}
+
+.cards {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+.card {
+  background:#f8fafc;
+  border:1px solid #eef0f4;
+  border-radius:30px;
+  padding:30px;
+  min-height:250px;
+}
+.card:hover {
+  background:white;
+  transform:translateY(-5px);
+  transition:.25s;
+  box-shadow:0 20px 50px rgba(16,24,40,.08);
+}
+.icon {
+  width:54px;
+  height:54px;
+  border-radius:18px;
+  background:#eef4ff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:27px;
+  margin-bottom:22px;
+}
+.card h3 { font-size:24px; margin:0 0 12px; letter-spacing:-.8px; }
+.card p { color:#667085; line-height:1.75; margin:0; }
+
+.office-grid {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:24px;
+}
+.office {
+  border-radius:34px;
+  overflow:hidden;
+  background:#111827;
+  color:white;
+  min-height:430px;
+}
+.office-img {
+  height:220px;
+  background:
+    linear-gradient(rgba(17,24,39,.22),rgba(17,24,39,.22)),
+    linear-gradient(135deg,#dbeafe,#bfdbfe,#ffffff);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:58px;
+}
+.office-body { padding:30px; }
+.office-body h3 { font-size:26px; margin:0 0 14px; }
+.office-body p {
+  color:#d1d5db;
+  line-height:1.75;
+  margin:0 0 12px;
+}
+.office-body b { color:white; }
+
+.process {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+.step {
+  background:#111827;
+  color:white;
+  border-radius:26px;
+  padding:28px;
+}
+.step b { color:#60a5fa; }
+.step h3 { font-size:22px; margin:22px 0 10px; }
+.step p { color:#cbd5e1; line-height:1.7; margin:0; }
+
+.cta {
+  max-width:1120px;
+  margin:70px auto;
+  border-radius:38px;
+  background:linear-gradient(135deg,#2563eb,#06b6d4);
+  color:white;
+  padding:72px 40px;
+  text-align:center;
+}
+.cta h2 {
+  font-size:44px;
+  margin:0 0 18px;
+  letter-spacing:-2px;
+}
+.cta p {
+  font-size:19px;
+  opacity:.92;
+  margin-bottom:30px;
+}
+footer {
+  border-top:1px solid #eef0f4;
+  padding:42px 24px;
+  color:#667085;
+}
+.footer-inner {
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  gap:24px;
+  flex-wrap:wrap;
+  line-height:1.8;
+}
+
+@media(max-width:900px) {
+  .menu { display:none; }
+  .hero { grid-template-columns:1fr; padding-top:72px; }
+  .hero h1 { font-size:42px; }
+  .stats, .cards, .office-grid, .process { grid-template-columns:1fr; }
+  .section-head h2, .cta h2 { font-size:34px; }
+}
+</style>
 </head>
 
 <body>
-  <header>
-    <div class="nav">
-      <div class="logo">CG<span>global</span></div>
-      <nav class="menu">
-        <a href="#why">Why CGglobal</a>
-        <a href="#services">Services</a>
-        <a href="#process">Process</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <a class="btn blue" href="mailto:zesia@coregateglobal.com">문의하기</a>
-    </div>
-  </header>
 
-  <main>
-    <section class="hero">
-      <div class="badge">AI Trade · China Commerce · Influencer Growth</div>
+<header>
+  <div class="nav">
+    <div class="logo">CG<span>global</span></div>
+    <nav class="menu">
+      <a href="#services">Services</a>
+      <a href="#offices">Offices</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn blue" href="mailto:zesia@coregateglobal.com">문의하기</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div>
+      <div class="badge">Korea · China · Global Commerce Execution</div>
       <h1>
         한국 브랜드의 글로벌 진출,<br>
-        <strong>콘텐츠에서 매출까지</strong> 연결합니다.
+        <strong>콘텐츠와 유통</strong>으로 실행합니다.
       </h1>
       <p>
         CGglobal은 한국 제품을 중국 및 글로벌 시장에 맞는 콘텐츠로 전환하고,
-        인플루언서 커머스·AI 무역·크로스보더 유통을 통해 실제 판매 구조를 설계하는 실행형 글로벌 파트너입니다.
+        인플루언서 커머스, AI 무역 콘텐츠, B2B 바이어 발굴, 크로스보더 유통까지 연결하는
+        실행 중심 글로벌 비즈니스 파트너입니다.
       </p>
       <div class="hero-actions">
-        <a class="btn blue" href="mailto:zesia@coregateglobal.com">도입 문의하기</a>
+        <a class="btn blue" href="mailto:zesia@coregateglobal.com">사업 제휴 문의</a>
         <a class="btn light" href="#services">서비스 보기</a>
       </div>
-
-      <div class="dashboard">
-        <div class="dash-top">
-          <div><span class="dot"></span><b>CGglobal Commerce Dashboard</b></div>
-          <div style="color:#667085;font-size:14px;">Korea → China → Global</div>
-        </div>
-        <div class="dash-grid">
-          <div class="panel">
-            <h3>Influencer Commerce Flow</h3>
-            <p style="color:#667085;line-height:1.7;">
-              제품 분석 → 콘텐츠 기획 → KOC/KOL 시딩 → 라이브커머스 → 데이터 기반 확장
-            </p>
-            <div class="bars">
-              <div><span style="width:86%"></span></div>
-              <div><span style="width:72%"></span></div>
-              <div><span style="width:64%"></span></div>
-              <div><span style="width:91%"></span></div>
-            </div>
-          </div>
-          <div class="panel">
-            <h3>Core Channels</h3>
-            <p>Douyin · Xiaohongshu · TikTok · B2B Buyer Network · Cross-border Commerce</p>
-            <br>
-            <a class="btn" href="mailto:zesia@coregateglobal.com">제휴 상담</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="stats">
-      <div class="stat">
-        <h2>4</h2>
-        <p>핵심 실행 영역</p>
-      </div>
-      <div class="stat">
-        <h2>3</h2>
-        <p>콘텐츠·유통·데이터</p>
-      </div>
-      <div class="stat">
-        <h2>1</h2>
-        <p>통합 실행 파트너</p>
-      </div>
-      <div class="stat">
-        <h2>∞</h2>
-        <p>글로벌 확장 가능성</p>
-      </div>
     </div>
 
-    <section id="why">
-      <div class="section-head">
-        <small>WHY CGGLOBAL</small>
-        <h2>단순 광고가 아니라<br>판매 가능한 구조를 만듭니다.</h2>
+    <div class="visual">
+      <div class="visual-card">
+        <h3>CGglobal Execution Map</h3>
+        <div class="flow">
+          <div>🇰🇷 Korea Brand</div>
+          <div>🎬 Short-form Content</div>
+          <div>🇨🇳 China Commerce</div>
+          <div>🌏 Global Buyer</div>
+        </div>
+      </div>
+      <div class="bluebox">
+        <h3>From Product to Sales</h3>
         <p>
-          많은 브랜드가 해외 진출을 원하지만, 실제로는 콘텐츠, 채널, 물류, 파트너, 정산이 따로 움직여 실패합니다.
-          CGglobal은 이 과정을 하나의 실행 구조로 묶습니다.
+          좋은 제품을 단순 소개에 그치지 않고, 시장 언어에 맞는 콘텐츠와 판매 가능한 유통 구조로 전환합니다.
         </p>
       </div>
-      <div class="cards">
-        <div class="card">
-          <div class="icon">🌏</div>
-          <h3>중국 시장 이해</h3>
-          <p>도우인, 샤오홍슈, 라이브커머스, 크로스보더 유통 구조에 맞춰 제품별 진입 전략을 설계합니다.</p>
-        </div>
-        <div class="card">
-          <div class="icon">🎬</div>
-          <h3>콘텐츠 실행력</h3>
-          <p>제품의 장점을 소비자가 이해하는 숏폼·리뷰·라이브 스크립트로 바꿔 실제 구매 전환을 노립니다.</p>
-        </div>
-        <div class="card">
-          <div class="icon">📊</div>
-          <h3>데이터 기반 확장</h3>
-          <p>광고비, 콘텐츠 반응, 판매 데이터, 파트너 성과를 분석해 다음 액션을 정교하게 조정합니다.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="services">
-      <div class="section-head">
-        <small>SERVICES</small>
-        <h2>CGglobal 주요 서비스</h2>
-        <p>브랜드 진단부터 중국·글로벌 판매 실행까지, 필요한 기능을 모듈형으로 제공합니다.</p>
-      </div>
-      <div class="cards">
-        <div class="card">
-          <div class="icon">🔎</div>
-          <h3>Market Entry</h3>
-          <p>제품 포지션, 경쟁사, 가격, 채널 적합성, 중국 소비자 반응 가능성을 분석합니다.</p>
-        </div>
-        <div class="card">
-          <div class="icon">🤳</div>
-          <h3>Influencer Seeding</h3>
-          <p>KOC/KOL 리스트업, 협업 제안, 콘텐츠 방향, 성과 체크까지 운영합니다.</p>
-        </div>
-        <div class="card">
-          <div class="icon">🛒</div>
-          <h3>Commerce Operation</h3>
-          <p>도우인·샤오홍슈·틱톡형 콘텐츠 판매, 라이브커머스, 상품 링크 운영을 지원합니다.</p>
-        </div>
-        <div class="card">
-          <div class="icon">🤖</div>
-          <h3>AI Trade Content</h3>
-          <p>AI 번역, 더빙, 숏폼 전환, 바이어용 제품 소개 콘텐츠 제작을 지원합니다.</p>
-        </div>
-        <div class="card">
-          <div class="icon">📦</div>
-          <h3>Cross-border Distribution</h3>
-          <p>한국 제품의 해외 판매, 샘플 발송, 물류·정산 구조 설계를 지원합니다.</p>
-        </div>
-        <div class="card">
-          <div class="icon">🤝</div>
-          <h3>B2B Partner Matching</h3>
-          <p>중국 및 글로벌 바이어, 유통상, 현지 실행 파트너 발굴을 연결합니다.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="process">
-      <div class="section-head">
-        <small>PROCESS</small>
-        <h2>실행은 단순하고 명확하게</h2>
-        <p>처음부터 큰 비용을 태우지 않고, 검증 → 실행 → 확장 순서로 움직입니다.</p>
-      </div>
-      <div class="process">
-        <div class="step">
-          <b>STEP 01</b>
-          <h3>제품 진단</h3>
-          <p>브랜드, 가격, 성분, 경쟁 제품, 시장성을 검토합니다.</p>
-        </div>
-        <div class="step">
-          <b>STEP 02</b>
-          <h3>콘텐츠 설계</h3>
-          <p>중국·글로벌 소비자에게 맞는 메시지와 콘텐츠 포맷을 만듭니다.</p>
-        </div>
-        <div class="step">
-          <b>STEP 03</b>
-          <h3>채널 실행</h3>
-          <p>인플루언서, 숏폼, 라이브커머스, B2B 상담을 실행합니다.</p>
-        </div>
-        <div class="step">
-          <b>STEP 04</b>
-          <h3>성과 확장</h3>
-          <p>반응 데이터를 바탕으로 광고, 유통, 파트너십을 확장합니다.</p>
-        </div>
-      </div>
-    </section>
-
-    <div class="cta" id="contact">
-      <h2>좋은 제품을 글로벌 시장의 언어로 바꾸세요.</h2>
-      <p>CGglobal이 콘텐츠, 인플루언서, 유통, 바이어 연결까지 함께 설계합니다.</p>
-      <a class="btn" href="mailto:zesia@coregateglobal.com">zesia@coregateglobal.com</a>
     </div>
-  </main>
+  </section>
 
-  <footer>
-    <div class="footer-inner">
-      <div>
-        <b>CGglobal</b><br>
-        AI Trade · China Commerce · Influencer Growth
+  <div class="stats">
+    <div class="stat"><h2>2</h2><p>한국·중국 거점</p></div>
+    <div class="stat"><h2>4</h2><p>핵심 실행 영역</p></div>
+    <div class="stat"><h2>1</h2><p>통합 운영 파트너</p></div>
+    <div class="stat"><h2>∞</h2><p>글로벌 확장 가능성</p></div>
+  </div>
+
+  <section id="services">
+    <div class="section-head">
+      <small>SERVICES</small>
+      <h2>CGglobal이 실행하는 일</h2>
+      <p>
+        제품 분석, 콘텐츠 제작, 인플루언서 운영, 중국 커머스, 글로벌 바이어 발굴까지
+        브랜드의 해외 진출에 필요한 과정을 하나의 실행 구조로 설계합니다.
+      </p>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <div class="icon">🔎</div>
+        <h3>Market Entry</h3>
+        <p>제품 포지션, 가격, 경쟁사, 채널 적합성을 분석해 중국 및 글로벌 진출 전략을 수립합니다.</p>
       </div>
-      <div>
-        Website: coregateglobal.com<br>
-        Email: zesia@coregateglobal.com
+      <div class="card">
+        <div class="icon">🎬</div>
+        <h3>Content Planning</h3>
+        <p>제품의 장점을 숏폼, 리뷰, 라이브 스크립트, 바이어용 소개 자료로 전환합니다.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🤳</div>
+        <h3>Influencer Commerce</h3>
+        <p>도우인, 샤오홍슈, 틱톡형 콘텐츠 운영과 KOC/KOL 협업을 연결합니다.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🛒</div>
+        <h3>China Commerce</h3>
+        <p>중국 온라인 판매, 라이브커머스, 상품 링크, 프로모션, 데이터 기반 운영을 지원합니다.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🤖</div>
+        <h3>AI Trade Content</h3>
+        <p>AI 번역, 더빙, 숏폼 변환, 제품 소개 콘텐츠를 활용해 해외 바이어와 소비자에게 접근합니다.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🤝</div>
+        <h3>B2B Partner Matching</h3>
+        <p>중국 및 글로벌 유통상, 바이어, 현지 실행 파트너 발굴과 협업 제안을 지원합니다.</p>
       </div>
     </div>
-  </footer>
+  </section>
+
+  <section id="offices">
+    <div class="section-head">
+      <small>GLOBAL OFFICES</small>
+      <h2>한국과 중국을 연결하는 실행 거점</h2>
+      <p>
+        CGglobal은 한국 브랜드의 발굴과 중국 시장 실행을 연결하기 위해
+        한국·중국 양쪽 거점을 기반으로 움직입니다.
+      </p>
+    </div>
+
+    <div class="office-grid">
+      <div class="office">
+        <div class="office-img">🇰🇷</div>
+        <div class="office-body">
+          <h3>Korea Office</h3>
+          <p><b>Address</b></p>
+          <p>서울특별시 금천구 디지털로9길 47, 804호<br>가산동, 한신IT타워2차</p>
+          <p><b>Role</b></p>
+          <p>한국 브랜드 발굴, 제품 기획, 해외 진출 전략, 파트너 상담</p>
+        </div>
+      </div>
+
+      <div class="office">
+        <div class="office-img">🇨🇳</div>
+        <div class="office-body">
+          <h3>China Office</h3>
+          <p><b>Address</b></p>
+          <p>上海市闵行区莲花南路3110号 A栋 A710</p>
+          <p><b>Role</b></p>
+          <p>중국 시장 실행, 현지 커머스 운영, 인플루언서 협업, 바이어 연결</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="section-head">
+      <small>PROCESS</small>
+      <h2>검증하고, 실행하고, 확장합니다.</h2>
+      <p>
+        CGglobal은 처음부터 큰 비용을 태우는 방식이 아니라,
+        시장 반응을 확인하면서 단계적으로 확장하는 실전형 방식을 지향합니다.
+      </p>
+    </div>
+
+    <div class="process">
+      <div class="step">
+        <b>STEP 01</b>
+        <h3>제품 진단</h3>
+        <p>브랜드, 가격, 성분, 패키지, 경쟁 제품, 시장성을 검토합니다.</p>
+      </div>
+      <div class="step">
+        <b>STEP 02</b>
+        <h3>콘텐츠 설계</h3>
+        <p>소비자가 이해할 수 있는 메시지와 숏폼 콘텐츠 방향을 만듭니다.</p>
+      </div>
+      <div class="step">
+        <b>STEP 03</b>
+        <h3>채널 실행</h3>
+        <p>인플루언서, 숏폼, 라이브커머스, B2B 상담을 실행합니다.</p>
+      </div>
+      <div class="step">
+        <b>STEP 04</b>
+        <h3>성과 확장</h3>
+        <p>반응 데이터를 바탕으로 광고, 유통, 파트너십을 확장합니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta" id="contact">
+    <h2>좋은 제품을 글로벌 시장의 언어로 바꾸세요.</h2>
+    <p>
+      CGglobal이 콘텐츠, 인플루언서, 중국 커머스, 글로벌 바이어 연결까지 함께 설계합니다.
+    </p>
+    <a class="btn" href="mailto:zesia@coregateglobal.com">zesia@coregateglobal.com</a>
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <b>CGglobal</b><br>
+      AI Trade · China Commerce · Influencer Growth
+    </div>
+    <div>
+      Website: coregateglobal.com<br>
+      Email: zesia@coregateglobal.com
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
