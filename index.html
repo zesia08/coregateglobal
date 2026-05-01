@@ -3,239 +3,305 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CGglobal | Global Commerce & Korean Influencer Partner</title>
+<title>CGglobal | Korea Influencer & Global Commerce Partner</title>
 <style>
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:#111827;background:#fff}a{text-decoration:none;color:inherit}
-header{position:sticky;top:0;z-index:99;background:rgba(255,255,255,.92);backdrop-filter:blur(16px);border-bottom:1px solid #edf0f5}.nav{max-width:1180px;margin:auto;height:76px;padding:0 22px;display:flex;align-items:center;justify-content:space-between}.logo{font-size:25px;font-weight:900;letter-spacing:-1px}.logo span{color:#2563eb}.menu{display:flex;gap:26px;color:#475467;font-weight:700;font-size:15px}.right{display:flex;gap:10px;align-items:center}.lang{display:flex;gap:4px;background:#f3f4f6;border:1px solid #e5e7eb;border-radius:999px;padding:5px}.lang button{border:0;background:transparent;border-radius:999px;padding:8px 10px;font-weight:800;color:#667085;cursor:pointer}.lang button.active{background:#111827;color:white}
-.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;background:#111827;color:white;padding:14px 22px;font-weight:800;box-shadow:0 12px 26px rgba(17,24,39,.13)}.btn.blue{background:#2563eb}.btn.light{background:#eef4ff;color:#2563eb;box-shadow:none}.btn.white{background:white;color:#111827}
-.hero{background:radial-gradient(circle at 15% 10%,rgba(37,99,235,.13),transparent 30%),radial-gradient(circle at 85% 12%,rgba(6,182,212,.16),transparent 32%),linear-gradient(180deg,#fff,#f8fbff 65%,#fff)}.hero-inner{max-width:1180px;margin:auto;padding:100px 22px 70px;text-align:center}.eyebrow{display:inline-flex;padding:10px 16px;border-radius:999px;background:#eef4ff;color:#2563eb;border:1px solid #dbe7ff;font-size:14px;font-weight:900;margin-bottom:26px}.hero h1{max-width:980px;margin:0 auto;font-size:66px;line-height:1.08;letter-spacing:-3.5px;font-weight:900}.hero h1 strong{background:linear-gradient(90deg,#2563eb,#06b6d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent}.hero p{max-width:780px;margin:28px auto 34px;color:#475467;font-size:20px;line-height:1.75}.actions{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-bottom:52px}
-.dashboard{max-width:1040px;margin:auto;background:rgba(255,255,255,.92);border:1px solid #e5e7eb;border-radius:36px;padding:22px;box-shadow:0 34px 90px rgba(16,24,40,.14);text-align:left}.dash-top{display:flex;justify-content:space-between;color:#667085;font-size:14px;font-weight:800;padding:6px 4px 18px}.dash-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:18px}.mock{background:#fff;border:1px solid #edf0f5;border-radius:28px;padding:24px;min-height:290px}.mock h3{margin:0 0 8px;font-size:22px}.mock p{margin:0;color:#667085;line-height:1.65}.flow{display:grid;gap:12px;margin-top:22px}.flow div{display:flex;justify-content:space-between;background:#f8fafc;border-radius:18px;padding:15px 16px;font-weight:900}.flow span:last-child{color:#2563eb}.bar{height:13px;background:#e8eefc;border-radius:999px;margin:14px 0;overflow:hidden}.bar i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#2563eb,#06b6d4)}.pills{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.pill{padding:10px 13px;border-radius:999px;background:#eef4ff;color:#2563eb;font-weight:900;font-size:13px}
-.proof-strip{max-width:1180px;margin:0 auto;padding:34px 22px 54px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.proof-item{border:1px solid #edf0f5;background:#fff;border-radius:24px;padding:24px;min-height:150px}.proof-item span{display:inline-block;color:#2563eb;font-size:13px;font-weight:900;margin-bottom:16px}.proof-item strong{display:block;font-size:18px;letter-spacing:-.4px;margin-bottom:10px}.proof-item p{margin:0;color:#667085;line-height:1.6;font-size:14px}
-section{max-width:1180px;margin:auto;padding:88px 22px}.head{text-align:center;margin-bottom:46px}.head small{color:#2563eb;font-weight:900}.head h2{max-width:820px;margin:14px auto;font-size:46px;line-height:1.17;letter-spacing:-2px}.head p{max-width:780px;margin:auto;color:#667085;font-size:18px;line-height:1.75}
-.features{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.feature{min-height:360px;border-radius:34px;background:#f8fafc;border:1px solid #eef0f4;padding:30px}.feature:hover{background:#fff;box-shadow:0 22px 60px rgba(16,24,40,.08);transform:translateY(-5px);transition:.25s}.icon{width:58px;height:58px;border-radius:20px;background:#eef4ff;display:flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:24px}.feature h3{font-size:27px;margin:0 0 14px}.feature p{color:#667085;line-height:1.75;margin:0}.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:24px}.tags span{padding:8px 11px;border-radius:999px;background:#fff;border:1px solid #e5e7eb;color:#475467;font-size:13px;font-weight:800}
-.solution{display:grid;grid-template-columns:.92fr 1.08fr;gap:28px}.dark{border-radius:36px;padding:40px;background:#111827;color:white;min-height:500px;display:flex;flex-direction:column;justify-content:space-between}.dark h2{font-size:42px;line-height:1.16;margin:0 0 20px;letter-spacing:-2px}.dark p{color:#cbd5e1;line-height:1.75}.checks{display:grid;gap:12px}.checks div{padding:14px 16px;border-radius:16px;background:rgba(255,255,255,.08);font-weight:800}.tiles{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.tile{border-radius:30px;padding:28px;min-height:246px;background:linear-gradient(135deg,#eef4ff,#fff);border:1px solid #e5e7eb;display:flex;flex-direction:column;justify-content:space-between}.tile.big{grid-column:span 2;background:linear-gradient(135deg,#eef4ff,#cffafe)}.emoji{font-size:44px}.tile h3{margin:0 0 10px;font-size:23px}.tile p{margin:0;color:#667085;line-height:1.65}
-.partner{background:#0f172a;color:#fff;border-radius:42px;padding:54px}.partner-top{display:grid;grid-template-columns:.9fr 1.1fr;gap:38px;align-items:center}.partner h2{font-size:44px;line-height:1.16;margin:0 0 18px;letter-spacing:-2px}.partner p{color:#cbd5e1;line-height:1.75;margin:0}.partner-badge{display:inline-flex;padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.1);color:#bfdbfe;font-weight:900;margin-bottom:22px}.category-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:38px}.category{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:24px;padding:22px;min-height:150px}.category b{display:block;font-size:16px;margin:14px 0 8px}.category span{font-size:28px}.category small{color:#cbd5e1;line-height:1.55}.partner-note{margin-top:26px;padding:18px 20px;border-radius:22px;background:rgba(37,99,235,.18);color:#dbeafe!important;font-size:15px}
-.influencer-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:24px}.influencer-card{border-radius:24px;background:#fff;color:#111827;padding:22px;min-height:145px}.influencer-card strong{display:block;margin-bottom:8px}.influencer-card p{color:#667085!important;font-size:14px;line-height:1.6}
-.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.service{border:1px solid #eef0f4;border-radius:30px;padding:28px;background:#fff;min-height:230px}.service b{color:#2563eb;font-size:14px}.service h3{margin:18px 0 10px;font-size:23px}.service p{margin:0;color:#667085;line-height:1.72}
-.process{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.step{border-radius:30px;background:#111827;color:#fff;padding:28px;min-height:230px}.step b{color:#60a5fa}.step h3{margin:22px 0 10px;font-size:22px}.step p{margin:0;color:#cbd5e1;line-height:1.7}
-.contact-box{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;background:#f8fafc;border:1px solid #eef0f4;border-radius:38px;padding:38px}.contact-box h2{font-size:38px;line-height:1.18;letter-spacing:-1.5px;margin:0 0 16px}.contact-box p{color:#667085;line-height:1.75}.form{display:grid;gap:12px}.form input,.form textarea,.form select{width:100%;border:1px solid #d8dee8;border-radius:16px;padding:15px 16px;font-size:15px;background:#fff}.form textarea{min-height:120px;resize:vertical}.form button{border:0}
-.cta{max-width:1120px;margin:72px auto 90px;padding:74px 40px;border-radius:40px;background:linear-gradient(135deg,#2563eb,#06b6d4);color:white;text-align:center}.cta h2{font-size:46px;line-height:1.18;margin:0 0 18px}.cta p{max-width:720px;margin:0 auto 30px;font-size:19px;line-height:1.7;opacity:.94}
-footer{border-top:1px solid #eef0f4;background:#f8fafc;padding:54px 22px;color:#667085}.footer-pro{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:34px}.footer-brand strong{font-size:22px;letter-spacing:-.6px;color:#111827}.footer-brand p,.footer-info p{color:#667085;line-height:1.7;margin:8px 0 0;font-size:14px}.footer-desc{margin-top:18px!important;max-width:360px}.footer-info h4{margin:0 0 14px;font-size:15px;color:#111827}
-@media(max-width:960px){.menu{display:none}.right .btn{display:none}.hero h1{font-size:42px;letter-spacing:-2px}.hero p{font-size:17px}.dash-grid,.proof-strip,.features,.solution,.tiles,.category-grid,.influencer-strip,.service-grid,.process,.contact-box,.footer-pro,.partner-top{grid-template-columns:1fr}.tile.big{grid-column:span 1}.head h2,.dark h2,.cta h2,.partner h2,.contact-box h2{font-size:34px}section{padding:68px 18px}.dashboard{border-radius:26px}.partner{padding:34px 22px;border-radius:30px}.lang button{padding:7px 9px}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:#111827;background:#fff;word-break:keep-all}
+a{text-decoration:none;color:inherit}
+header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(16px);border-bottom:1px solid #edf0f5}
+.nav{max-width:1180px;margin:auto;height:76px;padding:0 22px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:25px;font-weight:900;letter-spacing:-1px}.logo span{color:#2563eb}
+.menu{display:flex;gap:26px;color:#475467;font-size:15px;font-weight:750}
+.right{display:flex;gap:10px;align-items:center}
+.lang{display:flex;gap:4px;background:#f3f4f6;border:1px solid #e5e7eb;border-radius:999px;padding:5px}
+.lang button{border:0;background:transparent;border-radius:999px;padding:8px 10px;font-weight:800;color:#667085;cursor:pointer}
+.lang button.active{background:#111827;color:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;background:#111827;color:#fff;padding:14px 22px;font-weight:850;box-shadow:0 12px 26px rgba(17,24,39,.13)}
+.btn.blue{background:#2563eb}.btn.light{background:#eef4ff;color:#2563eb;box-shadow:none}.btn.white{background:#fff;color:#111827}
+
+.hero{background:radial-gradient(circle at 15% 10%,rgba(37,99,235,.13),transparent 30%),radial-gradient(circle at 85% 12%,rgba(6,182,212,.16),transparent 32%),linear-gradient(180deg,#fff,#f8fbff 65%,#fff)}
+.hero-inner{max-width:1180px;margin:auto;padding:96px 22px 72px;text-align:center}
+.eyebrow{display:inline-flex;padding:10px 16px;border-radius:999px;background:#eef4ff;color:#2563eb;border:1px solid #dbe7ff;font-size:14px;font-weight:900;margin-bottom:26px}
+.hero h1{max-width:980px;margin:0 auto;font-size:64px;line-height:1.08;letter-spacing:-3.4px;font-weight:950}
+.hero h1 strong{background:linear-gradient(90deg,#2563eb,#06b6d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{max-width:780px;margin:28px auto 34px;color:#475467;font-size:20px;line-height:1.75}
+.actions{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-bottom:52px}
+
+.dashboard{max-width:1040px;margin:auto;background:rgba(255,255,255,.95);border:1px solid #e5e7eb;border-radius:36px;padding:22px;box-shadow:0 34px 90px rgba(16,24,40,.14);text-align:left}
+.dash-top{display:flex;justify-content:space-between;color:#667085;font-size:14px;font-weight:800;padding:6px 4px 18px}
+.dash-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:18px}
+.mock{background:#fff;border:1px solid #edf0f5;border-radius:28px;padding:24px;min-height:292px}
+.mock h3{margin:0 0 8px;font-size:22px;letter-spacing:-.5px}
+.mock p{margin:0;color:#667085;line-height:1.65}
+.flow{display:grid;gap:12px;margin-top:22px}
+.flow div{display:flex;justify-content:space-between;gap:14px;background:#f8fafc;border-radius:18px;padding:15px 16px;font-weight:900}
+.flow span:last-child{color:#2563eb;white-space:nowrap}
+.bar{height:13px;background:#e8eefc;border-radius:999px;margin:14px 0;overflow:hidden}
+.bar i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#2563eb,#06b6d4)}
+.pills{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.pill{padding:10px 13px;border-radius:999px;background:#eef4ff;color:#2563eb;font-weight:900;font-size:13px}
+
+.proof-strip{max-width:1180px;margin:0 auto;padding:34px 22px 54px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.proof-item{border:1px solid #edf0f5;background:#fff;border-radius:24px;padding:24px;min-height:158px}
+.proof-item span{display:inline-block;color:#2563eb;font-size:13px;font-weight:900;margin-bottom:16px}
+.proof-item strong{display:block;font-size:18px;letter-spacing:-.4px;margin-bottom:10px}
+.proof-item p{margin:0;color:#667085;line-height:1.6;font-size:14px}
+
+section{max-width:1180px;margin:auto;padding:88px 22px}
+.head{text-align:center;margin-bottom:46px}
+.head small{color:#2563eb;font-weight:900}
+.head h2{max-width:820px;margin:14px auto;font-size:46px;line-height:1.17;letter-spacing:-2px}
+.head p{max-width:780px;margin:auto;color:#667085;font-size:18px;line-height:1.75}
+
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.feature{min-height:360px;border-radius:34px;background:#f8fafc;border:1px solid #eef0f4;padding:30px}
+.feature:hover{background:#fff;box-shadow:0 22px 60px rgba(16,24,40,.08);transform:translateY(-5px);transition:.25s}
+.icon{width:58px;height:58px;border-radius:20px;background:#eef4ff;display:flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:24px}
+.feature h3{font-size:27px;margin:0 0 14px}
+.feature p{color:#667085;line-height:1.75;margin:0}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:24px}
+.tags span{padding:8px 11px;border-radius:999px;background:#fff;border:1px solid #e5e7eb;color:#475467;font-size:13px;font-weight:800}
+
+.partner{background:#0f172a;color:#fff;border-radius:42px;padding:54px}
+.partner-layout{display:grid;grid-template-columns:.9fr 1.1fr;gap:42px;align-items:start}
+.partner-badge{display:inline-flex;padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.1);color:#bfdbfe;font-weight:900;margin-bottom:22px}
+.partner h2{font-size:44px;line-height:1.16;margin:0 0 18px;letter-spacing:-2px}
+.partner p{color:#cbd5e1;line-height:1.78;margin:0}
+.partner-note{margin-top:24px;padding:18px 20px;border-radius:22px;background:rgba(37,99,235,.2);color:#dbeafe!important;font-size:15px}
+
+.creator-panel{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.11);border-radius:30px;padding:26px}
+.creator-panel h3{margin:0 0 18px;font-size:22px}
+.creator-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.creator{background:#fff;color:#111827;border-radius:18px;padding:16px;min-height:96px}
+.creator strong{display:block;font-size:15px;margin-bottom:7px}
+.creator p{color:#667085!important;font-size:13px;line-height:1.55;margin:0}
+
+.category-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:30px}
+.category{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:24px;padding:22px;min-height:156px}
+.category span{font-size:28px}.category b{display:block;font-size:16px;margin:14px 0 8px}.category small{color:#cbd5e1;line-height:1.55}
+
+.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.service{border:1px solid #eef0f4;border-radius:30px;padding:28px;background:#fff;min-height:230px}
+.service b{color:#2563eb;font-size:14px}.service h3{margin:18px 0 10px;font-size:23px}.service p{margin:0;color:#667085;line-height:1.72}
+
+.process{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.step{border-radius:30px;background:#111827;color:#fff;padding:28px;min-height:230px}
+.step b{color:#60a5fa}.step h3{margin:22px 0 10px;font-size:22px}.step p{margin:0;color:#cbd5e1;line-height:1.7}
+
+.contact-box{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;background:#f8fafc;border:1px solid #eef0f4;border-radius:38px;padding:38px}
+.contact-box h2{font-size:38px;line-height:1.18;letter-spacing:-1.5px;margin:0 0 16px}.contact-box p{color:#667085;line-height:1.75}
+.form{display:grid;gap:12px}.form input,.form textarea,.form select{width:100%;border:1px solid #d8dee8;border-radius:16px;padding:15px 16px;font-size:15px;background:#fff}.form textarea{min-height:120px;resize:vertical}.form button{border:0}
+
+.cta{max-width:1120px;margin:72px auto 90px;padding:72px 40px;border-radius:40px;background:linear-gradient(135deg,#2563eb,#06b6d4);color:white;text-align:center}
+.cta h2{font-size:44px;line-height:1.18;margin:0 auto 18px;max-width:850px;letter-spacing:-1.8px}
+.cta p{max-width:760px;margin:0 auto 30px;font-size:18px;line-height:1.75;opacity:.94}
+
+footer{border-top:1px solid #eef0f4;background:#f8fafc;padding:54px 22px;color:#667085}
+.footer-pro{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:34px}
+.footer-brand strong{font-size:22px;letter-spacing:-.6px;color:#111827}.footer-brand p,.footer-info p{color:#667085;line-height:1.7;margin:8px 0 0;font-size:14px}.footer-desc{margin-top:18px!important;max-width:360px}.footer-info h4{margin:0 0 14px;font-size:15px;color:#111827}
+
+@media(max-width:960px){
+.menu{display:none}.right .btn{display:none}.hero h1{font-size:42px;letter-spacing:-2px}.hero p{font-size:17px}
+.dash-grid,.proof-strip,.features,.partner-layout,.creator-grid,.category-grid,.service-grid,.process,.contact-box,.footer-pro{grid-template-columns:1fr}
+.head h2,.cta h2,.partner h2,.contact-box h2{font-size:34px}
+section{padding:68px 18px}.dashboard{border-radius:26px}.partner{padding:34px 22px;border-radius:30px}.lang button{padding:7px 9px}
+}
 </style>
 </head>
 <body>
 
 <header>
-  <div class="nav">
-    <a href="#top" class="logo">CG<span>global</span></a>
-    <nav class="menu">
-      <a href="#why" data-i18n="nav_why">Why CGglobal</a>
-      <a href="#features" data-i18n="nav_features">Solutions</a>
-      <a href="#network" data-i18n="nav_network">Influencer</a>
-      <a href="#services" data-i18n="nav_services">Services</a>
-      <a href="#contact" data-i18n="nav_contact">문의</a>
-    </nav>
-    <div class="right">
-      <div class="lang">
-        <button id="btn-ko" class="active" onclick="setLang('ko')">KR</button>
-        <button id="btn-en" onclick="setLang('en')">EN</button>
-        <button id="btn-zh" onclick="setLang('zh')">CN</button>
-      </div>
-      <a class="btn blue" href="mailto:zesia@coregateglobal.com?subject=CGglobal%20Inquiry" data-i18n="nav_contact_btn">문의</a>
-    </div>
-  </div>
+<div class="nav">
+<a href="#top" class="logo">CG<span>global</span></a>
+<nav class="menu">
+<a href="#why">Why CGglobal</a>
+<a href="#network">Influencer</a>
+<a href="#services">Services</a>
+<a href="#process">Process</a>
+<a href="#contact">문의</a>
+</nav>
+<div class="right">
+<div class="lang">
+<button id="btn-ko" class="active" onclick="setLang('ko')">KR</button>
+<button id="btn-en" onclick="setLang('en')">EN</button>
+<button id="btn-zh" onclick="setLang('zh')">CN</button>
+</div>
+<a class="btn blue" href="mailto:zesia@coregateglobal.com?subject=CGglobal%20Inquiry">문의</a>
+</div>
+</div>
 </header>
 
 <main id="top">
 <section class="hero">
-  <div class="hero-inner">
-    <div class="eyebrow" data-i18n="hero_badge">All-In-One Global Commerce Execution Partner</div>
-    <h1 data-i18n-html="hero_title">한국 브랜드의 글로벌 진출,<br><strong>찾고 · 만들고 · 판매까지</strong></h1>
-    <p data-i18n="hero_desc">CGglobal은 한국 제품을 중국과 글로벌 시장에 맞는 콘텐츠로 바꾸고, 한국 인플루언서 연결, AI 무역 콘텐츠, B2B 바이어 연결, 크로스보더 유통까지 실행하는 글로벌 커머스 파트너입니다.</p>
-    <div class="actions">
-      <a class="btn blue" href="mailto:zesia@coregateglobal.com?subject=CGglobal%20Inquiry" data-i18n="hero_btn1">문의하기</a>
-      <a class="btn light" href="#network" data-i18n="hero_btn2">인플루언서 네트워크 보기</a>
-    </div>
-    <div class="dashboard">
-      <div class="dash-top"><span>CGglobal Operating Dashboard</span><span>Korea → China → Global</span></div>
-      <div class="dash-grid">
-        <div class="mock">
-          <h3 data-i18n="dash_title">Campaign Execution Flow</h3>
-          <p data-i18n="dash_desc">제품 분석부터 콘텐츠 제작, 한국 인플루언서 연결, 판매 데이터 확인까지 한 흐름으로 관리합니다.</p>
-          <div class="flow">
-            <div><span data-i18n="flow1">Product Fit</span><span>92%</span></div>
-            <div><span data-i18n="flow2">Creator Match</span><span>86%</span></div>
-            <div><span data-i18n="flow3">Channel Match</span><span>78%</span></div>
-          </div>
-        </div>
-        <div class="mock">
-          <h3 data-i18n="channel_title">Core Channels</h3>
-          <p data-i18n="channel_desc">한국 인플루언서 콘텐츠를 중국·글로벌 커머스 채널에 맞게 연결합니다.</p>
-          <div class="bar"><i style="width:88%"></i></div><div class="bar"><i style="width:72%"></i></div><div class="bar"><i style="width:64%"></i></div><div class="bar"><i style="width:91%"></i></div>
-          <div class="pills"><span class="pill">K-Influencer</span><span class="pill">Douyin</span><span class="pill">Xiaohongshu</span><span class="pill">TikTok</span><span class="pill">B2B Buyer</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="hero-inner">
+<div class="eyebrow" data-i18n="hero_badge">All-In-One Global Commerce Execution Partner</div>
+<h1 data-i18n-html="hero_title">한국 브랜드의 글로벌 진출,<br><strong>찾고 · 연결하고 · 판매까지</strong></h1>
+<p data-i18n="hero_desc">CGglobal은 한국 제품을 중국과 글로벌 시장에 맞는 콘텐츠로 바꾸고, 한국 인플루언서 연결, AI 무역 콘텐츠, B2B 바이어 연결, 크로스보더 유통까지 실행하는 글로벌 커머스 파트너입니다.</p>
+<div class="actions">
+<a class="btn blue" href="mailto:zesia@coregateglobal.com?subject=CGglobal%20Inquiry">문의하기</a>
+<a class="btn light" href="#network">인플루언서 네트워크 보기</a>
+</div>
+
+<div class="dashboard">
+<div class="dash-top"><span>CGglobal Operating Dashboard</span><span>Korea → China → Global</span></div>
+<div class="dash-grid">
+<div class="mock">
+<h3>Campaign Execution Flow</h3>
+<p>제품 분석부터 콘텐츠 제작, 한국 인플루언서 연결, 판매 데이터 확인까지 한 흐름으로 관리합니다.</p>
+<div class="flow">
+<div><span>Product Fit</span><span>92%</span></div>
+<div><span>Creator Match</span><span>86%</span></div>
+<div><span>Channel Match</span><span>78%</span></div>
+</div>
+</div>
+<div class="mock">
+<h3>Core Channels</h3>
+<p>한국 인플루언서 콘텐츠를 중국·글로벌 커머스 채널에 맞게 연결합니다.</p>
+<div class="bar"><i style="width:88%"></i></div>
+<div class="bar"><i style="width:72%"></i></div>
+<div class="bar"><i style="width:64%"></i></div>
+<div class="bar"><i style="width:91%"></i></div>
+<div class="pills"><span class="pill">K-Influencer</span><span class="pill">Douyin</span><span class="pill">Xiaohongshu</span><span class="pill">TikTok</span><span class="pill">B2B Buyer</span></div>
+</div>
+</div>
+</div>
+</div>
 </section>
 
 <div class="proof-strip">
-  <div class="proof-item"><span>01</span><strong>Market Intelligence</strong><p>중국·글로벌 시장 진입 가능성 분석</p></div>
-  <div class="proof-item"><span>02</span><strong>K-Influencer Network</strong><p>한국 인플루언서·쇼호스트 연결</p></div>
-  <div class="proof-item"><span>03</span><strong>Commerce Operation</strong><p>도우인·샤오홍슈·틱톡형 판매 운영</p></div>
-  <div class="proof-item"><span>04</span><strong>B2B Expansion</strong><p>글로벌 바이어·유통 파트너 연결</p></div>
+<div class="proof-item"><span>01</span><strong>Market Intelligence</strong><p>중국·글로벌 시장 진입 가능성 분석</p></div>
+<div class="proof-item"><span>02</span><strong>K-Influencer Network</strong><p>한국 인플루언서·쇼호스트 연결</p></div>
+<div class="proof-item"><span>03</span><strong>Commerce Operation</strong><p>도우인·샤오홍슈·틱톡형 판매 운영</p></div>
+<div class="proof-item"><span>04</span><strong>B2B Expansion</strong><p>글로벌 바이어·유통 파트너 연결</p></div>
 </div>
 
 <section id="why">
-  <div class="head">
-    <small>WHY CGGLOBAL</small>
-    <h2 data-i18n-html="why_title">해외 진출은 광고가 아니라<br>운영 시스템입니다.</h2>
-    <p data-i18n="why_desc">단순히 인플루언서를 섭외하거나 콘텐츠를 만드는 것만으로는 매출이 연결되지 않습니다. CGglobal은 제품, 한국 인플루언서, 콘텐츠, 채널, 바이어, 운영 데이터를 하나의 실행 구조로 연결합니다.</p>
-  </div>
-  <div class="features">
-    <div class="feature"><div class="icon">🔍</div><h3 data-i18n="f1_t">Discover</h3><p data-i18n="f1_d">시장에 맞는 제품 포지션, 가격, 소비자 메시지, 진입 채널을 먼저 찾습니다.</p><div class="tags"><span>Market Fit</span><span>Competitor</span><span>Pricing</span></div></div>
-    <div class="feature"><div class="icon">🤳</div><h3 data-i18n="f2_t">Creator Match</h3><p data-i18n="f2_d">브랜드에 맞는 한국 인플루언서, 쇼호스트, 숏폼 크리에이터 연결 구조를 설계합니다.</p><div class="tags"><span>K-Influencer</span><span>Creator</span><span>Show Host</span></div></div>
-    <div class="feature"><div class="icon">📈</div><h3 data-i18n="f3_t">Scale</h3><p data-i18n="f3_d">콘텐츠 반응과 판매 데이터를 기준으로 광고, 유통, 파트너십을 단계적으로 확대합니다.</p><div class="tags"><span>Data</span><span>Commerce</span><span>B2B</span></div></div>
-  </div>
-</section>
-
-<section id="features">
-  <div class="solution">
-    <div class="dark">
-      <div>
-        <h2 data-i18n-html="sol_title">보고서보다 중요한 건<br>실제 실행입니다.</h2>
-        <p data-i18n="sol_desc">CGglobal은 제품을 분석한 뒤, 시장 언어에 맞는 콘텐츠를 만들고, 한국 인플루언서 및 커머스 채널에 연결하며, 바이어 상담과 판매 구조까지 이어갑니다.</p>
-      </div>
-      <div class="checks">
-        <div data-i18n="sol_c1">✓ 한국 브랜드 발굴 및 제품 진단</div>
-        <div data-i18n="sol_c2">✓ 한국 인플루언서·쇼호스트 협업 연결</div>
-        <div data-i18n="sol_c3">✓ 중국·글로벌 소비자용 콘텐츠 기획</div>
-        <div data-i18n="sol_c4">✓ B2B 바이어 및 유통 파트너 연결</div>
-      </div>
-    </div>
-    <div class="tiles">
-      <div class="tile"><div class="emoji">🇰🇷</div><div><h3 data-i18n="tile1_t">Korea Creator Base</h3><p data-i18n="tile1_d">한국 인플루언서, 쇼호스트, 숏폼 크리에이터 협업 연결</p></div></div>
-      <div class="tile"><div class="emoji">🇨🇳</div><div><h3 data-i18n="tile2_t">China Commerce Base</h3><p data-i18n="tile2_d">현지 커머스, 콘텐츠, 파트너 실행</p></div></div>
-      <div class="tile big"><div class="emoji">🧭</div><div><h3 data-i18n="tile3_t">Commerce Operating System</h3><p data-i18n="tile3_d">제품 분석 → 크리에이터 매칭 → 콘텐츠 제작 → 판매 검증 → 바이어 확장까지 연결합니다.</p></div></div>
-    </div>
-  </div>
+<div class="head">
+<small>WHY CGGLOBAL</small>
+<h2>해외 진출은 광고가 아니라<br>운영 시스템입니다.</h2>
+<p>단순히 인플루언서를 섭외하거나 콘텐츠를 만드는 것만으로는 매출이 연결되지 않습니다. CGglobal은 제품, 한국 인플루언서, 콘텐츠, 채널, 바이어, 운영 데이터를 하나의 실행 구조로 연결합니다.</p>
+</div>
+<div class="features">
+<div class="feature"><div class="icon">🔍</div><h3>Discover</h3><p>시장에 맞는 제품 포지션, 가격, 소비자 메시지, 진입 채널을 먼저 찾습니다.</p><div class="tags"><span>Market Fit</span><span>Competitor</span><span>Pricing</span></div></div>
+<div class="feature"><div class="icon">🤳</div><h3>Creator Match</h3><p>브랜드에 맞는 한국 인플루언서, 쇼호스트, 숏폼 크리에이터 연결 구조를 설계합니다.</p><div class="tags"><span>K-Influencer</span><span>Creator</span><span>Show Host</span></div></div>
+<div class="feature"><div class="icon">📈</div><h3>Scale</h3><p>콘텐츠 반응과 판매 데이터를 기준으로 광고, 유통, 파트너십을 단계적으로 확대합니다.</p><div class="tags"><span>Data</span><span>Commerce</span><span>B2B</span></div></div>
+</div>
 </section>
 
 <section id="network">
-  <div class="partner">
-    <div class="partner-top">
-      <div>
-        <div class="partner-badge" data-i18n="partner_badge">Official Partner Network</div>
-        <h2 data-i18n-html="partner_title">한국 인플루언서 연결이 가능한<br>CGglobal 파트너 네트워크</h2>
-        <p data-i18n="partner_desc">CGglobal은 스토리앤미디어 협력사로서 한국 인플루언서·쇼호스트·숏폼 크리에이터 협업을 중국 및 글로벌 커머스 실행 구조와 연결합니다.</p>
-        <p class="partner-note" data-i18n="partner_note">브랜드 목적에 따라 아웃도어·스포츠, 패션·뷰티·라이프스타일, 엔터테인먼트, 플레이스, 지식교양·테크 분야의 크리에이터 협업을 기획할 수 있습니다.</p>
-      </div>
-      <div class="influencer-strip">
-        <div class="influencer-card"><strong>Beauty & Lifestyle</strong><p>화장품, 뷰티 루틴, 라이프스타일 제품 홍보</p></div>
-        <div class="influencer-card"><strong>Outdoor & Sports</strong><p>스포츠, 액티비티, 건강 관련 제품 캠페인</p></div>
-        <div class="influencer-card"><strong>Entertainment</strong><p>대중성 높은 숏폼·이슈형 콘텐츠 확산</p></div>
-        <div class="influencer-card"><strong>Place & Local</strong><p>공간, 매장, 여행, 오프라인 방문형 콘텐츠</p></div>
-      </div>
-    </div>
-    <div class="category-grid">
-      <div class="category"><span>🏃</span><b>Outdoor & Sports</b><small>액티비티, 건강, 스포츠 분야 협업</small></div>
-      <div class="category"><span>💄</span><b>Fashion · Beauty</b><small>뷰티·패션·라이프스타일 콘텐츠</small></div>
-      <div class="category"><span>🎤</span><b>Entertainment</b><small>엔터테인먼트·이슈형 콘텐츠 확산</small></div>
-      <div class="category"><span>📍</span><b>Place</b><small>플레이스·오프라인 방문형 캠페인</small></div>
-      <div class="category"><span>💡</span><b>Knowledge · Tech</b><small>전문성 기반 설명형 콘텐츠</small></div>
-    </div>
-  </div>
+<div class="partner">
+<div class="partner-layout">
+<div>
+<div class="partner-badge">Official Partner Network</div>
+<h2>한국 인플루언서 연결이 가능한<br>CGglobal 파트너 네트워크</h2>
+<p>CGglobal은 스토리앤미디어 협력사로서 한국 인플루언서·쇼호스트·숏폼 크리에이터 협업을 중국 및 글로벌 커머스 실행 구조와 연결합니다.</p>
+<p class="partner-note">브랜드 목적에 따라 아웃도어·스포츠, 패션·뷰티·라이프스타일, 엔터테인먼트, 플레이스, 지식교양·테크 분야의 크리에이터 협업을 기획할 수 있습니다.</p>
+</div>
+<div class="creator-panel">
+<h3>Public Creator Examples</h3>
+<div class="creator-grid">
+<div class="creator"><strong>우주킹토킹</strong><p>맛집·공간·리뷰형 콘텐츠</p></div>
+<div class="creator"><strong>모찌윤</strong><p>푸드·라이프스타일 리뷰</p></div>
+<div class="creator"><strong>김부자</strong><p>식품·선물세트·생활형 콘텐츠</p></div>
+<div class="creator"><strong>운동레저인플햇지</strong><p>운동·레저·건강 카테고리</p></div>
+<div class="creator"><strong>웅자92</strong><p>플레이스·맛집·방문형 리뷰</p></div>
+<div class="creator"><strong>badasoop</strong><p>라이프스타일·감성형 콘텐츠</p></div>
+<div class="creator"><strong>깐냉</strong><p>맛집·지역 기반 리뷰</p></div>
+<div class="creator"><strong>라라하</strong><p>상위노출형 리뷰 콘텐츠</p></div>
+</div>
+</div>
+</div>
+<div class="category-grid">
+<div class="category"><span>🏃</span><b>Outdoor & Sports</b><small>액티비티, 건강, 스포츠 분야 협업</small></div>
+<div class="category"><span>💄</span><b>Fashion · Beauty</b><small>뷰티·패션·라이프스타일 콘텐츠</small></div>
+<div class="category"><span>🎤</span><b>Entertainment</b><small>엔터테인먼트·이슈형 콘텐츠 확산</small></div>
+<div class="category"><span>📍</span><b>Place</b><small>플레이스·오프라인 방문형 캠페인</small></div>
+<div class="category"><span>💡</span><b>Knowledge · Tech</b><small>전문성 기반 설명형 콘텐츠</small></div>
+</div>
+</div>
 </section>
 
 <section id="services">
-  <div class="head">
-    <small>SERVICES</small>
-    <h2 data-i18n="service_title">CGglobal 주요 서비스</h2>
-    <p data-i18n="service_desc">브랜드가 해외 시장에서 실제로 움직일 수 있도록 필요한 기능을 모듈형으로 제공합니다.</p>
-  </div>
-  <div class="service-grid">
-    <div class="service"><b>01</b><h3 data-i18n="s1_t">Market Entry</h3><p data-i18n="s1_d">제품 포지션, 가격, 경쟁사, 채널 적합성을 분석합니다.</p></div>
-    <div class="service"><b>02</b><h3 data-i18n="s2_t">K-Influencer Matching</h3><p data-i18n="s2_d">한국 인플루언서, 쇼호스트, 숏폼 크리에이터 협업을 연결합니다.</p></div>
-    <div class="service"><b>03</b><h3 data-i18n="s3_t">AI Trade Content</h3><p data-i18n="s3_d">AI 번역, 더빙, 숏폼 전환, 바이어용 소개 콘텐츠를 제작합니다.</p></div>
-    <div class="service"><b>04</b><h3 data-i18n="s4_t">China Commerce</h3><p data-i18n="s4_d">중국 온라인 판매, 라이브커머스, 상품 링크, 프로모션 운영을 지원합니다.</p></div>
-    <div class="service"><b>05</b><h3 data-i18n="s5_t">B2B Matching</h3><p data-i18n="s5_d">글로벌 바이어, 유통상, 현지 실행 파트너를 연결합니다.</p></div>
-    <div class="service"><b>06</b><h3 data-i18n="s6_t">Cross-border Ops</h3><p data-i18n="s6_d">샘플 발송, 판매 검증, 크로스보더 유통 구조를 설계합니다.</p></div>
-  </div>
+<div class="head">
+<small>SERVICES</small>
+<h2>CGglobal 주요 서비스</h2>
+<p>브랜드가 해외 시장에서 실제로 움직일 수 있도록 필요한 기능을 모듈형으로 제공합니다.</p>
+</div>
+<div class="service-grid">
+<div class="service"><b>01</b><h3>Market Entry</h3><p>제품 포지션, 가격, 경쟁사, 채널 적합성을 분석합니다.</p></div>
+<div class="service"><b>02</b><h3>K-Influencer Matching</h3><p>한국 인플루언서, 쇼호스트, 숏폼 크리에이터 협업을 연결합니다.</p></div>
+<div class="service"><b>03</b><h3>AI Trade Content</h3><p>AI 번역, 더빙, 숏폼 전환, 바이어용 소개 콘텐츠를 제작합니다.</p></div>
+<div class="service"><b>04</b><h3>China Commerce</h3><p>중국 온라인 판매, 라이브커머스, 상품 링크, 프로모션 운영을 지원합니다.</p></div>
+<div class="service"><b>05</b><h3>B2B Matching</h3><p>글로벌 바이어, 유통상, 현지 실행 파트너를 연결합니다.</p></div>
+<div class="service"><b>06</b><h3>Cross-border Ops</h3><p>샘플 발송, 판매 검증, 크로스보더 유통 구조를 설계합니다.</p></div>
+</div>
 </section>
 
 <section id="process">
-  <div class="head">
-    <small>PROCESS</small>
-    <h2 data-i18n="process_title">검증하고, 연결하고, 확장합니다.</h2>
-    <p data-i18n="process_desc">초기부터 큰 비용을 태우지 않고, 제품과 시장 반응을 확인하면서 단계적으로 확장합니다.</p>
-  </div>
-  <div class="process">
-    <div class="step"><b>STEP 01</b><h3 data-i18n="p1_t">진단</h3><p data-i18n="p1_d">제품, 가격, 패키지, 경쟁사, 시장성을 검토합니다.</p></div>
-    <div class="step"><b>STEP 02</b><h3 data-i18n="p2_t">매칭</h3><p data-i18n="p2_d">브랜드에 맞는 한국 인플루언서와 콘텐츠 방향을 설계합니다.</p></div>
-    <div class="step"><b>STEP 03</b><h3 data-i18n="p3_t">실행</h3><p data-i18n="p3_d">숏폼, 라이브커머스, 콘텐츠 확산, B2B 상담을 운영합니다.</p></div>
-    <div class="step"><b>STEP 04</b><h3 data-i18n="p4_t">확장</h3><p data-i18n="p4_d">반응 데이터를 기준으로 광고, 유통, 파트너십을 확대합니다.</p></div>
-  </div>
+<div class="head">
+<small>PROCESS</small>
+<h2>검증하고, 연결하고, 확장합니다.</h2>
+<p>초기부터 큰 비용을 태우지 않고, 제품과 시장 반응을 확인하면서 단계적으로 확장합니다.</p>
+</div>
+<div class="process">
+<div class="step"><b>STEP 01</b><h3>진단</h3><p>제품, 가격, 패키지, 경쟁사, 시장성을 검토합니다.</p></div>
+<div class="step"><b>STEP 02</b><h3>매칭</h3><p>브랜드에 맞는 한국 인플루언서와 콘텐츠 방향을 설계합니다.</p></div>
+<div class="step"><b>STEP 03</b><h3>실행</h3><p>숏폼, 라이브커머스, 콘텐츠 확산, B2B 상담을 운영합니다.</p></div>
+<div class="step"><b>STEP 04</b><h3>확장</h3><p>반응 데이터를 기준으로 광고, 유통, 파트너십을 확대합니다.</p></div>
+</div>
 </section>
 
 <section id="contact">
-  <div class="contact-box">
-    <div>
-      <small style="color:#2563eb;font-weight:900">CONTACT</small>
-      <h2 data-i18n="contact_title">CGglobal에 문의하세요.</h2>
-      <p data-i18n="contact_desc">한국 인플루언서 협업, 중국 커머스 실행, 글로벌 바이어 연결, 크로스보더 유통 관련 문의를 보내주시면 확인 후 연락드리겠습니다.</p>
-      <a class="btn blue" href="mailto:zesia@coregateglobal.com?subject=CGglobal%20Inquiry" data-i18n="contact_mail">메일로 바로 문의</a>
-    </div>
-    <form class="form" action="mailto:zesia@coregateglobal.com" method="post" enctype="text/plain">
-      <input name="company" placeholder="Company / 회사명">
-      <input name="name" placeholder="Name / 담당자명">
-      <input name="email" placeholder="Email / 이메일">
-      <select name="interest">
-        <option>Inquiry Type / 문의 분야</option>
-        <option>Korean Influencer Matching</option>
-        <option>China Commerce</option>
-        <option>AI Trade Content</option>
-        <option>B2B Buyer Matching</option>
-      </select>
-      <textarea name="message" placeholder="Message / 문의 내용을 입력해 주세요"></textarea>
-      <button class="btn blue" type="submit" data-i18n="form_submit">문의 보내기</button>
-    </form>
-  </div>
+<div class="contact-box">
+<div>
+<small style="color:#2563eb;font-weight:900">CONTACT</small>
+<h2>CGglobal에 문의하세요.</h2>
+<p>한국 인플루언서 협업, 중국 커머스 실행, 글로벌 바이어 연결, 크로스보더 유통 관련 문의를 보내주시면 확인 후 연락드리겠습니다.</p>
+<a class="btn blue" href="mailto:zesia@coregateglobal.com?subject=CGglobal%20Inquiry">메일로 바로 문의</a>
+</div>
+<form class="form" action="mailto:zesia@coregateglobal.com" method="post" enctype="text/plain">
+<input name="company" placeholder="Company / 회사명">
+<input name="name" placeholder="Name / 담당자명">
+<input name="email" placeholder="Email / 이메일">
+<select name="interest">
+<option>Inquiry Type / 문의 분야</option>
+<option>Korean Influencer Matching</option>
+<option>China Commerce</option>
+<option>AI Trade Content</option>
+<option>B2B Buyer Matching</option>
+</select>
+<textarea name="message" placeholder="Message / 문의 내용을 입력해 주세요"></textarea>
+<button class="btn blue" type="submit">문의 보내기</button>
+</form>
+</div>
 </section>
 
 <div class="cta">
-  <h2 data-i18n="cta_title">좋은 제품을 글로벌 시장의 언어로 바꾸세요.</h2>
-  <p data-i18n="cta_desc">CGglobal이 한국 인플루언서, 콘텐츠, 중국 커머스, 글로벌 바이어 연결까지 함께 설계합니다.</p>
-  <a class="btn white" href="mailto:zesia@coregateglobal.com?subject=CGglobal%20Inquiry">zesia@coregateglobal.com</a>
+<h2>좋은 제품을 글로벌 시장의 언어로 바꾸세요.</h2>
+<p>CGglobal이 한국 인플루언서, 콘텐츠, 중국 커머스, 글로벌 바이어 연결까지 함께 설계합니다.</p>
+<a class="btn white" href="mailto:zesia@coregateglobal.com?subject=CGglobal%20Inquiry">zesia@coregateglobal.com</a>
 </div>
 </main>
 
 <footer>
-  <div class="footer-pro">
-    <div class="footer-brand">
-      <strong>CGglobal</strong>
-      <p>AI Trade · China Commerce · Korean Influencer Growth</p>
-      <p class="footer-desc">한국 브랜드의 글로벌 진출을 한국 인플루언서 협업, 콘텐츠, B2B 바이어 연결, 크로스보더 유통으로 실행하는 글로벌 커머스 파트너입니다.</p>
-    </div>
-    <div class="footer-info"><h4>Contact</h4><p>Website: coregateglobal.com</p><p>Email: zesia@coregateglobal.com</p></div>
-    <div class="footer-info"><h4>Korea Office</h4><p>서울특별시 금천구 디지털로9길 47, 804호</p><p>가산동, 한신IT타워2차</p></div>
-    <div class="footer-info"><h4>China Office</h4><p>上海市闵行区莲花南路3110号</p><p>A栋 A710</p></div>
-  </div>
+<div class="footer-pro">
+<div class="footer-brand">
+<strong>CGglobal</strong>
+<p>AI Trade · China Commerce · Korean Influencer Growth</p>
+<p class="footer-desc">한국 브랜드의 글로벌 진출을 한국 인플루언서 협업, 콘텐츠, B2B 바이어 연결, 크로스보더 유통으로 실행하는 글로벌 커머스 파트너입니다.</p>
+</div>
+<div class="footer-info"><h4>Contact</h4><p>Website: coregateglobal.com</p><p>Email: zesia@coregateglobal.com</p></div>
+<div class="footer-info"><h4>Korea Office</h4><p>서울특별시 금천구 디지털로9길 47, 804호</p><p>가산동, 한신IT타워2차</p></div>
+<div class="footer-info"><h4>China Office</h4><p>上海市闵行区莲花南路3110号</p><p>A栋 A710</p></div>
+</div>
 </footer>
 
 <script>
-const dict={
-ko:{nav_why:"Why CGglobal",nav_features:"Solutions",nav_network:"Influencer",nav_services:"Services",nav_contact:"문의",nav_contact_btn:"문의",hero_badge:"All-In-One Global Commerce Execution Partner",hero_title:"한국 브랜드의 글로벌 진출,<br><strong>찾고 · 연결하고 · 판매까지</strong>",hero_desc:"CGglobal은 한국 제품을 중국과 글로벌 시장에 맞는 콘텐츠로 바꾸고, 한국 인플루언서 연결, AI 무역 콘텐츠, B2B 바이어 연결, 크로스보더 유통까지 실행하는 글로벌 커머스 파트너입니다.",hero_btn1:"문의하기",hero_btn2:"인플루언서 네트워크 보기",dash_title:"Campaign Execution Flow",dash_desc:"제품 분석부터 콘텐츠 제작, 한국 인플루언서 연결, 판매 데이터 확인까지 한 흐름으로 관리합니다.",flow1:"Product Fit",flow2:"Creator Match",flow3:"Channel Match",channel_title:"Core Channels",channel_desc:"한국 인플루언서 콘텐츠를 중국·글로벌 커머스 채널에 맞게 연결합니다.",why_title:"해외 진출은 광고가 아니라<br>운영 시스템입니다.",why_desc:"단순히 인플루언서를 섭외하거나 콘텐츠를 만드는 것만으로는 매출이 연결되지 않습니다. CGglobal은 제품, 한국 인플루언서, 콘텐츠, 채널, 바이어, 운영 데이터를 하나의 실행 구조로 연결합니다.",f1_t:"Discover",f1_d:"시장에 맞는 제품 포지션, 가격, 소비자 메시지, 진입 채널을 먼저 찾습니다.",f2_t:"Creator Match",f2_d:"브랜드에 맞는 한국 인플루언서, 쇼호스트, 숏폼 크리에이터 연결 구조를 설계합니다.",f3_t:"Scale",f3_d:"콘텐츠 반응과 판매 데이터를 기준으로 광고, 유통, 파트너십을 단계적으로 확대합니다.",sol_title:"보고서보다 중요한 건<br>실제 실행입니다.",sol_desc:"CGglobal은 제품을 분석한 뒤, 시장 언어에 맞는 콘텐츠를 만들고, 한국 인플루언서 및 커머스 채널에 연결하며, 바이어 상담과 판매 구조까지 이어갑니다.",sol_c1:"✓ 한국 브랜드 발굴 및 제품 진단",sol_c2:"✓ 한국 인플루언서·쇼호스트 협업 연결",sol_c3:"✓ 중국·글로벌 소비자용 콘텐츠 기획",sol_c4:"✓ B2B 바이어 및 유통 파트너 연결",tile1_t:"Korea Creator Base",tile1_d:"한국 인플루언서, 쇼호스트, 숏폼 크리에이터 협업 연결",tile2_t:"China Commerce Base",tile2_d:"현지 커머스, 콘텐츠, 파트너 실행",tile3_t:"Commerce Operating System",tile3_d:"제품 분석 → 크리에이터 매칭 → 콘텐츠 제작 → 판매 검증 → 바이어 확장까지 연결합니다.",partner_badge:"Official Partner Network",partner_title:"한국 인플루언서 연결이 가능한<br>CGglobal 파트너 네트워크",partner_desc:"CGglobal은 스토리앤미디어 협력사로서 한국 인플루언서·쇼호스트·숏폼 크리에이터 협업을 중국 및 글로벌 커머스 실행 구조와 연결합니다.",partner_note:"브랜드 목적에 따라 아웃도어·스포츠, 패션·뷰티·라이프스타일, 엔터테인먼트, 플레이스, 지식교양·테크 분야의 크리에이터 협업을 기획할 수 있습니다.",service_title:"CGglobal 주요 서비스",service_desc:"브랜드가 해외 시장에서 실제로 움직일 수 있도록 필요한 기능을 모듈형으로 제공합니다.",s1_t:"Market Entry",s1_d:"제품 포지션, 가격, 경쟁사, 채널 적합성을 분석합니다.",s2_t:"K-Influencer Matching",s2_d:"한국 인플루언서, 쇼호스트, 숏폼 크리에이터 협업을 연결합니다.",s3_t:"AI Trade Content",s3_d:"AI 번역, 더빙, 숏폼 전환, 바이어용 소개 콘텐츠를 제작합니다.",s4_t:"China Commerce",s4_d:"중국 온라인 판매, 라이브커머스, 상품 링크, 프로모션 운영을 지원합니다.",s5_t:"B2B Matching",s5_d:"글로벌 바이어, 유통상, 현지 실행 파트너를 연결합니다.",s6_t:"Cross-border Ops",s6_d:"샘플 발송, 판매 검증, 크로스보더 유통 구조를 설계합니다.",process_title:"검증하고, 연결하고, 확장합니다.",process_desc:"초기부터 큰 비용을 태우지 않고, 제품과 시장 반응을 확인하면서 단계적으로 확장합니다.",p1_t:"진단",p1_d:"제품, 가격, 패키지, 경쟁사, 시장성을 검토합니다.",p2_t:"매칭",p2_d:"브랜드에 맞는 한국 인플루언서와 콘텐츠 방향을 설계합니다.",p3_t:"실행",p3_d:"숏폼, 라이브커머스, 콘텐츠 확산, B2B 상담을 운영합니다.",p4_t:"확장",p4_d:"반응 데이터를 기준으로 광고, 유통, 파트너십을 확대합니다.",contact_title:"CGglobal에 문의하세요.",contact_desc:"한국 인플루언서 협업, 중국 커머스 실행, 글로벌 바이어 연결, 크로스보더 유통 관련 문의를 보내주시면 확인 후 연락드리겠습니다.",contact_mail:"메일로 바로 문의",form_submit:"문의 보내기",cta_title:"좋은 제품을 글로벌 시장의 언어로 바꾸세요.",cta_desc:"CGglobal이 한국 인플루언서, 콘텐츠, 중국 커머스, 글로벌 바이어 연결까지 함께 설계합니다."},
-en:{nav_why:"Why CGglobal",nav_features:"Solutions",nav_network:"Influencer",nav_services:"Services",nav_contact:"Contact",nav_contact_btn:"Contact",hero_badge:"All-In-One Global Commerce Execution Partner",hero_title:"Global expansion for Korean brands,<br><strong>from creator matching to sales</strong>",hero_desc:"CGglobal transforms Korean products into market-ready content and connects Korean influencers, AI trade content, B2B buyer sourcing, and cross-border distribution.",hero_btn1:"Contact",hero_btn2:"View Influencer Network",dash_title:"Campaign Execution Flow",dash_desc:"From product analysis to content creation, Korean influencer matching, and sales data management.",flow1:"Product Fit",flow2:"Creator Match",flow3:"Channel Match",channel_title:"Core Channels",channel_desc:"We connect Korean influencer content to China and global commerce channels.",why_title:"Overseas expansion is not advertising.<br>It is an operating system.",why_desc:"Influencer recruiting or content creation alone does not create revenue. CGglobal connects products, Korean influencers, content, channels, buyers, and operating data.",f1_t:"Discover",f1_d:"We identify product positioning, pricing, consumer messaging, and entry channels.",f2_t:"Creator Match",f2_d:"We design collaboration structures with Korean influencers, show hosts, and short-form creators.",f3_t:"Scale",f3_d:"We scale advertising, distribution, and partnerships based on content response and sales data.",sol_title:"More important than reports<br>is real execution.",sol_desc:"CGglobal analyzes products, creates market-fit content, connects Korean influencers and commerce channels, and extends to buyers and sales structure.",sol_c1:"✓ Korean brand sourcing and product diagnosis",sol_c2:"✓ Korean influencer and show host collaboration",sol_c3:"✓ China and global consumer content planning",sol_c4:"✓ B2B buyer and distribution partner connection",tile1_t:"Korea Creator Base",tile1_d:"Korean influencers, show hosts, and short-form creators",tile2_t:"China Commerce Base",tile2_d:"Local commerce, content, and partner execution",tile3_t:"Commerce Operating System",tile3_d:"We connect product analysis, creator matching, content creation, sales validation, and buyer expansion.",partner_badge:"Official Partner Network",partner_title:"CGglobal connects Korean influencers<br>for China and global commerce",partner_desc:"As a Story&Media partner, CGglobal connects Korean influencers, show hosts, and short-form creators with China and global commerce execution.",partner_note:"Campaigns can be planned across outdoor & sports, fashion · beauty · lifestyle, entertainment, place, and knowledge · tech creator categories.",service_title:"CGglobal Services",service_desc:"We provide modular functions that help brands operate in overseas markets.",s1_t:"Market Entry",s1_d:"We analyze product positioning, pricing, competitors, and channel fit.",s2_t:"K-Influencer Matching",s2_d:"We connect Korean influencers, show hosts, and short-form creators.",s3_t:"AI Trade Content",s3_d:"We create AI translation, dubbing, short-form conversion, and buyer materials.",s4_t:"China Commerce",s4_d:"We support China online sales, live commerce, product links, and promotions.",s5_t:"B2B Matching",s5_d:"We connect global buyers, distributors, and local execution partners.",s6_t:"Cross-border Ops",s6_d:"We design sample delivery, sales validation, and cross-border structures.",process_title:"Validate, connect, and scale.",process_desc:"We avoid heavy spending from the start and scale based on product and market response.",p1_t:"Diagnose",p1_d:"We review products, prices, packages, competitors, and marketability.",p2_t:"Match",p2_d:"We design creator matching and content direction for each brand.",p3_t:"Execute",p3_d:"We operate short-form, live commerce, content distribution, and B2B consultations.",p4_t:"Scale",p4_d:"We scale advertising, distribution, and partnerships based on response data.",contact_title:"Contact CGglobal.",contact_desc:"Send inquiries about Korean influencer collaboration, China commerce, global buyer matching, or cross-border operations.",contact_mail:"Email us directly",form_submit:"Send Inquiry",cta_title:"Turn good products into the language of global markets.",cta_desc:"CGglobal connects Korean influencers, content, China commerce, and global buyers."},
-zh:{nav_why:"为什么选择CGglobal",nav_features:"解决方案",nav_network:"韩国达人",nav_services:"服务",nav_contact:"咨询",nav_contact_btn:"咨询",hero_badge:"一体化全球商业执行伙伴",hero_title:"韩国品牌全球拓展，<br><strong>从达人匹配到销售</strong>",hero_desc:"CGglobal将韩国产品转化为适合中国及全球市场的内容，并连接韩国达人、AI贸易内容、B2B买家开发与跨境流通。",hero_btn1:"商务咨询",hero_btn2:"查看韩国达人网络",dash_title:"营销执行流程",dash_desc:"从产品分析、内容制作、韩国达人匹配到销售数据管理，形成一套完整流程。",flow1:"产品适配度",flow2:"达人匹配度",flow3:"渠道匹配度",channel_title:"核心渠道",channel_desc:"将韩国达人内容连接到中国及全球商业渠道。",why_title:"海外拓展不是广告，<br>而是运营系统。",why_desc:"单纯找达人或制作内容并不能直接形成销售。CGglobal将产品、韩国达人、内容、渠道、买家与运营数据连接成一套执行结构。",f1_t:"Discover",f1_d:"寻找适合市场的产品定位、价格、消费者信息与进入渠道。",f2_t:"Creator Match",f2_d:"为品牌设计韩国达人、直播主持人与短视频创作者合作结构。",f3_t:"Scale",f3_d:"根据内容反应和销售数据，逐步扩大广告、流通和合作伙伴关系。",sol_title:"比报告更重要的，<br>是真正的执行。",sol_desc:"CGglobal分析产品，制作适合市场的内容，连接韩国达人及商业渠道，并延伸至买家洽谈和销售结构。",sol_c1:"✓ 韩国品牌发掘及产品诊断",sol_c2:"✓ 韩国达人及直播主持人合作连接",sol_c3:"✓ 面向中国及全球消费者的内容策划",sol_c4:"✓ B2B买家及流通伙伴连接",tile1_t:"韩国达人资源",tile1_d:"韩国达人、直播主持人、短视频创作者合作连接",tile2_t:"中国商业执行",tile2_d:"本地电商、内容与伙伴执行",tile3_t:"商业运营系统",tile3_d:"连接产品分析、达人匹配、内容制作、销售验证与买家拓展。",partner_badge:"官方合作伙伴网络",partner_title:"CGglobal可连接韩国达人<br>服务中国及全球商业",partner_desc:"CGglobal作为Story&Media合作方，将韩国达人、直播主持人、短视频创作者合作连接到中国及全球商业执行结构。",partner_note:"可根据品牌目标策划户外运动、时尚美妆生活、娱乐、场所、本地探店、知识科技等达人合作。",service_title:"CGglobal主要服务",service_desc:"我们提供模块化功能，帮助品牌在海外市场真正落地执行。",s1_t:"市场进入",s1_d:"分析产品定位、价格、竞品和渠道适配度。",s2_t:"韩国达人匹配",s2_d:"连接韩国达人、直播主持人和短视频创作者。",s3_t:"AI贸易内容",s3_d:"制作AI翻译、配音、短视频转换和买家介绍资料。",s4_t:"中国电商",s4_d:"支持中国线上销售、直播电商、商品链接和促销运营。",s5_t:"B2B匹配",s5_d:"连接全球买家、经销商和本地执行伙伴。",s6_t:"跨境运营",s6_d:"设计样品发送、销售验证和跨境流通结构。",process_title:"验证、连接、放大。",process_desc:"不从一开始投入大量费用，而是根据产品和市场反应分阶段扩大。",p1_t:"诊断",p1_d:"审查产品、价格、包装、竞品和市场性。",p2_t:"匹配",p2_d:"为品牌设计韩国达人匹配和内容方向。",p3_t:"执行",p3_d:"运营短视频、直播电商、内容扩散和B2B商务沟通。",p4_t:"放大",p4_d:"根据反应数据扩大广告、流通和伙伴关系。",contact_title:"联系CGglobal",contact_desc:"如需韩国达人合作、中国电商执行、全球买家连接或跨境流通服务，请发送咨询。",contact_mail:"直接邮件咨询",form_submit:"发送咨询",cta_title:"把好产品转化为全球市场的语言。",cta_desc:"CGglobal连接韩国达人、内容、中国电商和全球买家。"}
-};
 function setLang(lang){
 document.querySelectorAll(".lang button").forEach(b=>b.classList.remove("active"));
 document.getElementById("btn-"+lang).classList.add("active");
-const pack=dict[lang];
-document.querySelectorAll("[data-i18n]").forEach(el=>{const k=el.getAttribute("data-i18n");if(pack[k])el.textContent=pack[k];});
-document.querySelectorAll("[data-i18n-html]").forEach(el=>{const k=el.getAttribute("data-i18n-html");if(pack[k])el.innerHTML=pack[k];});
-document.documentElement.lang=lang==="zh"?"zh-CN":lang;
+alert("현재 버전은 한국어 페이지 기준으로 정리되어 있습니다. 영문/중문 상세 번역은 다음 단계에서 적용 가능합니다.");
 }
 </script>
 
