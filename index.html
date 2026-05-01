@@ -315,9 +315,11 @@ document.documentElement.lang=lang==="zh"?"zh-CN":lang;
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  const magazineMenuHTML = `
+  const menuHTML = `
     <a href="#influencer-magazine" class="cg-magazine-menu-link">
-      Influencer Magazine
+      <span class="lang-ko">인플루언서 매거진</span>
+      <span class="lang-en">Influencer Magazine</span>
+      <span class="lang-zh">达人杂志</span>
     </a>
   `;
 
@@ -326,83 +328,192 @@ document.addEventListener("DOMContentLoaded", function () {
   for (const selector of navSelectors) {
     const nav = document.querySelector(selector);
     if (nav && !document.querySelector(".cg-magazine-menu-link")) {
-      nav.insertAdjacentHTML("beforeend", magazineMenuHTML);
+      nav.insertAdjacentHTML("beforeend", menuHTML);
       break;
     }
   }
 
-  const magazineSectionHTML = `
+  const sectionHTML = `
     <section id="influencer-magazine" class="cg-influencer-magazine-section">
       <div class="cg-magazine-container">
 
         <div class="cg-magazine-header">
-          <p class="cg-section-label">GLOBAL INFLUENCER MAGAZINE</p>
-          <h2>Influencer Magazine</h2>
-          <p class="cg-section-desc">
-            CoreGate Global connects Korean brands, influencers, product stories, global buyers,
-            and digital commerce through strategic magazine content.
-          </p>
+
+          <div class="lang-ko">
+            <p class="cg-section-label">글로벌 인플루언서 매거진</p>
+            <h2>인플루언서 매거진</h2>
+            <p class="cg-section-desc">
+              코어게이트 글로벌은 브랜드, 제품, 인플루언서, 글로벌 바이어를 연결하는 콘텐츠 기반 글로벌 커머스 플랫폼입니다.
+            </p>
+          </div>
+
+          <div class="lang-en">
+            <p class="cg-section-label">GLOBAL INFLUENCER MAGAZINE</p>
+            <h2>Influencer Magazine</h2>
+            <p class="cg-section-desc">
+              CoreGate Global connects brands, products, influencers, global buyers, and digital commerce through strategic magazine content.
+            </p>
+          </div>
+
+          <div class="lang-zh">
+            <p class="cg-section-label">全球达人杂志</p>
+            <h2>达人杂志</h2>
+            <p class="cg-section-desc">
+              CoreGate Global 通过内容策划连接品牌、产品、达人、全球买家与数字 commerce，帮助韩国品牌进入海外市场。
+            </p>
+          </div>
+
         </div>
 
         <div class="cg-magazine-grid">
 
           <div class="cg-magazine-card">
-            <span>TREND</span>
-            <h3>Global Beauty & Lifestyle Trends</h3>
-            <p>
-              We analyze global beauty, lifestyle, short-form, and live-commerce trends
-              to help Korean brands enter overseas markets with stronger positioning.
-            </p>
+            <div class="lang-ko">
+              <span>트렌드</span>
+              <h3>글로벌 뷰티 & 라이프스타일 트렌드</h3>
+              <p>
+                글로벌 뷰티, 라이프스타일, 숏폼, 라이브커머스 트렌드를 분석하여 한국 브랜드의 해외 시장 진출 전략을 강화합니다.
+              </p>
+            </div>
+            <div class="lang-en">
+              <span>TREND</span>
+              <h3>Global Beauty & Lifestyle Trends</h3>
+              <p>
+                We analyze global beauty, lifestyle, short-form, and live-commerce trends to help Korean brands enter overseas markets with stronger positioning.
+              </p>
+            </div>
+            <div class="lang-zh">
+              <span>趋势</span>
+              <h3>全球美妆与生活方式趋势</h3>
+              <p>
+                我们分析全球美妆、生活方式、短视频与直播电商趋势，帮助韩国品牌建立更清晰的海外市场定位。
+              </p>
+            </div>
           </div>
 
           <div class="cg-magazine-card">
-            <span>PRODUCT STORY</span>
-            <h3>Product Storytelling</h3>
-            <p>
-              We turn product ingredients, brand philosophy, clinical data, and market value
-              into persuasive content that consumers and buyers can easily understand.
-            </p>
+            <div class="lang-ko">
+              <span>제품 스토리</span>
+              <h3>제품 스토리텔링</h3>
+              <p>
+                성분, 브랜드 철학, 임상 데이터, 시장 가치를 소비자와 바이어가 이해하기 쉬운 콘텐츠로 전환합니다.
+              </p>
+            </div>
+            <div class="lang-en">
+              <span>PRODUCT STORY</span>
+              <h3>Product Storytelling</h3>
+              <p>
+                We turn ingredients, brand philosophy, clinical data, and market value into persuasive content that consumers and buyers can easily understand.
+              </p>
+            </div>
+            <div class="lang-zh">
+              <span>产品故事</span>
+              <h3>产品内容策划</h3>
+              <p>
+                我们将产品成分、品牌理念、临床数据与市场价值转化为消费者和买家容易理解的内容。
+              </p>
+            </div>
           </div>
 
           <div class="cg-magazine-card">
-            <span>INFLUENCER PICK</span>
-            <h3>Influencer Picks & Reviews</h3>
-            <p>
-              We introduce selected products through influencers, creators, and market-friendly
-              content formats to support awareness and sales conversion.
-            </p>
+            <div class="lang-ko">
+              <span>인플루언서 픽</span>
+              <h3>인플루언서 추천 & 리뷰</h3>
+              <p>
+                인플루언서와 크리에이터를 통해 제품을 소개하고 브랜드 인지도와 판매 전환을 높입니다.
+              </p>
+            </div>
+            <div class="lang-en">
+              <span>INFLUENCER PICK</span>
+              <h3>Influencer Picks & Reviews</h3>
+              <p>
+                We introduce selected products through influencers and creators to support brand awareness and sales conversion.
+              </p>
+            </div>
+            <div class="lang-zh">
+              <span>达人推荐</span>
+              <h3>达人推荐与测评</h3>
+              <p>
+                通过达人与内容创作者介绍精选产品，提升品牌认知度并促进销售转化。
+              </p>
+            </div>
           </div>
 
           <div class="cg-magazine-card">
-            <span>CASE STUDY</span>
-            <h3>Commerce Case Studies</h3>
-            <p>
-              We share practical cases from short-form content, influencer marketing,
-              product seeding, buyer matching, and overseas distribution.
-            </p>
+            <div class="lang-ko">
+              <span>사례 분석</span>
+              <h3>커머스 성공 사례</h3>
+              <p>
+                숏폼 콘텐츠, 인플루언서 마케팅, 제품 시딩, 바이어 매칭, 해외 유통 사례를 공유합니다.
+              </p>
+            </div>
+            <div class="lang-en">
+              <span>CASE STUDY</span>
+              <h3>Commerce Case Studies</h3>
+              <p>
+                We share practical cases from short-form content, influencer marketing, product seeding, buyer matching, and overseas distribution.
+              </p>
+            </div>
+            <div class="lang-zh">
+              <span>案例分析</span>
+              <h3>电商与海外市场案例</h3>
+              <p>
+                我们分享短视频内容、达人营销、产品种草、买家匹配与海外流通的实际案例。
+              </p>
+            </div>
           </div>
 
         </div>
 
         <div class="cg-magazine-feature">
           <div>
-            <p class="cg-section-label">CONTENT TO COMMERCE</p>
-            <h3>From Magazine Content to Global Sales</h3>
-            <p>
-              Our magazine is not a simple blog. It is a strategic content hub designed to connect
-              brand stories with influencer marketing, buyer discovery, product verification,
-              and global distribution opportunities.
-            </p>
+            <div class="lang-ko">
+              <p class="cg-section-label">콘텐츠에서 커머스로</p>
+              <h3>매거진 콘텐츠에서 글로벌 판매까지</h3>
+              <p>
+                코어게이트 글로벌의 매거진은 단순한 블로그가 아닙니다. 브랜드 스토리, 인플루언서 마케팅, 바이어 발굴, 제품 검증, 글로벌 유통 기회를 연결하는 전략형 콘텐츠 허브입니다.
+              </p>
+            </div>
+            <div class="lang-en">
+              <p class="cg-section-label">CONTENT TO COMMERCE</p>
+              <h3>From Magazine Content to Global Sales</h3>
+              <p>
+                Our magazine is not a simple blog. It is a strategic content hub designed to connect brand stories with influencer marketing, buyer discovery, product verification, and global distribution opportunities.
+              </p>
+            </div>
+            <div class="lang-zh">
+              <p class="cg-section-label">从内容到商业转化</p>
+              <h3>从杂志内容到全球销售</h3>
+              <p>
+                我们的达人杂志不是普通博客，而是连接品牌故事、达人营销、买家发现、产品验证与全球流通机会的战略型内容中心。
+              </p>
+            </div>
           </div>
 
           <div class="cg-magazine-flow">
-            <div>Content</div>
+            <div>
+              <span class="lang-ko">콘텐츠</span>
+              <span class="lang-en">Content</span>
+              <span class="lang-zh">内容</span>
+            </div>
             <b>→</b>
-            <div>Trust</div>
+            <div>
+              <span class="lang-ko">신뢰</span>
+              <span class="lang-en">Trust</span>
+              <span class="lang-zh">信任</span>
+            </div>
             <b>→</b>
-            <div>Influencer</div>
+            <div>
+              <span class="lang-ko">인플루언서</span>
+              <span class="lang-en">Influencer</span>
+              <span class="lang-zh">达人</span>
+            </div>
             <b>→</b>
-            <div>Commerce</div>
+            <div>
+              <span class="lang-ko">커머스</span>
+              <span class="lang-en">Commerce</span>
+              <span class="lang-zh">商业转化</span>
+            </div>
           </div>
         </div>
 
@@ -411,11 +522,12 @@ document.addEventListener("DOMContentLoaded", function () {
   `;
 
   const footer = document.querySelector("footer, .footer, #footer");
+
   if (!document.querySelector("#influencer-magazine")) {
     if (footer) {
-      footer.insertAdjacentHTML("beforebegin", magazineSectionHTML);
+      footer.insertAdjacentHTML("beforebegin", sectionHTML);
     } else {
-      document.body.insertAdjacentHTML("beforeend", magazineSectionHTML);
+      document.body.insertAdjacentHTML("beforeend", sectionHTML);
     }
   }
 });
@@ -568,6 +680,31 @@ document.addEventListener("DOMContentLoaded", function () {
   font-size: 24px;
 }
 
+/* 언어 전환 구조 */
+html[lang="ko"] .lang-en,
+html[lang="ko"] .lang-zh {
+  display: none !important;
+}
+
+html[lang="en"] .lang-ko,
+html[lang="en"] .lang-zh {
+  display: none !important;
+}
+
+html[lang="zh"] .lang-ko,
+html[lang="zh"] .lang-en,
+html[lang="zh-CN"] .lang-ko,
+html[lang="zh-CN"] .lang-en {
+  display: none !important;
+}
+
+/* lang 값이 없을 경우 기본 한국어 표시 */
+html:not([lang]) .lang-en,
+html:not([lang]) .lang-zh {
+  display: none !important;
+}
+
+/* 반응형 */
 @media (max-width: 1024px) {
   .cg-magazine-grid {
     grid-template-columns: repeat(2, 1fr);
