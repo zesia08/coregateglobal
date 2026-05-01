@@ -313,5 +313,307 @@ document.documentElement.lang=lang==="zh"?"zh-CN":lang;
 }
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const magazineMenuHTML = `
+    <a href="#influencer-magazine" class="cg-magazine-menu-link">
+      Influencer Magazine
+    </a>
+  `;
+
+  const navSelectors = ["nav", ".nav", ".navbar", ".menu", ".header-menu", ".gnb"];
+
+  for (const selector of navSelectors) {
+    const nav = document.querySelector(selector);
+    if (nav && !document.querySelector(".cg-magazine-menu-link")) {
+      nav.insertAdjacentHTML("beforeend", magazineMenuHTML);
+      break;
+    }
+  }
+
+  const magazineSectionHTML = `
+    <section id="influencer-magazine" class="cg-influencer-magazine-section">
+      <div class="cg-magazine-container">
+
+        <div class="cg-magazine-header">
+          <p class="cg-section-label">GLOBAL INFLUENCER MAGAZINE</p>
+          <h2>Influencer Magazine</h2>
+          <p class="cg-section-desc">
+            CoreGate Global connects Korean brands, influencers, product stories, global buyers,
+            and digital commerce through strategic magazine content.
+          </p>
+        </div>
+
+        <div class="cg-magazine-grid">
+
+          <div class="cg-magazine-card">
+            <span>TREND</span>
+            <h3>Global Beauty & Lifestyle Trends</h3>
+            <p>
+              We analyze global beauty, lifestyle, short-form, and live-commerce trends
+              to help Korean brands enter overseas markets with stronger positioning.
+            </p>
+          </div>
+
+          <div class="cg-magazine-card">
+            <span>PRODUCT STORY</span>
+            <h3>Product Storytelling</h3>
+            <p>
+              We turn product ingredients, brand philosophy, clinical data, and market value
+              into persuasive content that consumers and buyers can easily understand.
+            </p>
+          </div>
+
+          <div class="cg-magazine-card">
+            <span>INFLUENCER PICK</span>
+            <h3>Influencer Picks & Reviews</h3>
+            <p>
+              We introduce selected products through influencers, creators, and market-friendly
+              content formats to support awareness and sales conversion.
+            </p>
+          </div>
+
+          <div class="cg-magazine-card">
+            <span>CASE STUDY</span>
+            <h3>Commerce Case Studies</h3>
+            <p>
+              We share practical cases from short-form content, influencer marketing,
+              product seeding, buyer matching, and overseas distribution.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="cg-magazine-feature">
+          <div>
+            <p class="cg-section-label">CONTENT TO COMMERCE</p>
+            <h3>From Magazine Content to Global Sales</h3>
+            <p>
+              Our magazine is not a simple blog. It is a strategic content hub designed to connect
+              brand stories with influencer marketing, buyer discovery, product verification,
+              and global distribution opportunities.
+            </p>
+          </div>
+
+          <div class="cg-magazine-flow">
+            <div>Content</div>
+            <b>→</b>
+            <div>Trust</div>
+            <b>→</b>
+            <div>Influencer</div>
+            <b>→</b>
+            <div>Commerce</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  `;
+
+  const footer = document.querySelector("footer, .footer, #footer");
+  if (!document.querySelector("#influencer-magazine")) {
+    if (footer) {
+      footer.insertAdjacentHTML("beforebegin", magazineSectionHTML);
+    } else {
+      document.body.insertAdjacentHTML("beforeend", magazineSectionHTML);
+    }
+  }
+});
+</script>
+
+<style>
+.cg-magazine-menu-link {
+  display: inline-block;
+  margin-left: 22px;
+  color: inherit;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.cg-magazine-menu-link:hover {
+  opacity: 0.75;
+}
+
+.cg-influencer-magazine-section {
+  padding: 90px 0;
+  background: #f8fafc;
+  font-family: inherit;
+}
+
+.cg-magazine-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cg-magazine-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.cg-section-label {
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 800;
+  color: #2563eb;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.cg-magazine-header h2 {
+  font-size: 42px;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 18px;
+}
+
+.cg-section-desc {
+  max-width: 780px;
+  margin: 0 auto;
+  font-size: 17px;
+  line-height: 1.75;
+  color: #4b5563;
+}
+
+.cg-magazine-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 55px;
+}
+
+.cg-magazine-card {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 30px 26px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cg-magazine-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.12);
+}
+
+.cg-magazine-card span {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 800;
+  color: #ffffff;
+  background: linear-gradient(135deg, #2563eb, #0f172a);
+  padding: 7px 12px;
+  border-radius: 999px;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+}
+
+.cg-magazine-card h3 {
+  font-size: 21px;
+  line-height: 1.35;
+  color: #111827;
+  margin-bottom: 14px;
+}
+
+.cg-magazine-card p {
+  font-size: 15px;
+  line-height: 1.75;
+  color: #4b5563;
+}
+
+.cg-magazine-feature {
+  background: #0f172a;
+  border-radius: 28px;
+  padding: 45px;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  align-items: center;
+}
+
+.cg-magazine-feature h3 {
+  font-size: 32px;
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+
+.cg-magazine-feature p {
+  font-size: 16px;
+  line-height: 1.75;
+  color: #cbd5e1;
+}
+
+.cg-magazine-flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  min-width: 420px;
+}
+
+.cg-magazine-flow div {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(147, 197, 253, 0.35);
+  padding: 14px 18px;
+  border-radius: 16px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.cg-magazine-flow b {
+  color: #93c5fd;
+  font-size: 24px;
+}
+
+@media (max-width: 1024px) {
+  .cg-magazine-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cg-magazine-feature {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cg-magazine-flow {
+    min-width: auto;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .cg-influencer-magazine-section {
+    padding: 70px 0;
+  }
+
+  .cg-magazine-header h2 {
+    font-size: 32px;
+  }
+
+  .cg-magazine-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cg-magazine-feature {
+    padding: 30px 24px;
+  }
+
+  .cg-magazine-feature h3 {
+    font-size: 26px;
+  }
+
+  .cg-magazine-menu-link {
+    display: block;
+    margin: 12px 0 0 0;
+  }
+}
+</style>
+
+<!-- =========================================================
+END - COREGATE GLOBAL INFLUENCER MAGAZINE ADD-ON
+========================================================= -->
 </body>
 </html>
