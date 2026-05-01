@@ -3,468 +3,434 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CGglobal | Global Influencer Commerce</title>
-
+<title>CGglobal | Korea Influencer & Global Commerce Partner</title>
 <style>
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;font-family:Arial,"Noto Sans KR",sans-serif;background:#fff;color:#111}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:#111827;background:#fff;word-break:keep-all}
 a{text-decoration:none;color:inherit}
-
-header{
-  position:sticky;top:0;z-index:100;
-  background:#fff;border-bottom:1px solid #eee;
-  padding:15px 24px;display:flex;justify-content:space-between;align-items:center
-}
-.logo{font-size:24px;font-weight:900}
+header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(16px);border-bottom:1px solid #edf0f5}
+.nav{max-width:1180px;margin:auto;height:76px;padding:0 22px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:25px;font-weight:900;letter-spacing:-1px}
 .logo span{color:#2563eb}
-.menu{display:flex;gap:18px;align-items:center}
-.menu a{color:#555;font-weight:700}
-.lang button{
-  border:1px solid #ddd;background:#fff;border-radius:20px;
-  padding:7px 12px;margin-left:4px;cursor:pointer;font-weight:800
-}
-.lang button.active{background:#111;color:#fff}
-
-.hero{
-  padding:90px 20px;text-align:center;
-  background:linear-gradient(180deg,#f8fbff,#fff)
-}
-.hero h1{font-size:52px;line-height:1.2;margin:0 0 20px;font-weight:900}
-.hero p{font-size:19px;color:#666;line-height:1.7;margin:0 auto 30px;max-width:760px}
-.btn{
-  display:inline-block;background:#2563eb;color:#fff;
-  padding:14px 24px;border-radius:999px;font-weight:900;margin:5px
-}
-.btn.dark{background:#111827}
-
-.section{max-width:1180px;margin:auto;padding:80px 20px}
-.section-title{text-align:center;margin-bottom:40px}
-.section-title h2{font-size:42px;margin:0 0 12px;font-weight:900}
-.section-title p{color:#666;font-size:18px;line-height:1.7}
-
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
-.card{
-  border:1px solid #eee;border-radius:24px;padding:26px;
-  background:#fff;box-shadow:0 12px 35px rgba(0,0,0,.05)
-}
-.card h3{margin:0 0 12px;font-size:22px}
-.card p{color:#666;line-height:1.6}
-
-.dark-section{
-  background:#0f172a;color:#fff;border-radius:36px;padding:46px
-}
-.dark-section p{color:#cbd5e1}
-.creator-card{
-  background:#fff;color:#111;border-radius:18px;padding:20px
-}
-.creator-card p{color:#666}
-
-/* SHOP */
-.shop-box{
-  background:linear-gradient(180deg,#fff,#f8fbff);
-  border:1px solid #eee;border-radius:36px;
-  padding:40px;box-shadow:0 20px 60px rgba(0,0,0,.06)
-}
-.shop-head{
-  display:grid;grid-template-columns:1fr .9fr;gap:28px;align-items:center;margin-bottom:30px
-}
-.shop-head h2{font-size:44px;margin:0 0 12px;font-weight:900}
-.shop-head p{color:#666;font-size:18px;line-height:1.7}
-.shop-note{
-  background:#111827;color:#fff;border-radius:24px;padding:26px
-}
-.shop-note p{color:#cbd5e1}
-
-.tabs{text-align:center;margin:28px 0}
-.tabs button{
-  margin:5px;padding:11px 20px;border-radius:999px;
-  border:1px solid #ddd;background:#fff;font-weight:900;cursor:pointer
-}
-.tabs button.active{background:#2563eb;color:#fff;border-color:#2563eb}
-
-.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
-.product{
-  border:1px solid #eee;border-radius:24px;overflow:hidden;
-  background:#fff;box-shadow:0 12px 35px rgba(0,0,0,.06)
-}
-.product-img{
-  height:170px;background:linear-gradient(135deg,#eff6ff,#dbeafe);
-  display:flex;align-items:center;justify-content:center;font-size:50px
-}
-.product-body{padding:20px}
-.product-cat{
-  display:inline-block;background:#eef4ff;color:#2563eb;
-  padding:6px 10px;border-radius:999px;font-size:12px;font-weight:900
-}
-.product h3{font-size:20px;margin:12px 0 8px}
-.product p{color:#666;font-size:14px;line-height:1.6}
-.buy{
-  display:block;text-align:center;background:#2563eb;color:#fff;
-  padding:12px;border-radius:14px;font-weight:900;margin-top:12px
-}
-.notice{
-  margin-top:24px;background:#fff7ed;color:#9a3412;
-  border:1px solid #fed7aa;border-radius:18px;padding:16px;line-height:1.6;font-size:14px
-}
-
-.process{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
-.step{background:#111827;color:#fff;border-radius:24px;padding:26px}
+.menu{display:flex;gap:22px;color:#475467;font-size:15px;font-weight:750}
+.menu a:hover{color:#2563eb}
+.right{display:flex;gap:10px;align-items:center}
+.lang{display:flex;gap:4px;background:#f3f4f6;border:1px solid #e5e7eb;border-radius:999px;padding:5px}
+.lang button{border:0;background:transparent;border-radius:999px;padding:8px 10px;font-weight:800;color:#667085;cursor:pointer}
+.lang button.active{background:#111827;color:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;background:#111827;color:#fff;padding:14px 22px;font-weight:850;box-shadow:0 12px 26px rgba(17,24,39,.13)}
+.btn.blue{background:#2563eb}
+.btn.light{background:#eef4ff;color:#2563eb;box-shadow:none}
+.btn.white{background:#fff;color:#111827}
+.hero{background:radial-gradient(circle at 15% 10%,rgba(37,99,235,.13),transparent 30%),radial-gradient(circle at 85% 12%,rgba(6,182,212,.16),transparent 32%),linear-gradient(180deg,#fff,#f8fbff 65%,#fff)}
+.hero-inner{max-width:1180px;margin:auto;padding:96px 22px 72px;text-align:center}
+.eyebrow{display:inline-flex;padding:10px 16px;border-radius:999px;background:#eef4ff;color:#2563eb;border:1px solid #dbe7ff;font-size:14px;font-weight:900;margin-bottom:26px}
+.hero h1{max-width:980px;margin:0 auto;font-size:64px;line-height:1.08;letter-spacing:-3.4px;font-weight:950}
+.hero h1 strong{background:linear-gradient(90deg,#2563eb,#06b6d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{max-width:780px;margin:28px auto 34px;color:#475467;font-size:20px;line-height:1.75}
+.actions{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-bottom:52px}
+.dashboard{max-width:1040px;margin:auto;background:rgba(255,255,255,.95);border:1px solid #e5e7eb;border-radius:36px;padding:22px;box-shadow:0 34px 90px rgba(16,24,40,.14);text-align:left}
+.dash-top{display:flex;justify-content:space-between;color:#667085;font-size:14px;font-weight:800;padding:6px 4px 18px}
+.dash-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:18px}
+.mock{background:#fff;border:1px solid #edf0f5;border-radius:28px;padding:24px;min-height:292px}
+.mock h3{margin:0 0 8px;font-size:22px;letter-spacing:-.5px}
+.mock p{margin:0;color:#667085;line-height:1.65}
+.flow{display:grid;gap:12px;margin-top:22px}
+.flow div{display:flex;justify-content:space-between;gap:14px;background:#f8fafc;border-radius:18px;padding:15px 16px;font-weight:900}
+.flow span:last-child{color:#2563eb;white-space:nowrap}
+.bar{height:13px;background:#e8eefc;border-radius:999px;margin:14px 0;overflow:hidden}
+.bar i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#2563eb,#06b6d4)}
+.pills{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.pill{padding:10px 13px;border-radius:999px;background:#eef4ff;color:#2563eb;font-weight:900;font-size:13px}
+.proof-strip{max-width:1180px;margin:0 auto;padding:34px 22px 54px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.proof-item{border:1px solid #edf0f5;background:#fff;border-radius:24px;padding:24px;min-height:158px}
+.proof-item span{display:inline-block;color:#2563eb;font-size:13px;font-weight:900;margin-bottom:16px}
+.proof-item strong{display:block;font-size:18px;letter-spacing:-.4px;margin-bottom:10px}
+.proof-item p{margin:0;color:#667085;line-height:1.6;font-size:14px}
+section{max-width:1180px;margin:auto;padding:88px 22px}
+.head{text-align:center;margin-bottom:46px}
+.head small{color:#2563eb;font-weight:900}
+.head h2{max-width:820px;margin:14px auto;font-size:46px;line-height:1.17;letter-spacing:-2px}
+.head p{max-width:780px;margin:auto;color:#667085;font-size:18px;line-height:1.75}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.feature{min-height:360px;border-radius:34px;background:#f8fafc;border:1px solid #eef0f4;padding:30px}
+.feature:hover{background:#fff;box-shadow:0 22px 60px rgba(16,24,40,.08);transform:translateY(-5px);transition:.25s}
+.icon{width:58px;height:58px;border-radius:20px;background:#eef4ff;display:flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:24px}
+.feature h3{font-size:27px;margin:0 0 14px}
+.feature p{color:#667085;line-height:1.75;margin:0}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:24px}
+.tags span{padding:8px 11px;border-radius:999px;background:#fff;border:1px solid #e5e7eb;color:#475467;font-size:13px;font-weight:800}
+.partner{background:#0f172a;color:#fff;border-radius:42px;padding:54px}
+.partner-layout{display:grid;grid-template-columns:.9fr 1.1fr;gap:42px;align-items:start}
+.partner-badge{display:inline-flex;padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.1);color:#bfdbfe;font-weight:900;margin-bottom:22px}
+.partner h2{font-size:44px;line-height:1.16;margin:0 0 18px;letter-spacing:-2px}
+.partner p{color:#cbd5e1;line-height:1.78;margin:0}
+.partner-note{margin-top:24px;padding:18px 20px;border-radius:22px;background:rgba(37,99,235,.2);color:#dbeafe!important;font-size:15px}
+.creator-panel{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.11);border-radius:30px;padding:26px}
+.creator-panel h3{margin:0 0 18px;font-size:22px}
+.creator-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.creator{background:#fff;color:#111827;border-radius:18px;padding:16px;min-height:96px}
+.creator strong{display:block;font-size:15px;margin-bottom:7px}
+.creator p{color:#667085!important;font-size:13px;line-height:1.55;margin:0}
+.category-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:30px}
+.category{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:24px;padding:22px;min-height:156px}
+.category span{font-size:28px}
+.category b{display:block;font-size:16px;margin:14px 0 8px}
+.category small{color:#cbd5e1;line-height:1.55}
+.shop-wrap{background:linear-gradient(180deg,#fff,#f8fbff);border:1px solid #eef0f4;border-radius:42px;padding:44px;box-shadow:0 24px 70px rgba(16,24,40,.07)}
+.shop-hero{display:grid;grid-template-columns:1fr .9fr;gap:34px;align-items:center;margin-bottom:34px}
+.shop-hero h2{font-size:46px;line-height:1.12;letter-spacing:-2px;margin:0 0 14px}
+.shop-hero p{color:#667085;font-size:18px;line-height:1.75;margin:0}
+.shop-note{background:#111827;color:#fff;border-radius:28px;padding:28px}
+.shop-note b{display:block;font-size:22px;margin-bottom:12px}
+.shop-note p{color:#d1d5db;margin:0;line-height:1.7}
+.shop-tabs{display:flex;gap:10px;flex-wrap:wrap;margin:26px 0 28px}
+.shop-tabs button{border:1px solid #dbe4f0;background:#fff;color:#475467;border-radius:999px;padding:12px 18px;font-weight:900;cursor:pointer}
+.shop-tabs button.active{background:#2563eb;color:#fff;border-color:#2563eb}
+.product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.product-card{display:flex;flex-direction:column;overflow:hidden;border:1px solid #eef0f4;background:#fff;border-radius:26px;box-shadow:0 14px 34px rgba(16,24,40,.06);transition:.25s}
+.product-card:hover{transform:translateY(-5px);box-shadow:0 24px 60px rgba(16,24,40,.1)}
+.product-img{height:180px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#eff6ff,#dbeafe);font-size:48px}
+.product-body{padding:20px;display:flex;flex-direction:column;gap:10px;flex:1}
+.product-cat{display:inline-flex;width:max-content;padding:6px 10px;border-radius:999px;background:#eef4ff;color:#2563eb;font-size:12px;font-weight:900}
+.product-body h3{font-size:20px;line-height:1.25;margin:0;letter-spacing:-.7px}
+.product-body p{color:#667085;font-size:14px;line-height:1.6;margin:0;flex:1}
+.product-price{font-size:14px;color:#111827;font-weight:900}
+.buy-btn{display:block;text-align:center;background:#2563eb;color:#fff;border-radius:14px;padding:12px 14px;font-weight:900;margin-top:6px}
+.partner-disclosure{margin-top:22px;padding:18px 20px;border-radius:22px;background:#fff7ed;color:#9a3412;font-size:14px;line-height:1.65;border:1px solid #fed7aa}
+.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.service{border:1px solid #eef0f4;border-radius:30px;padding:28px;background:#fff;min-height:230px}
+.service b{color:#2563eb;font-size:14px}
+.service h3{margin:18px 0 10px;font-size:23px}
+.service p{margin:0;color:#667085;line-height:1.72}
+.process{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.step{border-radius:30px;background:#111827;color:#fff;padding:28px;min-height:230px}
 .step b{color:#60a5fa}
-.step p{color:#cbd5e1;line-height:1.6}
-
-.contact-box{
-  background:#f8fafc;border:1px solid #eee;border-radius:30px;
-  padding:36px;display:grid;grid-template-columns:1fr 1fr;gap:28px
-}
-input,select,textarea{
-  width:100%;padding:14px;border:1px solid #ddd;border-radius:14px;margin-bottom:12px;font-size:15px
-}
-textarea{min-height:120px}
-button.submit{
-  background:#2563eb;color:#fff;border:0;border-radius:999px;
-  padding:14px 22px;font-weight:900;cursor:pointer
-}
-
-footer{background:#f8fafc;border-top:1px solid #eee;padding:46px 20px;color:#666}
-.footer{max-width:1180px;margin:auto;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:24px}
-.footer strong{font-size:22px;color:#111}
-
-@media(max-width:900px){
-  .menu a{display:none}
-  .hero h1{font-size:36px}
-  .shop-head,.contact-box,.footer{grid-template-columns:1fr}
-  .dark-section,.shop-box{padding:26px}
+.step h3{margin:22px 0 10px;font-size:22px}
+.step p{margin:0;color:#cbd5e1;line-height:1.7}
+.contact-box{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;background:#f8fafc;border:1px solid #eef0f4;border-radius:38px;padding:38px}
+.contact-box h2{font-size:38px;line-height:1.18;letter-spacing:-1.5px;margin:0 0 16px}
+.contact-box p{color:#667085;line-height:1.75}
+.form{display:grid;gap:12px}
+.form input,.form textarea,.form select{width:100%;border:1px solid #d8dee8;border-radius:16px;padding:15px 16px;font-size:15px;background:#fff}
+.form textarea{min-height:120px;resize:vertical}
+.form button{border:0}
+.cta{max-width:1120px;margin:72px auto 90px;padding:72px 40px;border-radius:40px;background:linear-gradient(135deg,#2563eb,#06b6d4);color:white;text-align:center}
+.cta h2{font-size:44px;line-height:1.18;margin:0 auto 18px;max-width:850px;letter-spacing:-1.8px}
+.cta p{max-width:760px;margin:0 auto 30px;font-size:18px;line-height:1.75;opacity:.94}
+footer{border-top:1px solid #eef0f4;background:#f8fafc;padding:54px 22px;color:#667085}
+.footer-pro{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:34px}
+.footer-brand strong{font-size:22px;letter-spacing:-.6px;color:#111827}
+.footer-brand p,.footer-info p{color:#667085;line-height:1.7;margin:8px 0 0;font-size:14px}
+.footer-desc{margin-top:18px!important;max-width:360px}
+.footer-info h4{margin:0 0 14px;font-size:15px;color:#111827}
+@media(max-width:960px){
+.menu{display:none}.right .btn{display:none}.hero h1{font-size:42px;letter-spacing:-2px}.hero p{font-size:17px}
+.dash-grid,.proof-strip,.features,.partner-layout,.creator-grid,.category-grid,.service-grid,.process,.contact-box,.footer-pro,.shop-hero,.product-grid{grid-template-columns:1fr}
+.head h2,.cta h2,.partner h2,.contact-box h2,.shop-hero h2{font-size:34px}
+section{padding:68px 18px}.dashboard{border-radius:26px}.partner{padding:34px 22px;border-radius:30px}.shop-wrap{padding:28px 18px;border-radius:30px}.lang button{padding:7px 9px}
 }
 </style>
 </head>
-
 <body>
 
 <header>
-  <div class="logo">CG<span>global</span></div>
-  <div class="menu">
-    <a href="#about" data-i18n="nav_about">소개</a>
-    <a href="#influencer" data-i18n="nav_influencer">인플루언서</a>
-    <a href="#shop" data-i18n="nav_shop">상품관</a>
-    <a href="#process" data-i18n="nav_process">프로세스</a>
-    <a href="#contact" data-i18n="nav_contact">문의</a>
-    <div class="lang">
-      <button id="btn-ko" class="active" onclick="setLang('ko')">KR</button>
-      <button id="btn-en" onclick="setLang('en')">EN</button>
-      <button id="btn-zh" onclick="setLang('zh')">CN</button>
-    </div>
-  </div>
+<div class="nav">
+<a href="#top" class="logo">CG<span>global</span></a>
+<nav class="menu">
+<a href="#why" data-i18n="nav_why">Why CGglobal</a>
+<a href="#network" data-i18n="nav_network">Influencer</a>
+<a href="#shop" data-i18n="nav_shop">상품관</a>
+<a href="#services" data-i18n="nav_services">Services</a>
+<a href="#process" data-i18n="nav_process">Process</a>
+<a href="#contact" data-i18n="nav_contact">문의</a>
+</nav>
+<div class="right">
+<div class="lang">
+<button id="btn-ko" class="active" onclick="setLang('ko')">KR</button>
+<button id="btn-en" onclick="setLang('en')">EN</button>
+<button id="btn-zh" onclick="setLang('zh')">CN</button>
+</div>
+<a class="btn blue" href="mailto:zesia@coregateglobal.com?subject=CGglobal%20Inquiry" data-i18n="nav_contact_btn">문의</a>
+</div>
+</div>
 </header>
 
+<main id="top">
 <section class="hero">
-  <h1 data-i18n="hero_title">숏폼에서 상품관까지,<br>구매 전환 구조를 만듭니다</h1>
-  <p data-i18n="hero_desc">
-    CGglobal은 한국 인플루언서, 숏폼 콘텐츠, 상품관, 쿠팡 파트너스 링크, 중국·글로벌 커머스를 하나의 실행 구조로 연결합니다.
-  </p>
-  <a href="#shop" class="btn" data-i18n="hero_btn_shop">상품관 보기</a>
-  <a href="#contact" class="btn dark" data-i18n="hero_btn_contact">문의하기</a>
+<div class="hero-inner">
+<div class="eyebrow" data-i18n="hero_badge">All-In-One Global Commerce Execution Partner</div>
+<h1 data-i18n-html="hero_title">한국 브랜드의 글로벌 진출,<br><strong>찾고 · 연결하고 · 판매까지</strong></h1>
+<p data-i18n="hero_desc">CGglobal은 한국 제품을 중국과 글로벌 시장에 맞는 콘텐츠로 바꾸고, 한국 인플루언서 연결, AI 무역 콘텐츠, B2B 바이어 연결, 크로스보더 유통까지 실행하는 글로벌 커머스 파트너입니다.</p>
+<div class="actions">
+<a class="btn blue" href="#shop" data-i18n="hero_btn1">상품관 보기</a>
+<a class="btn light" href="#network" data-i18n="hero_btn2">인플루언서 네트워크 보기</a>
+</div>
+
+<div class="dashboard">
+<div class="dash-top"><span>CGglobal Operating Dashboard</span><span>Korea → China → Global</span></div>
+<div class="dash-grid">
+<div class="mock">
+<h3 data-i18n="dash_title">Campaign Execution Flow</h3>
+<p data-i18n="dash_desc">제품 분석부터 콘텐츠 제작, 한국 인플루언서 연결, 판매 데이터 확인까지 한 흐름으로 관리합니다.</p>
+<div class="flow">
+<div><span data-i18n="flow1">Product Fit</span><span>92%</span></div>
+<div><span data-i18n="flow2">Creator Match</span><span>86%</span></div>
+<div><span data-i18n="flow3">Channel Match</span><span>78%</span></div>
+</div>
+</div>
+<div class="mock">
+<h3 data-i18n="channel_title">Core Channels</h3>
+<p data-i18n="channel_desc">한국 인플루언서 콘텐츠를 중국·글로벌 커머스 채널에 맞게 연결합니다.</p>
+<div class="bar"><i style="width:88%"></i></div>
+<div class="bar"><i style="width:72%"></i></div>
+<div class="bar"><i style="width:64%"></i></div>
+<div class="bar"><i style="width:91%"></i></div>
+<div class="pills"><span class="pill">K-Influencer</span><span class="pill">Douyin</span><span class="pill">Xiaohongshu</span><span class="pill">TikTok</span><span class="pill">Coupang</span></div>
+</div>
+</div>
+</div>
+</div>
 </section>
 
-<section id="about" class="section">
-  <div class="section-title">
-    <h2 data-i18n="about_title">CGglobal은 무엇을 하나요?</h2>
-    <p data-i18n="about_desc">단순 광고가 아니라, 콘텐츠가 상품 클릭과 구매로 이어지는 커머스 운영 구조를 만듭니다.</p>
-  </div>
-  <div class="grid">
-    <div class="card">
-      <h3 data-i18n="about_1_t">숏폼 콘텐츠</h3>
-      <p data-i18n="about_1_d">틱톡, 릴스, 쇼츠에 적합한 상품 소개형 콘텐츠를 제작하고 운영합니다.</p>
-    </div>
-    <div class="card">
-      <h3 data-i18n="about_2_t">인플루언서 연결</h3>
-      <p data-i18n="about_2_d">한국 인플루언서와 쇼호스트, 숏폼 크리에이터 협업 구조를 설계합니다.</p>
-    </div>
-    <div class="card">
-      <h3 data-i18n="about_3_t">상품관 전환</h3>
-      <p data-i18n="about_3_d">숏폼 유입을 홈페이지 상품관과 구매 링크로 연결합니다.</p>
-    </div>
-  </div>
+<div class="proof-strip">
+<div class="proof-item"><span>01</span><strong data-i18n="proof1_t">Market Intelligence</strong><p data-i18n="proof1_d">중국·글로벌 시장 진입 가능성 분석</p></div>
+<div class="proof-item"><span>02</span><strong data-i18n="proof2_t">K-Influencer Network</strong><p data-i18n="proof2_d">한국 인플루언서·쇼호스트 연결</p></div>
+<div class="proof-item"><span>03</span><strong data-i18n="proof3_t">Commerce Operation</strong><p data-i18n="proof3_d">도우인·샤오홍슈·틱톡형 판매 운영</p></div>
+<div class="proof-item"><span>04</span><strong data-i18n="proof4_t">Product Gallery</strong><p data-i18n="proof4_d">숏폼 유입을 상품관으로 연결</p></div>
+</div>
+
+<section id="why">
+<div class="head">
+<small>WHY CGGLOBAL</small>
+<h2 data-i18n-html="why_title">해외 진출은 광고가 아니라<br>운영 시스템입니다.</h2>
+<p data-i18n="why_desc">단순히 인플루언서를 섭외하거나 콘텐츠를 만드는 것만으로는 매출이 연결되지 않습니다. CGglobal은 제품, 한국 인플루언서, 콘텐츠, 채널, 상품관, 바이어, 운영 데이터를 하나의 실행 구조로 연결합니다.</p>
+</div>
+<div class="features">
+<div class="feature"><div class="icon">🔍</div><h3 data-i18n="f1_t">Discover</h3><p data-i18n="f1_d">시장에 맞는 제품 포지션, 가격, 소비자 메시지, 진입 채널을 먼저 찾습니다.</p><div class="tags"><span>Market Fit</span><span>Competitor</span><span>Pricing</span></div></div>
+<div class="feature"><div class="icon">🤳</div><h3 data-i18n="f2_t">Creator Match</h3><p data-i18n="f2_d">브랜드에 맞는 한국 인플루언서, 쇼호스트, 숏폼 크리에이터 연결 구조를 설계합니다.</p><div class="tags"><span>K-Influencer</span><span>Creator</span><span>Show Host</span></div></div>
+<div class="feature"><div class="icon">📈</div><h3 data-i18n="f3_t">Scale</h3><p data-i18n="f3_d">콘텐츠 반응과 판매 데이터를 기준으로 광고, 유통, 파트너십을 단계적으로 확대합니다.</p><div class="tags"><span>Data</span><span>Commerce</span><span>B2B</span></div></div>
+</div>
 </section>
 
-<section id="influencer" class="section">
-  <div class="dark-section">
-    <div class="section-title" style="text-align:left;margin-bottom:28px">
-      <h2 data-i18n="inf_title">한국 인플루언서 네트워크</h2>
-      <p data-i18n="inf_desc">CGglobal은 스토리앤미디어 협력 기반으로 한국 인플루언서, 쇼호스트, 숏폼 크리에이터 협업을 연결할 수 있습니다.</p>
-    </div>
-    <div class="grid">
-      <div class="creator-card"><h3>Beauty & Lifestyle</h3><p data-i18n="inf_1">뷰티, 화장품, 라이프스타일 상품 콘텐츠</p></div>
-      <div class="creator-card"><h3>Food & Place</h3><p data-i18n="inf_2">식품, 맛집, 공간, 방문형 리뷰 콘텐츠</p></div>
-      <div class="creator-card"><h3>Fashion & Style</h3><p data-i18n="inf_3">패션, 스타일, 착용형 숏폼 콘텐츠</p></div>
-      <div class="creator-card"><h3>Health & Sports</h3><p data-i18n="inf_4">운동, 건강, 다이어트 관련 콘텐츠</p></div>
-    </div>
-  </div>
+<section id="network">
+<div class="partner">
+<div class="partner-layout">
+<div>
+<div class="partner-badge" data-i18n="partner_badge">Official Partner Network</div>
+<h2 data-i18n-html="partner_title">한국 인플루언서 연결이 가능한<br>CGglobal 파트너 네트워크</h2>
+<p data-i18n="partner_desc">CGglobal은 스토리앤미디어 협력사로서 한국 인플루언서·쇼호스트·숏폼 크리에이터 협업을 중국 및 글로벌 커머스 실행 구조와 연결합니다.</p>
+<p class="partner-note" data-i18n="partner_note">브랜드 목적에 따라 아웃도어·스포츠, 패션·뷰티·라이프스타일, 엔터테인먼트, 플레이스, 지식교양·테크 분야의 크리에이터 협업을 기획할 수 있습니다.</p>
+</div>
+<div class="creator-panel">
+<h3 data-i18n="creator_title">Public Creator Examples</h3>
+<div class="creator-grid">
+<div class="creator"><strong>우주킹토킹</strong><p data-i18n="c1">맛집·공간·리뷰형 콘텐츠</p></div>
+<div class="creator"><strong>모찌윤</strong><p data-i18n="c2">푸드·라이프스타일 리뷰</p></div>
+<div class="creator"><strong>김부자</strong><p data-i18n="c3">식품·선물세트·생활형 콘텐츠</p></div>
+<div class="creator"><strong>운동레저인플햇지</strong><p data-i18n="c4">운동·레저·건강 카테고리</p></div>
+<div class="creator"><strong>웅자92</strong><p data-i18n="c5">플레이스·맛집·방문형 리뷰</p></div>
+<div class="creator"><strong>badasoop</strong><p data-i18n="c6">라이프스타일·감성형 콘텐츠</p></div>
+<div class="creator"><strong>깐냉</strong><p data-i18n="c7">맛집·지역 기반 리뷰</p></div>
+<div class="creator"><strong>라라하</strong><p data-i18n="c8">상위노출형 리뷰 콘텐츠</p></div>
+</div>
+</div>
+</div>
+<div class="category-grid">
+<div class="category"><span>🏃</span><b>Outdoor & Sports</b><small data-i18n="cat1">액티비티, 건강, 스포츠 분야 협업</small></div>
+<div class="category"><span>💄</span><b>Fashion · Beauty</b><small data-i18n="cat2">뷰티·패션·라이프스타일 콘텐츠</small></div>
+<div class="category"><span>🎤</span><b>Entertainment</b><small data-i18n="cat3">엔터테인먼트·이슈형 콘텐츠 확산</small></div>
+<div class="category"><span>📍</span><b>Place</b><small data-i18n="cat4">플레이스·오프라인 방문형 캠페인</small></div>
+<div class="category"><span>💡</span><b>Knowledge · Tech</b><small data-i18n="cat5">전문성 기반 설명형 콘텐츠</small></div>
+</div>
+</div>
 </section>
 
-<section id="shop" class="section">
-  <div class="shop-box">
-    <div class="shop-head">
-      <div>
-        <h2 data-i18n="shop_title">CGglobal 상품관</h2>
-        <p data-i18n="shop_desc">
-          숏폼 영상에서 소개된 추천 상품을 한곳에서 확인할 수 있습니다. 식품, 뷰티, 패션, 건강보조식품 카테고리별로 상품을 전시하고 쿠팡 파트너스 링크로 연결할 수 있습니다.
-        </p>
-      </div>
-      <div class="shop-note">
-        <h3 data-i18n="shop_note_t">Shortform → Shop → Purchase</h3>
-        <p data-i18n="shop_note_d">영상에서 “프로필 링크 확인”으로 유입시키고, 상품관에서 구매 링크를 클릭하도록 설계합니다.</p>
-      </div>
-    </div>
+<section id="shop">
+<div class="shop-wrap">
+<div class="shop-hero">
+<div>
+<small style="color:#2563eb;font-weight:900">PRODUCT GALLERY</small>
+<h2 data-i18n="shop_title">CGglobal 상품관</h2>
+<p data-i18n="shop_desc">숏폼 영상에서 소개되는 추천 상품을 한곳에서 확인할 수 있습니다. 식품, 뷰티, 패션, 건강보조식품 카테고리별로 쿠팡 파트너스 링크를 연결해 운영할 수 있습니다.</p>
+</div>
+<div class="shop-note">
+<b data-i18n="shop_note_t">Shortform → Shop → Purchase</b>
+<p data-i18n="shop_note_d">틱톡·릴스·쇼츠 영상에서 “프로필 링크 확인”으로 유입시키고, 이 상품관에서 구매 링크를 클릭하도록 설계합니다.</p>
+</div>
+</div>
 
-    <div class="tabs">
-      <button class="active" onclick="filterProducts('all', this)" data-i18n="tab_all">전체</button>
-      <button onclick="filterProducts('food', this)" data-i18n="tab_food">식품</button>
-      <button onclick="filterProducts('beauty', this)" data-i18n="tab_beauty">뷰티</button>
-      <button onclick="filterProducts('fashion', this)" data-i18n="tab_fashion">패션</button>
-      <button onclick="filterProducts('health', this)" data-i18n="tab_health">건강보조식품</button>
-    </div>
+<div class="shop-tabs">
+<button class="active" onclick="filterProducts('all',this)" data-i18n="tab_all">전체</button>
+<button onclick="filterProducts('food',this)" data-i18n="tab_food">식품</button>
+<button onclick="filterProducts('beauty',this)" data-i18n="tab_beauty">뷰티</button>
+<button onclick="filterProducts('fashion',this)" data-i18n="tab_fashion">패션</button>
+<button onclick="filterProducts('health',this)" data-i18n="tab_health">건강보조식품</button>
+</div>
 
-    <div class="products">
-      <div class="product" data-cat="food">
-        <div class="product-img">🍜</div>
-        <div class="product-body">
-          <span class="product-cat" data-i18n="cat_food">식품</span>
-          <h3 data-i18n="p1_t">프리미엄 간편식</h3>
-          <p data-i18n="p1_d">숏폼에서 반응이 좋은 간편식·밀키트·간식류 상품입니다.</p>
-          <a class="buy" href="https://www.coupang.com/" target="_blank" data-i18n="buy">상품 보기</a>
-        </div>
-      </div>
+<div class="product-grid">
+<div class="product-card" data-cat="food">
+<div class="product-img">🍜</div>
+<div class="product-body"><span class="product-cat" data-i18n="cat_food">식품</span><h3 data-i18n="p1_t">프리미엄 간편식</h3><p data-i18n="p1_d">숏폼에서 반응이 좋은 간편식·밀키트·간식류 상품을 전시하는 공간입니다.</p><div class="product-price" data-i18n="price_ready">링크 준비중</div><a class="buy-btn" href="https://www.coupang.com/" target="_blank" data-i18n="buy_btn">상품 보기</a></div>
+</div>
+<div class="product-card" data-cat="food">
+<div class="product-img">🍯</div>
+<div class="product-body"><span class="product-cat" data-i18n="cat_food">식품</span><h3 data-i18n="p2_t">건강 간식 추천</h3><p data-i18n="p2_d">다이어트 간식, 견과류, 영양 간식 등 영상 설명이 쉬운 상품에 적합합니다.</p><div class="product-price" data-i18n="price_ready">링크 준비중</div><a class="buy-btn" href="https://www.coupang.com/" target="_blank" data-i18n="buy_btn">상품 보기</a></div>
+</div>
+<div class="product-card" data-cat="beauty">
+<div class="product-img">💄</div>
+<div class="product-body"><span class="product-cat" data-i18n="cat_beauty">뷰티</span><h3 data-i18n="p3_t">스킨케어 추천템</h3><p data-i18n="p3_d">크림, 세럼, 마스크팩 등 전후 비교와 사용 장면이 잘 보이는 상품을 전시합니다.</p><div class="product-price" data-i18n="price_ready">링크 준비중</div><a class="buy-btn" href="https://www.coupang.com/" target="_blank" data-i18n="buy_btn">상품 보기</a></div>
+</div>
+<div class="product-card" data-cat="beauty">
+<div class="product-img">🧴</div>
+<div class="product-body"><span class="product-cat" data-i18n="cat_beauty">뷰티</span><h3 data-i18n="p4_t">헤어·바디 케어</h3><p data-i18n="p4_d">헤어팩, 바디로션, 클렌징 제품처럼 반복 구매가 가능한 상품군입니다.</p><div class="product-price" data-i18n="price_ready">링크 준비중</div><a class="buy-btn" href="https://www.coupang.com/" target="_blank" data-i18n="buy_btn">상품 보기</a></div>
+</div>
+<div class="product-card" data-cat="fashion">
+<div class="product-img">👗</div>
+<div class="product-body"><span class="product-cat" data-i18n="cat_fashion">패션</span><h3 data-i18n="p5_t">데일리 패션 아이템</h3><p data-i18n="p5_d">가방, 의류, 액세서리 등 짧은 영상에서 착용감과 스타일을 보여주기 좋습니다.</p><div class="product-price" data-i18n="price_ready">링크 준비중</div><a class="buy-btn" href="https://www.coupang.com/" target="_blank" data-i18n="buy_btn">상품 보기</a></div>
+</div>
+<div class="product-card" data-cat="fashion">
+<div class="product-img">👟</div>
+<div class="product-body"><span class="product-cat" data-i18n="cat_fashion">패션</span><h3 data-i18n="p6_t">슈즈·잡화 추천</h3><p data-i18n="p6_d">운동화, 슬리퍼, 모자, 지갑 등 즉시 구매 전환이 쉬운 상품군입니다.</p><div class="product-price" data-i18n="price_ready">링크 준비중</div><a class="buy-btn" href="https://www.coupang.com/" target="_blank" data-i18n="buy_btn">상품 보기</a></div>
+</div>
+<div class="product-card" data-cat="health">
+<div class="product-img">💊</div>
+<div class="product-body"><span class="product-cat" data-i18n="cat_health">건강보조식품</span><h3 data-i18n="p7_t">비타민·영양제</h3><p data-i18n="p7_d">비타민, 루테인, 오메가 등 수요가 안정적인 건강보조식품을 전시합니다.</p><div class="product-price" data-i18n="price_ready">링크 준비중</div><a class="buy-btn" href="https://www.coupang.com/" target="_blank" data-i18n="buy_btn">상품 보기</a></div>
+</div>
+<div class="product-card" data-cat="health">
+<div class="product-img">🏃</div>
+<div class="product-body"><span class="product-cat" data-i18n="cat_health">건강보조식품</span><h3 data-i18n="p8_t">운동·다이어트 보조</h3><p data-i18n="p8_d">단백질, 식이섬유, 다이어트 보조 제품처럼 숏폼 전환이 쉬운 상품군입니다.</p><div class="product-price" data-i18n="price_ready">링크 준비중</div><a class="buy-btn" href="https://www.coupang.com/" target="_blank" data-i18n="buy_btn">상품 보기</a></div>
+</div>
+</div>
 
-      <div class="product" data-cat="food">
-        <div class="product-img">🍯</div>
-        <div class="product-body">
-          <span class="product-cat" data-i18n="cat_food">식품</span>
-          <h3 data-i18n="p2_t">건강 간식 추천</h3>
-          <p data-i18n="p2_d">다이어트 간식, 견과류, 영양 간식 등 영상 설명이 쉬운 상품입니다.</p>
-          <a class="buy" href="https://www.coupang.com/" target="_blank" data-i18n="buy">상품 보기</a>
-        </div>
-      </div>
-
-      <div class="product" data-cat="beauty">
-        <div class="product-img">💄</div>
-        <div class="product-body">
-          <span class="product-cat" data-i18n="cat_beauty">뷰티</span>
-          <h3 data-i18n="p3_t">스킨케어 추천템</h3>
-          <p data-i18n="p3_d">크림, 세럼, 마스크팩 등 사용 장면이 잘 보이는 상품입니다.</p>
-          <a class="buy" href="https://www.coupang.com/" target="_blank" data-i18n="buy">상품 보기</a>
-        </div>
-      </div>
-
-      <div class="product" data-cat="beauty">
-        <div class="product-img">🧴</div>
-        <div class="product-body">
-          <span class="product-cat" data-i18n="cat_beauty">뷰티</span>
-          <h3 data-i18n="p4_t">헤어·바디 케어</h3>
-          <p data-i18n="p4_d">헤어팩, 바디로션, 클렌징 제품처럼 반복 구매가 가능한 상품입니다.</p>
-          <a class="buy" href="https://www.coupang.com/" target="_blank" data-i18n="buy">상품 보기</a>
-        </div>
-      </div>
-
-      <div class="product" data-cat="fashion">
-        <div class="product-img">👗</div>
-        <div class="product-body">
-          <span class="product-cat" data-i18n="cat_fashion">패션</span>
-          <h3 data-i18n="p5_t">데일리 패션 아이템</h3>
-          <p data-i18n="p5_d">가방, 의류, 액세서리 등 스타일을 보여주기 좋은 상품입니다.</p>
-          <a class="buy" href="https://www.coupang.com/" target="_blank" data-i18n="buy">상품 보기</a>
-        </div>
-      </div>
-
-      <div class="product" data-cat="fashion">
-        <div class="product-img">👟</div>
-        <div class="product-body">
-          <span class="product-cat" data-i18n="cat_fashion">패션</span>
-          <h3 data-i18n="p6_t">슈즈·잡화 추천</h3>
-          <p data-i18n="p6_d">운동화, 슬리퍼, 모자, 지갑 등 구매 전환이 쉬운 상품입니다.</p>
-          <a class="buy" href="https://www.coupang.com/" target="_blank" data-i18n="buy">상품 보기</a>
-        </div>
-      </div>
-
-      <div class="product" data-cat="health">
-        <div class="product-img">💊</div>
-        <div class="product-body">
-          <span class="product-cat" data-i18n="cat_health">건강보조식품</span>
-          <h3 data-i18n="p7_t">비타민·영양제</h3>
-          <p data-i18n="p7_d">비타민, 루테인, 오메가 등 수요가 안정적인 건강 제품입니다.</p>
-          <a class="buy" href="https://www.coupang.com/" target="_blank" data-i18n="buy">상품 보기</a>
-        </div>
-      </div>
-
-      <div class="product" data-cat="health">
-        <div class="product-img">🏃</div>
-        <div class="product-body">
-          <span class="product-cat" data-i18n="cat_health">건강보조식품</span>
-          <h3 data-i18n="p8_t">운동·다이어트 보조</h3>
-          <p data-i18n="p8_d">단백질, 식이섬유, 다이어트 보조 제품에 적합한 상품입니다.</p>
-          <a class="buy" href="https://www.coupang.com/" target="_blank" data-i18n="buy">상품 보기</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="notice" data-i18n="notice">
-      본 상품관의 일부 링크는 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받을 수 있습니다.
-    </div>
-  </div>
+<div class="partner-disclosure" data-i18n="partner_disclosure">본 상품관의 일부 링크는 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받을 수 있습니다. 실제 상품명, 가격, 이미지, 링크는 쿠팡 파트너스 링크로 교체해 사용하면 됩니다.</div>
+</div>
 </section>
 
-<section id="process" class="section">
-  <div class="section-title">
-    <h2 data-i18n="process_title">상품 선정부터 수익화까지</h2>
-    <p data-i18n="process_desc">숏폼 영상과 상품관을 연결해 구매 전환 흐름을 만듭니다.</p>
-  </div>
-  <div class="process">
-    <div class="step"><b>STEP 01</b><h3 data-i18n="step1_t">상품 선정</h3><p data-i18n="step1_d">전환이 쉬운 상품을 선별합니다.</p></div>
-    <div class="step"><b>STEP 02</b><h3 data-i18n="step2_t">영상 제작</h3><p data-i18n="step2_d">숏폼 콘텐츠를 제작합니다.</p></div>
-    <div class="step"><b>STEP 03</b><h3 data-i18n="step3_t">상품관 연결</h3><p data-i18n="step3_d">프로필 링크를 상품관으로 연결합니다.</p></div>
-    <div class="step"><b>STEP 04</b><h3 data-i18n="step4_t">수익화</h3><p data-i18n="step4_d">클릭과 구매 데이터를 기반으로 확장합니다.</p></div>
-  </div>
+<section id="services">
+<div class="head">
+<small>SERVICES</small>
+<h2 data-i18n="service_title">CGglobal 주요 서비스</h2>
+<p data-i18n="service_desc">브랜드가 해외 시장에서 실제로 움직일 수 있도록 필요한 기능을 모듈형으로 제공합니다.</p>
+</div>
+<div class="service-grid">
+<div class="service"><b>01</b><h3 data-i18n="s1_t">Market Entry</h3><p data-i18n="s1_d">제품 포지션, 가격, 경쟁사, 채널 적합성을 분석합니다.</p></div>
+<div class="service"><b>02</b><h3 data-i18n="s2_t">K-Influencer Matching</h3><p data-i18n="s2_d">한국 인플루언서, 쇼호스트, 숏폼 크리에이터 협업을 연결합니다.</p></div>
+<div class="service"><b>03</b><h3 data-i18n="s3_t">AI Trade Content</h3><p data-i18n="s3_d">AI 번역, 더빙, 숏폼 전환, 바이어용 소개 콘텐츠를 제작합니다.</p></div>
+<div class="service"><b>04</b><h3 data-i18n="s4_t">China Commerce</h3><p data-i18n="s4_d">중국 온라인 판매, 라이브커머스, 상품 링크, 프로모션 운영을 지원합니다.</p></div>
+<div class="service"><b>05</b><h3 data-i18n="s5_t">B2B Matching</h3><p data-i18n="s5_d">글로벌 바이어, 유통상, 현지 실행 파트너를 연결합니다.</p></div>
+<div class="service"><b>06</b><h3 data-i18n="s6_t">Cross-border Ops</h3><p data-i18n="s6_d">샘플 발송, 판매 검증, 크로스보더 유통 구조를 설계합니다.</p></div>
+</div>
 </section>
 
-<section id="contact" class="section">
-  <div class="contact-box">
-    <div>
-      <h2 data-i18n="contact_title">CGglobal에 문의하세요</h2>
-      <p data-i18n="contact_desc">상품관 운영, 인플루언서 협업, 중국 커머스 실행 관련 문의를 보내주세요.</p>
-      <a class="btn blue" href="mailto:zesia@coregateglobal.com?subject=CGglobal%20Inquiry" data-i18n="contact_btn">메일로 문의</a>
-    </div>
-    <form class="form" action="mailto:zesia@coregateglobal.com" method="post" enctype="text/plain">
-      <input name="name" placeholder="Name / 이름">
-      <input name="email" placeholder="Email / 이메일">
-      <select name="interest">
-        <option>Product Gallery / 상품관</option>
-        <option>Korean Influencer Matching</option>
-        <option>China Commerce</option>
-      </select>
-      <textarea name="message" placeholder="Message / 문의 내용"></textarea>
-      <button class="submit" type="submit" data-i18n="submit">문의 보내기</button>
-    </form>
-  </div>
+<section id="process">
+<div class="head">
+<small>PROCESS</small>
+<h2 data-i18n="process_title">검증하고, 연결하고, 확장합니다.</h2>
+<p data-i18n="process_desc">초기부터 큰 비용을 태우지 않고, 제품과 시장 반응을 확인하면서 단계적으로 확장합니다.</p>
+</div>
+<div class="process">
+<div class="step"><b>STEP 01</b><h3 data-i18n="p1_t">진단</h3><p data-i18n="p1_d">제품, 가격, 패키지, 경쟁사, 시장성을 검토합니다.</p></div>
+<div class="step"><b>STEP 02</b><h3 data-i18n="p2_t">매칭</h3><p data-i18n="p2_d">브랜드에 맞는 한국 인플루언서와 콘텐츠 방향을 설계합니다.</p></div>
+<div class="step"><b>STEP 03</b><h3 data-i18n="p3_t">실행</h3><p data-i18n="p3_d">숏폼, 라이브커머스, 콘텐츠 확산, B2B 상담을 운영합니다.</p></div>
+<div class="step"><b>STEP 04</b><h3 data-i18n="p4_t">확장</h3><p data-i18n="p4_d">반응 데이터를 기준으로 광고, 유통, 파트너십을 확대합니다.</p></div>
+</div>
 </section>
+
+<section id="contact">
+<div class="contact-box">
+<div>
+<small style="color:#2563eb;font-weight:900">CONTACT</small>
+<h2 data-i18n="contact_title">CGglobal에 문의하세요.</h2>
+<p data-i18n="contact_desc">한국 인플루언서 협업, 중국 커머스 실행, 글로벌 바이어 연결, 크로스보더 유통 관련 문의를 보내주시면 확인 후 연락드리겠습니다.</p>
+<a class="btn blue" href="mailto:zesia@coregateglobal.com?subject=CGglobal%20Inquiry" data-i18n="contact_mail">메일로 바로 문의</a>
+</div>
+<form class="form" action="mailto:zesia@coregateglobal.com" method="post" enctype="text/plain">
+<input name="company" placeholder="Company / 회사명">
+<input name="name" placeholder="Name / 담당자명">
+<input name="email" placeholder="Email / 이메일">
+<select name="interest">
+<option>Inquiry Type / 문의 분야</option>
+<option>Korean Influencer Matching</option>
+<option>China Commerce</option>
+<option>AI Trade Content</option>
+<option>Product Gallery</option>
+<option>B2B Buyer Matching</option>
+</select>
+<textarea name="message" placeholder="Message / 문의 내용을 입력해 주세요"></textarea>
+<button class="btn blue" type="submit" data-i18n="form_submit">문의 보내기</button>
+</form>
+</div>
+</section>
+
+<div class="cta">
+<h2 data-i18n="cta_title">좋은 제품을 글로벌 시장의 언어로 바꾸세요.</h2>
+<p data-i18n="cta_desc">CGglobal이 한국 인플루언서, 콘텐츠, 상품관, 중국 커머스, 글로벌 바이어 연결까지 함께 설계합니다.</p>
+<a class="btn white" href="mailto:zesia@coregateglobal.com?subject=CGglobal%20Inquiry">zesia@coregateglobal.com</a>
+</div>
+</main>
 
 <footer>
-  <div class="footer">
-    <div><strong>CGglobal</strong><p data-i18n="footer_desc">AI Trade · Shortform Commerce · Korean Influencer Growth</p></div>
-    <div><h4>Contact</h4><p>Website: coregateglobal.com</p><p>Email: zesia@coregateglobal.com</p></div>
-    <div><h4>Korea Office</h4><p>서울특별시 금천구 디지털로9길 47, 804호</p><p>가산동, 한신IT타워2차</p></div>
-    <div><h4>China Office</h4><p>上海市闵行区莲花南路3110号</p><p>A栋 A710</p></div>
-  </div>
+<div class="footer-pro">
+<div class="footer-brand"><strong>CGglobal</strong><p data-i18n="footer_tag">AI Trade · China Commerce · Korean Influencer Growth</p><p class="footer-desc" data-i18n="footer_desc">한국 브랜드의 글로벌 진출을 한국 인플루언서 협업, 콘텐츠, B2B 바이어 연결, 크로스보더 유통으로 실행하는 글로벌 커머스 파트너입니다.</p></div>
+<div class="footer-info"><h4>Contact</h4><p>Website: coregateglobal.com</p><p>Email: zesia@coregateglobal.com</p></div>
+<div class="footer-info"><h4>Korea Office</h4><p>서울특별시 금천구 디지털로9길 47, 804호</p><p>가산동, 한신IT타워2차</p></div>
+<div class="footer-info"><h4>China Office</h4><p>上海市闵行区莲花南路3110号</p><p>A栋 A710</p></div>
+</div>
 </footer>
 
 <script>
-const langData={
+function filterProducts(cat,btn){
+document.querySelectorAll(".shop-tabs button").forEach(b=>b.classList.remove("active"));
+btn.classList.add("active");
+document.querySelectorAll(".product-card").forEach(card=>{
+const c=card.getAttribute("data-cat");
+card.style.display=(cat==="all"||c===cat)?"flex":"none";
+});
+}
+
+const dict={
 ko:{
-nav_about:"소개",nav_influencer:"인플루언서",nav_shop:"상품관",nav_process:"프로세스",nav_contact:"문의",
-hero_title:"숏폼에서 상품관까지,<br>구매 전환 구조를 만듭니다",
-hero_desc:"CGglobal은 한국 인플루언서, 숏폼 콘텐츠, 상품관, 쿠팡 파트너스 링크, 중국·글로벌 커머스를 하나의 실행 구조로 연결합니다.",
-hero_btn_shop:"상품관 보기",hero_btn_contact:"문의하기",
-about_title:"CGglobal은 무엇을 하나요?",about_desc:"단순 광고가 아니라, 콘텐츠가 상품 클릭과 구매로 이어지는 커머스 운영 구조를 만듭니다.",
-about_1_t:"숏폼 콘텐츠",about_1_d:"틱톡, 릴스, 쇼츠에 적합한 상품 소개형 콘텐츠를 제작하고 운영합니다.",
-about_2_t:"인플루언서 연결",about_2_d:"한국 인플루언서와 쇼호스트, 숏폼 크리에이터 협업 구조를 설계합니다.",
-about_3_t:"상품관 전환",about_3_d:"숏폼 유입을 홈페이지 상품관과 구매 링크로 연결합니다.",
-inf_title:"한국 인플루언서 네트워크",inf_desc:"CGglobal은 스토리앤미디어 협력 기반으로 한국 인플루언서, 쇼호스트, 숏폼 크리에이터 협업을 연결할 수 있습니다.",
-inf_1:"뷰티, 화장품, 라이프스타일 상품 콘텐츠",inf_2:"식품, 맛집, 공간, 방문형 리뷰 콘텐츠",inf_3:"패션, 스타일, 착용형 숏폼 콘텐츠",inf_4:"운동, 건강, 다이어트 관련 콘텐츠",
-shop_title:"CGglobal 상품관",shop_desc:"숏폼 영상에서 소개된 추천 상품을 한곳에서 확인할 수 있습니다. 식품, 뷰티, 패션, 건강보조식품 카테고리별로 상품을 전시하고 쿠팡 파트너스 링크로 연결할 수 있습니다.",
-shop_note_t:"Shortform → Shop → Purchase",shop_note_d:"영상에서 “프로필 링크 확인”으로 유입시키고, 상품관에서 구매 링크를 클릭하도록 설계합니다.",
-tab_all:"전체",tab_food:"식품",tab_beauty:"뷰티",tab_fashion:"패션",tab_health:"건강보조식품",
-cat_food:"식품",cat_beauty:"뷰티",cat_fashion:"패션",cat_health:"건강보조식품",buy:"상품 보기",
-p1_t:"프리미엄 간편식",p1_d:"숏폼에서 반응이 좋은 간편식·밀키트·간식류 상품입니다.",
-p2_t:"건강 간식 추천",p2_d:"다이어트 간식, 견과류, 영양 간식 등 영상 설명이 쉬운 상품입니다.",
-p3_t:"스킨케어 추천템",p3_d:"크림, 세럼, 마스크팩 등 사용 장면이 잘 보이는 상품입니다.",
-p4_t:"헤어·바디 케어",p4_d:"헤어팩, 바디로션, 클렌징 제품처럼 반복 구매가 가능한 상품입니다.",
-p5_t:"데일리 패션 아이템",p5_d:"가방, 의류, 액세서리 등 스타일을 보여주기 좋은 상품입니다.",
-p6_t:"슈즈·잡화 추천",p6_d:"운동화, 슬리퍼, 모자, 지갑 등 구매 전환이 쉬운 상품입니다.",
-p7_t:"비타민·영양제",p7_d:"비타민, 루테인, 오메가 등 수요가 안정적인 건강 제품입니다.",
-p8_t:"운동·다이어트 보조",p8_d:"단백질, 식이섬유, 다이어트 보조 제품에 적합한 상품입니다.",
-notice:"본 상품관의 일부 링크는 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받을 수 있습니다.",
-process_title:"상품 선정부터 수익화까지",process_desc:"숏폼 영상과 상품관을 연결해 구매 전환 흐름을 만듭니다.",
-step1_t:"상품 선정",step1_d:"전환이 쉬운 상품을 선별합니다.",step2_t:"영상 제작",step2_d:"숏폼 콘텐츠를 제작합니다.",step3_t:"상품관 연결",step3_d:"프로필 링크를 상품관으로 연결합니다.",step4_t:"수익화",step4_d:"클릭과 구매 데이터를 기반으로 확장합니다.",
-contact_title:"CGglobal에 문의하세요",contact_desc:"상품관 운영, 인플루언서 협업, 중국 커머스 실행 관련 문의를 보내주세요.",contact_btn:"메일로 문의",submit:"문의 보내기",
-footer_desc:"AI Trade · Shortform Commerce · Korean Influencer Growth"
+nav_why:"Why CGglobal",nav_network:"Influencer",nav_shop:"상품관",nav_services:"Services",nav_process:"Process",nav_contact:"문의",nav_contact_btn:"문의",
+hero_badge:"All-In-One Global Commerce Execution Partner",hero_title:"한국 브랜드의 글로벌 진출,<br><strong>찾고 · 연결하고 · 판매까지</strong>",hero_desc:"CGglobal은 한국 제품을 중국과 글로벌 시장에 맞는 콘텐츠로 바꾸고, 한국 인플루언서 연결, AI 무역 콘텐츠, B2B 바이어 연결, 크로스보더 유통까지 실행하는 글로벌 커머스 파트너입니다.",hero_btn1:"상품관 보기",hero_btn2:"인플루언서 네트워크 보기",
+dash_title:"Campaign Execution Flow",dash_desc:"제품 분석부터 콘텐츠 제작, 한국 인플루언서 연결, 판매 데이터 확인까지 한 흐름으로 관리합니다.",flow1:"Product Fit",flow2:"Creator Match",flow3:"Channel Match",channel_title:"Core Channels",channel_desc:"한국 인플루언서 콘텐츠를 중국·글로벌 커머스 채널에 맞게 연결합니다.",
+proof1_t:"Market Intelligence",proof1_d:"중국·글로벌 시장 진입 가능성 분석",proof2_t:"K-Influencer Network",proof2_d:"한국 인플루언서·쇼호스트 연결",proof3_t:"Commerce Operation",proof3_d:"도우인·샤오홍슈·틱톡형 판매 운영",proof4_t:"Product Gallery",proof4_d:"숏폼 유입을 상품관으로 연결",
+why_title:"해외 진출은 광고가 아니라<br>운영 시스템입니다.",why_desc:"단순히 인플루언서를 섭외하거나 콘텐츠를 만드는 것만으로는 매출이 연결되지 않습니다. CGglobal은 제품, 한국 인플루언서, 콘텐츠, 채널, 상품관, 바이어, 운영 데이터를 하나의 실행 구조로 연결합니다.",
+f1_t:"Discover",f1_d:"시장에 맞는 제품 포지션, 가격, 소비자 메시지, 진입 채널을 먼저 찾습니다.",f2_t:"Creator Match",f2_d:"브랜드에 맞는 한국 인플루언서, 쇼호스트, 숏폼 크리에이터 연결 구조를 설계합니다.",f3_t:"Scale",f3_d:"콘텐츠 반응과 판매 데이터를 기준으로 광고, 유통, 파트너십을 단계적으로 확대합니다.",
+partner_badge:"Official Partner Network",partner_title:"한국 인플루언서 연결이 가능한<br>CGglobal 파트너 네트워크",partner_desc:"CGglobal은 스토리앤미디어 협력사로서 한국 인플루언서·쇼호스트·숏폼 크리에이터 협업을 중국 및 글로벌 커머스 실행 구조와 연결합니다.",partner_note:"브랜드 목적에 따라 아웃도어·스포츠, 패션·뷰티·라이프스타일, 엔터테인먼트, 플레이스, 지식교양·테크 분야의 크리에이터 협업을 기획할 수 있습니다.",
+creator_title:"Public Creator Examples",c1:"맛집·공간·리뷰형 콘텐츠",c2:"푸드·라이프스타일 리뷰",c3:"식품·선물세트·생활형 콘텐츠",c4:"운동·레저·건강 카테고리",c5:"플레이스·맛집·방문형 리뷰",c6:"라이프스타일·감성형 콘텐츠",c7:"맛집·지역 기반 리뷰",c8:"상위노출형 리뷰 콘텐츠",
+cat1:"액티비티, 건강, 스포츠 분야 협업",cat2:"뷰티·패션·라이프스타일 콘텐츠",cat3:"엔터테인먼트·이슈형 콘텐츠 확산",cat4:"플레이스·오프라인 방문형 캠페인",cat5:"전문성 기반 설명형 콘텐츠",
+shop_title:"CGglobal 상품관",shop_desc:"숏폼 영상에서 소개되는 추천 상품을 한곳에서 확인할 수 있습니다. 식품, 뷰티, 패션, 건강보조식품 카테고리별로 쿠팡 파트너스 링크를 연결해 운영할 수 있습니다.",shop_note_t:"Shortform → Shop → Purchase",shop_note_d:"틱톡·릴스·쇼츠 영상에서 “프로필 링크 확인”으로 유입시키고, 이 상품관에서 구매 링크를 클릭하도록 설계합니다.",
+tab_all:"전체",tab_food:"식품",tab_beauty:"뷰티",tab_fashion:"패션",tab_health:"건강보조식품",cat_food:"식품",cat_beauty:"뷰티",cat_fashion:"패션",cat_health:"건강보조식품",price_ready:"링크 준비중",buy_btn:"상품 보기",
+p1_t:"프리미엄 간편식",p1_d:"숏폼에서 반응이 좋은 간편식·밀키트·간식류 상품을 전시하는 공간입니다.",p2_t:"건강 간식 추천",p2_d:"다이어트 간식, 견과류, 영양 간식 등 영상 설명이 쉬운 상품에 적합합니다.",p3_t:"스킨케어 추천템",p3_d:"크림, 세럼, 마스크팩 등 전후 비교와 사용 장면이 잘 보이는 상품을 전시합니다.",p4_t:"헤어·바디 케어",p4_d:"헤어팩, 바디로션, 클렌징 제품처럼 반복 구매가 가능한 상품군입니다.",p5_t:"데일리 패션 아이템",p5_d:"가방, 의류, 액세서리 등 짧은 영상에서 착용감과 스타일을 보여주기 좋습니다.",p6_t:"슈즈·잡화 추천",p6_d:"운동화, 슬리퍼, 모자, 지갑 등 즉시 구매 전환이 쉬운 상품군입니다.",p7_t:"비타민·영양제",p7_d:"비타민, 루테인, 오메가 등 수요가 안정적인 건강보조식품을 전시합니다.",p8_t:"운동·다이어트 보조",p8_d:"단백질, 식이섬유, 다이어트 보조 제품처럼 숏폼 전환이 쉬운 상품군입니다.",partner_disclosure:"본 상품관의 일부 링크는 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받을 수 있습니다. 실제 상품명, 가격, 이미지, 링크는 쿠팡 파트너스 링크로 교체해 사용하면 됩니다.",
+service_title:"CGglobal 주요 서비스",service_desc:"브랜드가 해외 시장에서 실제로 움직일 수 있도록 필요한 기능을 모듈형으로 제공합니다.",s1_t:"Market Entry",s1_d:"제품 포지션, 가격, 경쟁사, 채널 적합성을 분석합니다.",s2_t:"K-Influencer Matching",s2_d:"한국 인플루언서, 쇼호스트, 숏폼 크리에이터 협업을 연결합니다.",s3_t:"AI Trade Content",s3_d:"AI 번역, 더빙, 숏폼 전환, 바이어용 소개 콘텐츠를 제작합니다.",s4_t:"China Commerce",s4_d:"중국 온라인 판매, 라이브커머스, 상품 링크, 프로모션 운영을 지원합니다.",s5_t:"B2B Matching",s5_d:"글로벌 바이어, 유통상, 현지 실행 파트너를 연결합니다.",s6_t:"Cross-border Ops",s6_d:"샘플 발송, 판매 검증, 크로스보더 유통 구조를 설계합니다.",
+process_title:"검증하고, 연결하고, 확장합니다.",process_desc:"초기부터 큰 비용을 태우지 않고, 제품과 시장 반응을 확인하면서 단계적으로 확장합니다.",p1_t:"진단",p1_d:"제품, 가격, 패키지, 경쟁사, 시장성을 검토합니다.",p2_t:"매칭",p2_d:"브랜드에 맞는 한국 인플루언서와 콘텐츠 방향을 설계합니다.",p3_t:"실행",p3_d:"숏폼, 라이브커머스, 콘텐츠 확산, B2B 상담을 운영합니다.",p4_t:"확장",p4_d:"반응 데이터를 기준으로 광고, 유통, 파트너십을 확대합니다.",
+contact_title:"CGglobal에 문의하세요.",contact_desc:"한국 인플루언서 협업, 중국 커머스 실행, 글로벌 바이어 연결, 크로스보더 유통 관련 문의를 보내주시면 확인 후 연락드리겠습니다.",contact_mail:"메일로 바로 문의",form_submit:"문의 보내기",cta_title:"좋은 제품을 글로벌 시장의 언어로 바꾸세요.",cta_desc:"CGglobal이 한국 인플루언서, 콘텐츠, 상품관, 중국 커머스, 글로벌 바이어 연결까지 함께 설계합니다.",footer_tag:"AI Trade · China Commerce · Korean Influencer Growth",footer_desc:"한국 브랜드의 글로벌 진출을 한국 인플루언서 협업, 콘텐츠, B2B 바이어 연결, 크로스보더 유통으로 실행하는 글로벌 커머스 파트너입니다."
 },
 en:{
-nav_about:"About",nav_influencer:"Influencer",nav_shop:"Shop",nav_process:"Process",nav_contact:"Contact",
-hero_title:"From short-form content to product gallery,<br>we build purchase conversion systems",
-hero_desc:"CGglobal connects Korean influencers, short-form content, product galleries, Coupang Partners links, China commerce, and global commerce into one execution structure.",
-hero_btn_shop:"View Shop",hero_btn_contact:"Contact",
-about_title:"What does CGglobal do?",about_desc:"We build commerce operations where content leads to product clicks and purchases.",
-about_1_t:"Short-form Content",about_1_d:"We create and operate product-driven content for TikTok, Reels, and Shorts.",
-about_2_t:"Influencer Connection",about_2_d:"We design collaboration structures with Korean influencers, show hosts, and short-form creators.",
-about_3_t:"Shop Conversion",about_3_d:"We connect short-form traffic to product galleries and purchase links.",
-inf_title:"Korean Influencer Network",inf_desc:"Based on our Story&Media partnership network, CGglobal connects Korean influencers, show hosts, and short-form creators.",
-inf_1:"Beauty, cosmetics, and lifestyle product content",inf_2:"Food, restaurants, places, and visit-based review content",inf_3:"Fashion, style, and wearable short-form content",inf_4:"Sports, wellness, and diet-related content",
-shop_title:"CGglobal Product Gallery",shop_desc:"Recommended products introduced in short-form videos can be displayed here. Food, beauty, fashion, and health supplement categories can be connected to Coupang Partners links.",
-shop_note_t:"Shortform → Shop → Purchase",shop_note_d:"Drive viewers from videos to the profile link, then guide them to product purchase links in the gallery.",
-tab_all:"All",tab_food:"Food",tab_beauty:"Beauty",tab_fashion:"Fashion",tab_health:"Health",
-cat_food:"Food",cat_beauty:"Beauty",cat_fashion:"Fashion",cat_health:"Health",buy:"View Product",
-p1_t:"Premium Ready Meal",p1_d:"Easy meals, meal kits, and snacks that work well in short-form videos.",
-p2_t:"Healthy Snacks",p2_d:"Diet snacks, nuts, and nutritious snacks that are easy to explain on video.",
-p3_t:"Skincare Picks",p3_d:"Creams, serums, and masks that are easy to show through usage scenes.",
-p4_t:"Hair & Body Care",p4_d:"Hair packs, body lotions, and cleansing products suitable for repeat purchase.",
-p5_t:"Daily Fashion Items",p5_d:"Bags, clothing, and accessories that show style well in short videos.",
-p6_t:"Shoes & Accessories",p6_d:"Sneakers, slippers, hats, and wallets with easy purchase conversion.",
-p7_t:"Vitamins & Nutrition",p7_d:"Stable-demand health products such as vitamins, lutein, and omega.",
-p8_t:"Fitness & Diet Support",p8_d:"Protein, fiber, and diet support products suitable for short-form commerce.",
-notice:"Some links in this product gallery may be part of the Coupang Partners program, and we may receive a commission from qualifying purchases.",
-process_title:"From product selection to monetization",process_desc:"We connect short-form videos to product galleries to create a purchase conversion flow.",
-step1_t:"Product Selection",step1_d:"Select products with high conversion potential.",step2_t:"Video Creation",step2_d:"Create short-form content.",step3_t:"Shop Connection",step3_d:"Connect profile links to the product gallery.",step4_t:"Monetization",step4_d:"Scale based on click and purchase data.",
-contact_title:"Contact CGglobal",contact_desc:"Send inquiries about product gallery operation, influencer collaboration, and China commerce execution.",contact_btn:"Email Us",submit:"Send Inquiry",
-footer_desc:"AI Trade · Shortform Commerce · Korean Influencer Growth"
+nav_why:"Why CGglobal",nav_network:"Influencer",nav_shop:"Shop",nav_services:"Services",nav_process:"Process",nav_contact:"Contact",nav_contact_btn:"Contact",
+hero_badge:"All-In-One Global Commerce Execution Partner",hero_title:"Global expansion for Korean brands,<br><strong>from creator matching to sales</strong>",hero_desc:"CGglobal transforms Korean products into market-ready content and connects Korean influencers, AI trade content, B2B buyers, product galleries, and cross-border distribution.",hero_btn1:"View Shop",hero_btn2:"View Influencer Network",
+shop_title:"CGglobal Product Gallery",shop_desc:"Recommended products introduced through short-form videos can be displayed here. Food, beauty, fashion, and health supplement categories can be connected to Coupang Partners links.",shop_note_t:"Shortform → Shop → Purchase",shop_note_d:"Drive traffic from TikTok, Reels, and Shorts to this product gallery, then guide visitors to purchase links.",
+tab_all:"All",tab_food:"Food",tab_beauty:"Beauty",tab_fashion:"Fashion",tab_health:"Health",cat_food:"Food",cat_beauty:"Beauty",cat_fashion:"Fashion",cat_health:"Health",price_ready:"Link ready soon",buy_btn:"View Product"
 },
 zh:{
-nav_about:"介绍",nav_influencer:"韩国达人",nav_shop:"商品馆",nav_process:"流程",nav_contact:"咨询",
-hero_title:"从短视频到商品馆，<br>建立购买转化系统",
-hero_desc:"CGglobal将韩国达人、短视频内容、商品馆、Coupang合作链接、中国电商与全球电商连接成一个执行结构。",
-hero_btn_shop:"查看商品馆",hero_btn_contact:"商务咨询",
-about_title:"CGglobal做什么？",about_desc:"我们不是单纯做广告，而是建立内容带来商品点击和购买的商业运营结构。",
-about_1_t:"短视频内容",about_1_d:"制作并运营适合TikTok、Reels、Shorts的商品介绍型内容。",
-about_2_t:"韩国达人连接",about_2_d:"设计韩国达人、直播主持人、短视频创作者的合作结构。",
-about_3_t:"商品馆转化",about_3_d:"将短视频流量连接到官网商品馆和购买链接。",
-inf_title:"韩国达人网络",inf_desc:"CGglobal基于Story&Media合作网络，可连接韩国达人、直播主持人和短视频创作者。",
-inf_1:"美妆、化妆品、生活方式商品内容",inf_2:"食品、餐厅、空间、探店型测评内容",inf_3:"时尚、穿搭、风格型短视频内容",inf_4:"运动、健康、减脂相关内容",
-shop_title:"CGglobal 商品馆",shop_desc:"短视频中介绍的推荐商品可以集中展示在这里。食品、美妆、时尚、健康产品等类别可连接到购买链接进行运营。",
-shop_note_t:"短视频 → 商品馆 → 购买",shop_note_d:"从视频引导用户点击主页链接，再在商品馆点击购买链接。",
-tab_all:"全部",tab_food:"食品",tab_beauty:"美妆",tab_fashion:"时尚",tab_health:"健康产品",
-cat_food:"食品",cat_beauty:"美妆",cat_fashion:"时尚",cat_health:"健康",buy:"查看商品",
-p1_t:"精品方便食品",p1_d:"适合短视频展示的方便食品、半成品料理和零食类商品。",
-p2_t:"健康零食推荐",p2_d:"适合减脂零食、坚果、营养零食等容易用视频说明的商品。",
-p3_t:"护肤推荐",p3_d:"适合面霜、精华、面膜等可展示使用场景的商品。",
-p4_t:"头发·身体护理",p4_d:"适合发膜、身体乳、洁面等可重复购买的商品。",
-p5_t:"日常时尚单品",p5_d:"适合包、服装、配饰等可通过短视频展示风格的商品。",
-p6_t:"鞋类·配件推荐",p6_d:"适合运动鞋、拖鞋、帽子、钱包等容易转化购买的商品。",
-p7_t:"维生素·营养品",p7_d:"适合维生素、叶黄素、欧米伽等需求稳定的健康产品。",
-p8_t:"运动·减脂辅助",p8_d:"适合蛋白粉、膳食纤维、减脂辅助类短视频商品。",
-notice:"本商品馆的部分链接可能属于合作推广链接，运营者可因此获得一定佣金。",
-process_title:"从商品选择到收益化",process_desc:"将短视频与商品馆连接，建立购买转化流程。",
-step1_t:"商品选择",step1_d:"选择适合转化的商品。",step2_t:"视频制作",step2_d:"制作短视频内容。",step3_t:"商品馆连接",step3_d:"将主页链接连接到商品馆。",step4_t:"收益化",step4_d:"根据点击和购买数据进行扩大。",
-contact_title:"联系CGglobal",contact_desc:"如需商品馆运营、韩国达人合作、中国电商执行，请发送咨询。",contact_btn:"邮件咨询",submit:"发送咨询",
-footer_desc:"AI贸易 · 短视频电商 · 韩国达人成长"
+nav_why:"为什么选择CGglobal",nav_network:"韩国达人",nav_shop:"商品馆",nav_services:"服务",nav_process:"流程",nav_contact:"咨询",nav_contact_btn:"咨询",
+hero_badge:"一体化全球商业执行伙伴",hero_title:"韩国品牌全球拓展，<br><strong>从达人匹配到销售</strong>",hero_desc:"CGglobal将韩国产品转化为适合中国及全球市场的内容，并连接韩国达人、AI贸易内容、B2B买家、商品馆和跨境流通。",hero_btn1:"查看商品馆",hero_btn2:"查看韩国达人网络",
+shop_title:"CGglobal 商品馆",shop_desc:"短视频中介绍的推荐商品可以集中展示在这里。食品、美妆、时尚、健康产品等类别可连接到购买链接进行运营。",shop_note_t:"短视频 → 商品馆 → 购买",shop_note_d:"从TikTok、Reels、Shorts等短视频平台导流到本商品馆，再引导访问者点击购买链接。",
+tab_all:"全部",tab_food:"食品",tab_beauty:"美妆",tab_fashion:"时尚",tab_health:"健康产品",cat_food:"食品",cat_beauty:"美妆",cat_fashion:"时尚",cat_health:"健康",price_ready:"链接准备中",buy_btn:"查看商品"
 }
 };
+dict.en={...dict.ko,...dict.en};
+dict.zh={...dict.ko,...dict.zh};
 
 function setLang(lang){
-  document.querySelectorAll(".lang button").forEach(b=>b.classList.remove("active"));
-  document.getElementById("btn-"+lang).classList.add("active");
-  const data=langData[lang];
-  document.querySelectorAll("[data-i18n]").forEach(el=>{
-    const key=el.getAttribute("data-i18n");
-    if(data[key]) el.innerHTML=data[key];
-  });
-  document.documentElement.lang=lang==="zh"?"zh-CN":lang;
-}
-
-function filterProducts(cat,btn){
-  document.querySelectorAll(".tabs button").forEach(b=>b.classList.remove("active"));
-  btn.classList.add("active");
-  document.querySelectorAll(".product").forEach(p=>{
-    const c=p.getAttribute("data-cat");
-    p.style.display=(cat==="all"||c===cat)?"block":"none";
-  });
+document.querySelectorAll(".lang button").forEach(b=>b.classList.remove("active"));
+document.getElementById("btn-"+lang).classList.add("active");
+const pack=dict[lang];
+document.querySelectorAll("[data-i18n]").forEach(el=>{const k=el.getAttribute("data-i18n");if(pack[k])el.textContent=pack[k];});
+document.querySelectorAll("[data-i18n-html]").forEach(el=>{const k=el.getAttribute("data-i18n-html");if(pack[k])el.innerHTML=pack[k];});
+document.documentElement.lang=lang==="zh"?"zh-CN":lang;
 }
 </script>
 
