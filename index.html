@@ -3,531 +3,323 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="CoreGate Global은 한국 브랜드와 콘텐츠의 중국 및 글로벌 시장 진입부터 콘텐츠, 커머스, 유통, B2B까지 연결합니다.">
-  <meta name="theme-color" content="#07111f">
-  <title>CoreGate Global | Cross-border Business Operator</title>
+  <meta name="description" content="CoreGate Global은 한국 브랜드와 콘텐츠의 중국 및 글로벌 시장 진입, 콘텐츠, 커머스, 유통과 B2B를 직접 운영합니다.">
+  <meta name="theme-color" content="#07090d">
+  <title>CoreGate Global — Korea to China, China to Global</title>
+  <link rel="preload" as="image" href="assets/media/hero-crossborder.webp">
   <style>
     :root{
-      --ink:#07111f;--ink-2:#10213a;--blue:#2764ff;--cyan:#14b8d4;
-      --paper:#ffffff;--soft:#f4f7fb;--line:#dce4ef;--muted:#5f6d80;
-      --radius:26px;--shadow:0 24px 70px rgba(7,17,31,.11);
+      --black:#07090d;--black-2:#11151b;--paper:#f1efe9;--white:#fff;
+      --blue:#2d63ff;--ice:#a8c9ff;--gold:#d6ae72;--ink:#14171c;
+      --muted:#6f747b;--line:rgba(20,23,28,.16);--line-dark:rgba(255,255,255,.16);
+      --max:1320px;--pad:clamp(20px,4vw,64px);
     }
     *{box-sizing:border-box}
-    html{scroll-behavior:smooth;scroll-padding-top:82px}
+    html{scroll-behavior:smooth;scroll-padding-top:80px}
     body{margin:0;background:var(--paper);color:var(--ink);font-family:"Malgun Gothic","Apple SD Gothic Neo",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;word-break:keep-all}
     body.menu-open{overflow:hidden}
     a{color:inherit;text-decoration:none}
-    button,input,select,textarea{font:inherit}
+    button,input,textarea,select{font:inherit}
     button{cursor:pointer}
-    img{max-width:100%;display:block}
-    .skip-link{position:absolute;left:-9999px;top:8px;z-index:999;background:#fff;padding:12px 16px;border-radius:10px}
-    .skip-link:focus{left:12px}
-    .shell{width:min(1180px,calc(100% - 44px));margin-inline:auto}
-    .section{padding:104px 0}
-    .section.soft{background:var(--soft)}
-    .section.dark{background:var(--ink);color:#fff}
-    .eyebrow{margin:0 0 14px;color:var(--blue);font-size:12px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
-    .dark .eyebrow{color:#7dd3fc}
-    .section-head{max-width:810px;margin-bottom:46px}
-    .section-head.center{margin-inline:auto;text-align:center}
-    .section-head h2{margin:0;font-size:clamp(34px,5vw,56px);line-height:1.12;letter-spacing:-.045em}
-    .section-head p{margin:22px 0 0;color:var(--muted);font-size:17px;line-height:1.82}
-    .dark .section-head p{color:#b9c6d8}
-    .btn{min-height:48px;display:inline-flex;align-items:center;justify-content:center;gap:9px;border:1px solid transparent;border-radius:999px;padding:0 20px;font-weight:900;transition:.2s}
-    .btn:hover{transform:translateY(-2px)}
-    .btn.primary{background:var(--blue);color:#fff;box-shadow:0 12px 28px rgba(39,100,255,.26)}
-    .btn.secondary{background:#fff;color:var(--ink);border-color:var(--line)}
-    .btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.25)}
+    img,video{display:block;width:100%}
+    .wrap{width:min(var(--max),calc(100% - var(--pad)*2));margin:auto}
+    .eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 22px;font-size:11px;font-weight:900;letter-spacing:.18em;text-transform:uppercase}
+    .eyebrow:before{content:"";width:34px;height:1px;background:currentColor}
     .lang-en,.lang-zh{display:none}
     html[lang="en"] .lang-ko,html[lang="en"] .lang-zh{display:none!important}
     html[lang="en"] .lang-en{display:initial}
     html[lang="zh-CN"] .lang-ko,html[lang="zh-CN"] .lang-en{display:none!important}
     html[lang="zh-CN"] .lang-zh{display:initial}
+    .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}
+    .reveal.visible{opacity:1;transform:none}
 
-    header{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.92);backdrop-filter:blur(18px);border-bottom:1px solid rgba(220,228,239,.85)}
-    .nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:26px}
-    .brand{font-size:22px;font-weight:950;letter-spacing:-.04em;white-space:nowrap}
-    .brand i{font-style:normal;color:var(--blue)}
-    .menu{display:flex;align-items:center;justify-content:center;gap:25px;color:#3f4c5f;font-size:13px;font-weight:850;letter-spacing:.02em}
-    .menu a{position:relative;padding:29px 0}
-    .menu a:after{content:"";position:absolute;left:0;right:100%;bottom:22px;height:2px;background:var(--blue);transition:.2s}
-    .menu a:hover:after{right:0}
-    .nav-tools{display:flex;align-items:center;gap:10px}
-    .languages{display:flex;padding:4px;background:#eef2f7;border-radius:999px}
-    .languages button{border:0;background:transparent;border-radius:999px;padding:8px 9px;color:#748196;font-size:12px;font-weight:900}
-    .languages button.active{background:var(--ink);color:#fff}
-    .nav-contact{min-height:40px;padding:0 16px;font-size:13px}
-    .menu-toggle{display:none;width:42px;height:42px;border:1px solid var(--line);border-radius:13px;background:#fff;font-size:20px}
+    header{position:fixed;inset:0 0 auto;z-index:100;color:#fff;border-bottom:1px solid rgba(255,255,255,.13);transition:.3s}
+    header.scrolled{background:rgba(7,9,13,.9);backdrop-filter:blur(18px)}
+    .nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:34px}
+    .brand{font-size:19px;font-weight:950;letter-spacing:-.045em;white-space:nowrap}
+    .brand span{color:var(--ice)}
+    .menu{display:flex;align-items:center;gap:30px;margin-left:auto;font-size:12px;font-weight:850;letter-spacing:.06em}
+    .menu a{padding:30px 0;opacity:.78;transition:.2s}.menu a:hover{opacity:1}
+    .nav-right{display:flex;align-items:center;gap:12px}
+    .langs{display:flex;gap:2px;padding:3px;border:1px solid rgba(255,255,255,.18);border-radius:999px}
+    .langs button{border:0;background:transparent;color:#aeb8c8;border-radius:999px;padding:7px 8px;font-size:10px;font-weight:900}
+    .langs button.active{background:#fff;color:#111}
+    .contact-link{display:inline-flex;align-items:center;gap:9px;padding:11px 15px;border:1px solid rgba(255,255,255,.26);border-radius:999px;font-size:11px;font-weight:900;letter-spacing:.05em}
+    .menu-toggle{display:none;width:40px;height:40px;border:1px solid rgba(255,255,255,.25);border-radius:50%;background:transparent;color:#fff;font-size:19px}
 
-    .hero{position:relative;overflow:hidden;background:
-      radial-gradient(circle at 13% 14%,rgba(39,100,255,.16),transparent 32%),
-      radial-gradient(circle at 88% 8%,rgba(20,184,212,.14),transparent 30%),
-      linear-gradient(180deg,#fff 0%,#f4f8ff 72%,#fff 100%)}
-    .hero:after{content:"";position:absolute;inset:auto 0 0;height:1px;background:linear-gradient(90deg,transparent,var(--line),transparent)}
-    .hero-inner{padding:104px 0 78px}
-    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:58px;align-items:center}
-    .hero-kicker{display:inline-flex;align-items:center;gap:9px;margin-bottom:24px;padding:9px 13px;border:1px solid #cfe0ff;border-radius:999px;background:rgba(255,255,255,.75);color:var(--blue);font-size:12px;font-weight:950;letter-spacing:.12em}
-    .hero-kicker:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 0 5px rgba(20,184,212,.12)}
-    .hero h1{margin:0;font-size:clamp(46px,6.6vw,78px);line-height:1.04;letter-spacing:-.06em}
-    .hero h1 strong{display:block;background:linear-gradient(90deg,var(--blue),#0a9ec6);-webkit-background-clip:text;background-clip:text;color:transparent}
-    .hero-sub{margin:23px 0 0;font-size:18px;font-weight:900;color:#233653}
-    .hero-desc{max-width:710px;margin:21px 0 0;color:var(--muted);font-size:17px;line-height:1.82}
-    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
-    .route-panel{position:relative;background:rgba(7,17,31,.98);border:1px solid rgba(255,255,255,.13);border-radius:34px;padding:32px;color:#fff;box-shadow:0 34px 90px rgba(7,17,31,.24)}
-    .route-panel:before{content:"";position:absolute;inset:1px;border-radius:33px;background:linear-gradient(140deg,rgba(255,255,255,.08),transparent 42%);pointer-events:none}
-    .route-top{position:relative;display:flex;justify-content:space-between;gap:20px;padding-bottom:22px;border-bottom:1px solid rgba(255,255,255,.13)}
-    .route-top b{font-size:14px}.route-top span{color:#8fa1ba;font-size:12px}
-    .route{position:relative;display:grid;gap:0;padding:18px 0}
-    .route-item{display:grid;grid-template-columns:42px 1fr;gap:14px;align-items:center;padding:12px 0}
-    .route-item:not(:last-child):after{content:"";position:absolute;left:20px;width:1px;height:20px;margin-top:62px;background:linear-gradient(#4d76d8,#20406f)}
-    .route-num{height:42px;display:grid;place-items:center;border:1px solid rgba(125,211,252,.4);border-radius:14px;background:rgba(39,100,255,.17);color:#9edcff;font-size:12px;font-weight:950}
-    .route-item b{display:block;font-size:15px}.route-item span{display:block;margin-top:4px;color:#9baac0;font-size:12px}
-    .channel-row{position:relative;display:flex;flex-wrap:wrap;gap:7px;padding-top:18px;border-top:1px solid rgba(255,255,255,.13)}
-    .channel-row span{padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.08);color:#cad5e4;font-size:11px;font-weight:800}
-    .proof-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:54px}
-    .proof{padding:22px;border:1px solid var(--line);border-radius:21px;background:rgba(255,255,255,.78)}
-    .proof small{color:var(--blue);font-weight:950}.proof b{display:block;margin:10px 0 6px;font-size:15px}.proof p{margin:0;color:var(--muted);font-size:13px;line-height:1.6}
+    .hero{position:relative;min-height:100svh;display:flex;align-items:end;overflow:hidden;background:var(--black);color:#fff}
+    .hero-media{position:absolute;inset:0}
+    .hero-media img{height:100%;object-fit:cover;object-position:center}
+    .hero-media:after{content:"";position:absolute;inset:0;background:
+      linear-gradient(90deg,rgba(5,8,14,.95) 0%,rgba(5,8,14,.74) 38%,rgba(5,8,14,.2) 70%),
+      linear-gradient(0deg,rgba(5,8,14,.9),transparent 58%)}
+    .hero-inner{position:relative;z-index:2;width:100%;padding-top:160px;padding-bottom:50px}
+    .hero-copy{max-width:900px;padding:0 0 70px}
+    .hero .eyebrow{color:#d5deea}
+    .hero h1{margin:0;font-size:clamp(48px,7.5vw,104px);line-height:1.01;letter-spacing:-.065em;font-weight:900}
+    .hero h1 em{display:block;color:var(--ice);font-style:normal}
+    .hero p{max-width:700px;margin:30px 0 0;color:#d1d8e2;font-size:clamp(15px,1.4vw,19px);line-height:1.85}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:36px}
+    .button{min-height:50px;display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:0 19px;border-radius:999px;border:1px solid transparent;font-size:12px;font-weight:900;letter-spacing:.04em;transition:.25s}
+    .button:hover{transform:translateY(-2px)}
+    .button.white{background:#fff;color:#0b1018}.button.outline{border-color:rgba(255,255,255,.28);color:#fff}
+    .hero-foot{display:grid;grid-template-columns:1fr auto;align-items:end;gap:30px;padding-top:24px;border-top:1px solid rgba(255,255,255,.18)}
+    .hero-tags{display:flex;gap:22px;flex-wrap:wrap;color:#aeb8c8;font-size:10px;font-weight:850;letter-spacing:.12em}
+    .scroll{display:flex;align-items:center;gap:10px;color:#aeb8c8;font-size:10px;letter-spacing:.13em}.scroll i{width:38px;height:38px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.2);border-radius:50%;font-style:normal}
 
-    .about-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:54px;align-items:start}
-    .about-statement{position:sticky;top:110px}
-    .about-statement h2{font-size:clamp(36px,4.8vw,58px);line-height:1.09;letter-spacing:-.05em;margin:0}
-    .about-statement p{color:var(--muted);font-size:17px;line-height:1.85;margin:24px 0 0}
-    .formula{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-    .formula-card{min-height:198px;padding:27px;border:1px solid var(--line);border-radius:var(--radius);background:#fff}
-    .formula-card:nth-child(4){background:var(--ink);color:#fff}
-    .formula-card small{color:var(--blue);font-weight:950}.formula-card:nth-child(4) small{color:#7dd3fc}
-    .formula-card h3{margin:58px 0 8px;font-size:24px;letter-spacing:-.03em}
-    .formula-card p{margin:0;color:var(--muted);font-size:13px;line-height:1.6}.formula-card:nth-child(4) p{color:#aebed1}
+    .marquee{overflow:hidden;background:#0a0d12;color:#fff;border-top:1px solid rgba(255,255,255,.1);border-bottom:1px solid rgba(255,255,255,.1)}
+    .marquee-track{display:flex;width:max-content;animation:marquee 28s linear infinite}
+    .marquee span{padding:18px 28px;font-size:11px;font-weight:850;letter-spacing:.16em;color:#b7c0ce}.marquee b{color:var(--ice);font-weight:900}
+    @keyframes marquee{to{transform:translateX(-50%)}}
 
-    .business-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
-    .business-card{grid-column:span 2;min-height:340px;display:flex;flex-direction:column;padding:29px;border:1px solid var(--line);border-radius:var(--radius);background:#fff;transition:.24s}
-    .business-card:nth-child(4){grid-column:2/span 2}.business-card:nth-child(5){grid-column:4/span 2}
-    .business-card:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:#bdd0f4}
-    .business-card .no{display:flex;align-items:center;justify-content:space-between;color:var(--blue);font-size:12px;font-weight:950}
-    .business-card .no i{width:34px;height:1px;background:var(--line)}
-    .business-card h3{margin:42px 0 14px;font-size:25px;line-height:1.2;letter-spacing:-.04em}
-    .business-card p{margin:0;color:var(--muted);font-size:14px;line-height:1.75}
-    .tag-list{display:flex;flex-wrap:wrap;gap:7px;margin-top:auto;padding-top:24px}
-    .tag-list span{padding:7px 9px;border:1px solid var(--line);border-radius:999px;background:#f9fbfd;color:#536278;font-size:10px;font-weight:850}
+    .manifesto{padding:150px 0 130px}
+    .manifesto-grid{display:grid;grid-template-columns:.32fr 1fr;gap:60px;align-items:start}
+    .manifesto-index{font-size:11px;font-weight:900;letter-spacing:.15em;color:#5c626a}
+    .manifesto h2{margin:0;max-width:1080px;font-size:clamp(42px,6.8vw,92px);line-height:1.07;letter-spacing:-.06em;font-weight:850}
+    .manifesto h2 strong{color:var(--blue)}
+    .manifesto-bottom{display:grid;grid-template-columns:1fr 1fr;gap:50px;margin-top:62px;padding-top:30px;border-top:1px solid var(--line)}
+    .manifesto-bottom p{margin:0;color:#555b63;font-size:15px;line-height:1.9}
+    .manifesto-route{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
+    .route-step{padding:16px;border:1px solid var(--line);border-radius:5px;background:rgba(255,255,255,.35)}
+    .route-step small{color:var(--blue);font-size:9px;font-weight:900}.route-step b{display:block;margin-top:18px;font-size:11px}
 
-    .projects-toolbar{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:35px}
-    .projects-toolbar .section-head{margin:0}
-    .project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-    .project-card{position:relative;min-height:320px;overflow:hidden;padding:30px;border:1px solid rgba(255,255,255,.13);border-radius:28px;background:#0e1b2e}
-    .project-card:after{content:"";position:absolute;width:190px;height:190px;right:-90px;bottom:-80px;border-radius:50%;background:radial-gradient(circle,rgba(39,100,255,.35),transparent 70%)}
-    .project-meta{display:flex;justify-content:space-between;gap:15px}
-    .project-category{color:#85dff0;font-size:11px;font-weight:950;letter-spacing:.12em}
-    .status{display:inline-flex;align-items:center;gap:7px;padding:7px 10px;border:1px solid rgba(255,255,255,.14);border-radius:999px;color:#d8e3f1;font-size:10px;font-weight:900}
-    .status:before{content:"";width:6px;height:6px;border-radius:50%;background:#34d399}
-    .status.planned:before{background:#fbbf24}
-    .project-card h3{position:relative;margin:55px 0 15px;max-width:460px;font-size:28px;line-height:1.17;letter-spacing:-.04em}
-    .project-card p{position:relative;z-index:1;max-width:510px;margin:0;color:#b8c5d7;font-size:14px;line-height:1.75}
-    .project-tags{position:absolute;left:30px;bottom:28px;z-index:1;display:flex;flex-wrap:wrap;gap:7px}
-    .project-tags span{padding:6px 9px;border-radius:999px;background:rgba(255,255,255,.07);color:#aebed1;font-size:10px;font-weight:800}
-    #projects-more{display:none;margin-top:18px}
-    #projects-more.open{display:block}
+    .capabilities{padding:130px 0;background:#fff}
+    .cap-grid{display:grid;grid-template-columns:.38fr 1fr;gap:70px}
+    .cap-intro{position:sticky;top:116px;height:max-content}
+    .cap-intro h2{margin:0;font-size:clamp(36px,4.3vw,58px);line-height:1.08;letter-spacing:-.055em}
+    .cap-intro p{margin:25px 0 0;color:var(--muted);font-size:14px;line-height:1.8}
+    .cap-list{border-top:1px solid var(--line)}
+    .cap-item{display:grid;grid-template-columns:55px .7fr 1fr;gap:28px;padding:38px 0;border-bottom:1px solid var(--line);transition:.25s}
+    .cap-item:hover{padding-left:12px}
+    .cap-no{color:var(--blue);font-size:11px;font-weight:900}
+    .cap-item h3{margin:0;font-size:clamp(23px,2.5vw,34px);line-height:1.2;letter-spacing:-.04em}
+    .cap-item p{margin:0;color:#626872;font-size:14px;line-height:1.8}
+    .cap-keywords{display:flex;gap:7px;flex-wrap:wrap;margin-top:17px}
+    .cap-keywords span{padding:7px 9px;background:#f2f3f5;border-radius:999px;color:#5f6670;font-size:9px;font-weight:850}
 
-    .process-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
-    .process-step{position:relative;min-height:265px;padding:25px;border:1px solid var(--line);border-radius:23px;background:#fff}
-    .process-step:not(:last-child):after{content:"→";position:absolute;right:-14px;top:50%;z-index:2;width:26px;height:26px;display:grid;place-items:center;border-radius:50%;background:var(--ink);color:#fff;font-size:12px}
-    .process-step b{color:var(--blue);font-size:12px}.process-step h3{margin:66px 0 12px;font-size:21px}.process-step p{margin:0;color:var(--muted);font-size:13px;line-height:1.65}
+    .work{padding:140px 0;background:var(--black);color:#fff}
+    .work-head{display:flex;align-items:end;justify-content:space-between;gap:50px;margin-bottom:24px}
+    .work-head h2{margin:0;font-size:clamp(45px,7vw,94px);line-height:.97;letter-spacing:-.06em}
+    .work-head p{max-width:420px;margin:0;color:#9aa7b8;font-size:14px;line-height:1.8}
+    .visual-disclaimer{display:flex;justify-content:flex-end;margin:0 0 70px;color:#6f7b8c;font-size:10px;line-height:1.7;letter-spacing:.06em}
+    .case{display:grid;grid-template-columns:1.16fr .84fr;min-height:760px;margin-top:32px;border:1px solid var(--line-dark);background:#0e1218}
+    .case.reverse{grid-template-columns:.84fr 1.16fr}.case.reverse .case-media{order:2}
+    .case-media{position:relative;overflow:hidden;min-height:650px}
+    .case-media>img{height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+    .case:hover .case-media>img{transform:scale(1.025)}
+    .case-media:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(5,8,13,.55),transparent 45%)}
+    .case-badge{position:absolute;left:25px;top:25px;z-index:2;padding:9px 12px;border:1px solid rgba(255,255,255,.25);border-radius:999px;background:rgba(4,7,12,.45);backdrop-filter:blur(12px);font-size:9px;font-weight:900;letter-spacing:.12em}
+    .case-caption{position:absolute;z-index:2;left:28px;right:28px;bottom:28px;display:flex;justify-content:space-between;gap:20px;color:#d9e1ed;font-size:10px;letter-spacing:.09em}
+    .case-copy{display:flex;flex-direction:column;padding:55px}
+    .case-no{color:var(--ice);font-size:10px;font-weight:900;letter-spacing:.13em}
+    .case-copy h3{margin:70px 0 22px;font-size:clamp(36px,4.4vw,66px);line-height:1.04;letter-spacing:-.055em}
+    .case-copy>p{margin:0;color:#aeb9c8;font-size:15px;line-height:1.9}
+    .case-points{margin-top:auto;padding-top:35px;border-top:1px solid var(--line-dark)}
+    .case-points div{display:flex;justify-content:space-between;gap:20px;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.08);font-size:11px;color:#bdc7d4}.case-points span:last-child{color:#fff;font-weight:850;text-align:right}
+    .proof-case{display:grid;grid-template-columns:.8fr 1.2fr;gap:0;margin-top:32px;border:1px solid var(--line-dark);background:#0e1218}
+    .proof-copy{padding:55px}.proof-copy h3{margin:55px 0 20px;font-size:clamp(35px,4.3vw,62px);line-height:1.05;letter-spacing:-.05em}.proof-copy p{color:#aeb9c8;line-height:1.9;font-size:14px}
+    .proof-visual{position:relative;min-height:670px;overflow:hidden;background:#171c24}
+    .proof-visual>img{height:100%;object-fit:cover;object-position:center;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+    .proof-case:hover .proof-visual>img{transform:scale(1.025)}
+    .proof-visual:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(4,7,11,.55),transparent 45%)}
+    .proof-caption{position:absolute;z-index:2;left:28px;right:28px;bottom:28px;display:flex;justify-content:space-between;gap:20px;color:#d9e1ed;font-size:10px;letter-spacing:.09em}
 
-    .creator-panel{padding:52px;border-radius:36px;background:#fff;color:var(--ink)}
-    .creator-layout{display:grid;grid-template-columns:.82fr 1.18fr;gap:44px;align-items:start}
-    .creator-copy h2{margin:0;font-size:clamp(34px,4.5vw,52px);line-height:1.1;letter-spacing:-.045em}
-    .creator-copy p{color:var(--muted);font-size:16px;line-height:1.8}
-    .creator-note{margin-top:28px;padding:18px;border-radius:18px;background:#eef4ff;color:#375170!important;font-size:13px!important}
-    .creator-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:11px}
-    .creator-card{min-height:105px;padding:18px;border:1px solid var(--line);border-radius:18px;background:#fbfcfe}
-    .creator-card b{font-size:14px}.creator-card p{margin:7px 0 0;color:var(--muted);font-size:12px;line-height:1.55}
-    .creator-categories{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:28px}
-    .creator-category{padding:18px 14px;border-radius:18px;background:var(--ink);color:#fff;text-align:center}
-    .creator-category b{display:block;font-size:12px;line-height:1.4}.creator-category small{display:block;margin-top:7px;color:#93a6bd;font-size:10px}
+    .approach{padding:150px 0}
+    .approach-head{display:grid;grid-template-columns:.36fr 1fr;gap:70px;margin-bottom:70px}
+    .approach h2{margin:0;font-size:clamp(42px,6vw,80px);line-height:1.02;letter-spacing:-.06em}
+    .process{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .process article{min-height:330px;padding:25px 20px;border-right:1px solid var(--line)}.process article:last-child{border-right:0}
+    .process small{color:var(--blue);font-size:9px;font-weight:900}.process h3{margin:110px 0 14px;font-size:18px}.process p{margin:0;color:#666c74;font-size:12px;line-height:1.7}
 
-    .partner-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}
-    .partner-type{min-height:150px;padding:22px;border:1px solid var(--line);border-radius:22px;background:#fff}
-    .partner-type small{color:var(--blue);font-weight:950}.partner-type h3{margin:43px 0 0;font-size:17px}
-    .partner-rule{margin-top:20px;padding:20px 23px;border-left:3px solid var(--blue);background:#eef4ff;color:#3e506a;font-size:13px;line-height:1.7}
+    .network{padding:130px 0;background:#dfe5ef}
+    .network-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px}
+    .network h2{margin:0;font-size:clamp(44px,6vw,82px);line-height:1.02;letter-spacing:-.06em}
+    .network-copy>p{margin:28px 0 0;color:#505969;font-size:15px;line-height:1.85}
+    .network-list{border-top:1px solid rgba(20,23,28,.2)}
+    .network-list div{display:flex;align-items:center;justify-content:space-between;gap:30px;padding:22px 0;border-bottom:1px solid rgba(20,23,28,.2)}
+    .network-list b{font-size:14px}.network-list span{color:#526175;font-size:11px;text-align:right}
+    .network-note{margin-top:25px;padding:18px;border:1px solid rgba(20,23,28,.18);font-size:11px;line-height:1.7;color:#596271}
 
-    .commerce-wrap{display:grid;grid-template-columns:1fr .9fr;gap:40px;align-items:center;padding:48px;border:1px solid var(--line);border-radius:36px;background:linear-gradient(135deg,#fff,#f3f7fd);box-shadow:0 20px 60px rgba(7,17,31,.07)}
-    .commerce-wrap h2{margin:0;font-size:clamp(36px,5vw,56px);line-height:1.08;letter-spacing:-.05em}
-    .commerce-wrap p{color:var(--muted);font-size:16px;line-height:1.82}
-    .commerce-categories{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px}
-    .commerce-categories span{padding:10px 13px;border:1px solid var(--line);border-radius:999px;background:#fff;color:#41516a;font-size:12px;font-weight:900}
-    .commerce-flow{display:grid;gap:10px}
-    .commerce-flow div{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:18px 20px;border:1px solid var(--line);border-radius:18px;background:#fff}
-    .commerce-flow b{font-size:13px}.commerce-flow span{color:var(--blue);font-size:12px;font-weight:950}
+    .contact{padding:150px 0;background:#090c11;color:#fff}
+    .contact-grid{display:grid;grid-template-columns:1fr .85fr;gap:90px}
+    .contact h2{margin:0;font-size:clamp(50px,7.5vw,102px);line-height:.98;letter-spacing:-.065em}
+    .contact h2 strong{display:block;color:var(--ice)}
+    .contact-copy p{max-width:600px;margin:30px 0;color:#9ba8b9;font-size:14px;line-height:1.85}
+    .contact-email{display:inline-flex;margin-top:18px;padding-bottom:7px;border-bottom:1px solid #fff;font-size:15px;font-weight:900}
+    .form{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding-top:8px}
+    .form input,.form textarea,.form select{width:100%;border:0;border-bottom:1px solid rgba(255,255,255,.2);border-radius:0;background:transparent;color:#fff;padding:16px 3px;outline:none}
+    .form input::placeholder,.form textarea::placeholder{color:#6f7b8d}.form select{color:#b6c0ce}.form option{color:#111}
+    .form textarea{grid-column:1/-1;min-height:130px;resize:vertical}.form button{grid-column:1/-1;margin-top:18px;border:0;background:#fff;color:#111}
+    footer{padding:38px 0;background:#05070a;color:#8b96a7;border-top:1px solid rgba(255,255,255,.1)}
+    .footer{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:45px}.footer b{color:#fff}.footer p{margin:10px 0 0;font-size:11px;line-height:1.75}
+    .copyright{margin-top:32px;padding-top:19px;border-top:1px solid rgba(255,255,255,.08);font-size:10px}
 
-    .magazine-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
-    .magazine-card{min-height:245px;padding:25px;border:1px solid var(--line);border-radius:23px;background:#fff}
-    .magazine-card small{color:var(--blue);font-weight:950}.magazine-card h3{margin:48px 0 13px;font-size:19px;line-height:1.35}.magazine-card p{margin:0;color:var(--muted);font-size:13px;line-height:1.68}
-
-    .contact-grid{display:grid;grid-template-columns:.86fr 1.14fr;gap:48px;align-items:start}
-    .contact-copy h2{margin:0;font-size:clamp(40px,5vw,60px);line-height:1.05;letter-spacing:-.05em}
-    .contact-copy p{color:#b8c5d7;font-size:16px;line-height:1.8}
-    .contact-direct{display:inline-block;margin-top:22px;color:#7dd3fc;font-weight:900}
-    .contact-form{display:grid;grid-template-columns:1fr 1fr;gap:11px;padding:28px;border:1px solid rgba(255,255,255,.14);border-radius:27px;background:rgba(255,255,255,.055)}
-    .contact-form input,.contact-form select,.contact-form textarea{width:100%;border:1px solid rgba(255,255,255,.16);border-radius:14px;background:rgba(255,255,255,.07);color:#fff;padding:14px 15px;outline:none}
-    .contact-form input::placeholder,.contact-form textarea::placeholder{color:#8494aa}
-    .contact-form select{color:#d8e3f1}.contact-form option{color:#111;background:#fff}
-    .contact-form textarea{grid-column:1/-1;min-height:132px;resize:vertical}
-    .contact-form button{grid-column:1/-1;border:0}
-
-    footer{padding:52px 0;background:#050b13;color:#8fa0b6;border-top:1px solid rgba(255,255,255,.08)}
-    .footer-grid{display:grid;grid-template-columns:1.35fr 1fr 1fr;gap:40px}
-    .footer-brand{color:#fff;font-size:22px;font-weight:950}.footer-grid p{margin:10px 0 0;font-size:12px;line-height:1.75}
-    .footer-grid h3{margin:0;color:#fff;font-size:13px}.copyright{margin-top:34px;padding-top:22px;border-top:1px solid rgba(255,255,255,.08);font-size:11px}
-
-    @media(max-width:1040px){
-      .menu{position:fixed;inset:78px 0 auto;display:none;flex-direction:column;align-items:stretch;gap:0;padding:16px 22px 28px;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 24px 45px rgba(7,17,31,.14)}
-      .menu.open{display:flex}.menu a{padding:15px 0}.menu a:after{display:none}.menu-toggle{display:block}.nav-contact{display:none}
-      .hero-grid,.about-grid,.creator-layout,.commerce-wrap,.contact-grid{grid-template-columns:1fr}.about-statement{position:static}
-      .business-grid{grid-template-columns:repeat(2,1fr)}.business-card,.business-card:nth-child(4),.business-card:nth-child(5){grid-column:auto}
-      .process-grid{grid-template-columns:repeat(2,1fr)}.process-step:not(:last-child):after{display:none}
-      .magazine-grid,.partner-grid{grid-template-columns:repeat(2,1fr)}
-      .creator-categories{grid-template-columns:repeat(3,1fr)}
+    @media(max-width:1000px){
+      .menu{position:fixed;inset:78px 0 auto;display:none;flex-direction:column;align-items:stretch;gap:0;padding:18px var(--pad) 28px;background:#080b10}.menu.open{display:flex}.menu a{padding:15px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+      .menu-toggle{display:block}.contact-link{display:none}
+      .manifesto-grid,.cap-grid,.approach-head,.network-grid,.contact-grid{grid-template-columns:1fr}.cap-intro{position:static}.manifesto-bottom{grid-template-columns:1fr}
+      .case,.case.reverse,.proof-case{grid-template-columns:1fr}.case.reverse .case-media{order:0}.case-media{min-height:560px}.case-copy{min-height:630px}.proof-visual{min-height:700px}
+      .process{grid-template-columns:repeat(2,1fr)}.process article:nth-child(2n){border-right:0}
     }
-    @media(max-width:720px){
-      .shell{width:min(100% - 32px,1180px)}.section{padding:76px 0}.nav{height:70px}.menu{top:70px}
-      .brand{font-size:19px}.languages button{padding:7px}.hero-inner{padding:72px 0 58px}
-      .hero h1{font-size:44px}.hero-sub,.hero-desc{font-size:15px}.route-panel{padding:24px;border-radius:26px}
-      .proof-row,.formula,.business-grid,.project-grid,.process-grid,.creator-grid,.creator-categories,.partner-grid,.magazine-grid,.footer-grid{grid-template-columns:1fr}
-      .proof-row{margin-top:36px}.proof{min-height:auto}.business-card{min-height:300px}.project-card{min-height:360px}
-      .projects-toolbar{display:block}.projects-toolbar .btn{margin-top:22px}.creator-panel{padding:28px 20px;border-radius:27px}
-      .creator-categories{grid-template-columns:repeat(2,1fr)}.commerce-wrap{padding:28px 20px}.contact-form{grid-template-columns:1fr;padding:20px}.contact-form textarea,.contact-form button{grid-column:auto}
-      .section-head h2{font-size:36px}.route-top{display:block}.route-top span{display:block;margin-top:6px}
+    @media(max-width:680px){
+      .nav{height:68px}.menu{top:68px}.brand{font-size:17px}.hero{min-height:850px}.hero-inner{padding-top:120px}.hero-copy{padding-bottom:50px}.hero h1{font-size:48px}.hero-media img{object-position:62% center}.hero-foot{grid-template-columns:1fr}.scroll{display:none}
+      .manifesto{padding:100px 0}.manifesto-grid{gap:25px}.manifesto h2{font-size:42px}.manifesto-route{grid-template-columns:1fr 1fr}
+      .capabilities,.work,.approach,.network,.contact{padding:95px 0}.cap-item{grid-template-columns:35px 1fr;gap:16px}.cap-item p,.cap-keywords{grid-column:2}.work-head{display:block}.work-head p{margin-top:25px}
+      .case-media{min-height:500px}.case-copy,.proof-copy{padding:34px 24px}.case-copy{min-height:590px}.case-copy h3,.proof-copy h3{margin-top:45px}.proof-visual{min-height:570px}.visual-disclaimer{justify-content:flex-start;margin-bottom:42px}
+      .process{grid-template-columns:1fr}.process article{min-height:230px;border-right:0;border-bottom:1px solid var(--line)}.process article:last-child{border-bottom:0}.process h3{margin-top:70px}
+      .footer,.form{grid-template-columns:1fr}.form textarea,.form button{grid-column:auto}.contact h2{font-size:54px}
     }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.marquee-track{animation:none}}
   </style>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header>
-    <div class="shell nav">
-      <a class="brand" href="#top" aria-label="CoreGate Global home">CoreGate <i>Global</i></a>
-      <nav class="menu" id="main-menu" aria-label="Primary navigation">
-        <a href="#about"><span class="lang-ko">회사소개</span><span class="lang-en">ABOUT</span><span class="lang-zh">关于我们</span></a>
-        <a href="#business"><span class="lang-ko">사업영역</span><span class="lang-en">BUSINESS</span><span class="lang-zh">业务领域</span></a>
-        <a href="#projects"><span class="lang-ko">진행사업</span><span class="lang-en">PROJECTS</span><span class="lang-zh">进行项目</span></a>
-        <a href="#creator"><span class="lang-ko">크리에이터</span><span class="lang-en">CREATOR</span><span class="lang-zh">达人网络</span></a>
-        <a href="#partners"><span class="lang-ko">파트너</span><span class="lang-en">PARTNERS</span><span class="lang-zh">合作伙伴</span></a>
-        <a href="#contact"><span class="lang-ko">문의</span><span class="lang-en">CONTACT</span><span class="lang-zh">业务咨询</span></a>
+  <header id="header">
+    <div class="wrap nav">
+      <a class="brand" href="#top">CoreGate <span>Global</span></a>
+      <nav class="menu" id="menu">
+        <a href="#work"><span class="lang-ko">프로젝트</span><span class="lang-en">WORK</span><span class="lang-zh">项目</span></a>
+        <a href="#capabilities"><span class="lang-ko">사업영역</span><span class="lang-en">CAPABILITIES</span><span class="lang-zh">业务</span></a>
+        <a href="#approach"><span class="lang-ko">실행방식</span><span class="lang-en">APPROACH</span><span class="lang-zh">执行方式</span></a>
+        <a href="#network"><span class="lang-ko">네트워크</span><span class="lang-en">NETWORK</span><span class="lang-zh">网络</span></a>
       </nav>
-      <div class="nav-tools">
-        <div class="languages" aria-label="Language selector">
-          <button class="active" data-lang-button="ko" type="button">KR</button>
-          <button data-lang-button="en" type="button">EN</button>
-          <button data-lang-button="zh-CN" type="button">CN</button>
-        </div>
-        <a class="btn primary nav-contact" href="#contact"><span class="lang-ko">사업문의</span><span class="lang-en">INQUIRY</span><span class="lang-zh">业务咨询</span></a>
-        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+      <div class="nav-right">
+        <div class="langs"><button class="active" data-lang="ko">KR</button><button data-lang="en">EN</button><button data-lang="zh-CN">CN</button></div>
+        <a class="contact-link" href="#contact"><span class="lang-ko">사업 문의</span><span class="lang-en">START A PROJECT</span><span class="lang-zh">业务咨询</span> ↗</a>
+        <button class="menu-toggle" aria-label="Menu" aria-expanded="false">☰</button>
       </div>
     </div>
   </header>
 
-  <main id="main">
+  <main>
     <section class="hero" id="top">
-      <div class="shell hero-inner">
-        <div class="hero-grid">
-          <div>
-            <div class="hero-kicker">KOREA × CHINA × GLOBAL</div>
-            <h1>
-              <span class="lang-ko">한국 브랜드와 콘텐츠의<strong>해외 진입부터 판매까지.</strong></span>
-              <span class="lang-en">Korean brands and content,<strong>from market entry to sales.</strong></span>
-              <span class="lang-zh">韩国品牌与内容，<strong>从市场进入到销售落地。</strong></span>
-            </h1>
-            <p class="hero-sub">From Korea to China. From China to Global.</p>
-            <p class="hero-desc">
-              <span class="lang-ko">CoreGate Global은 시장진입, 콘텐츠, 크리에이터, 이커머스, 라이브커머스, B2B 바이어 발굴과 현지 운영을 하나의 실행 구조로 연결하는 크로스보더 비즈니스 운영사입니다.</span>
-              <span class="lang-en">CoreGate Global is a cross-border business operator connecting market entry, content, creators, e-commerce, live commerce, B2B buyer discovery, and local operations.</span>
-              <span class="lang-zh">CoreGate Global 是跨境业务运营机构，将市场进入、内容、达人、电商、直播、B2B买家开发与本地运营连接为一套执行体系。</span>
-            </p>
-            <div class="hero-actions">
-              <a class="btn primary" href="#business"><span class="lang-ko">사업영역 보기</span><span class="lang-en">OUR BUSINESS</span><span class="lang-zh">查看业务领域</span> →</a>
-              <a class="btn secondary" href="#projects"><span class="lang-ko">진행사업 보기</span><span class="lang-en">CURRENT PROJECTS</span><span class="lang-zh">查看进行项目</span></a>
-            </div>
-          </div>
-          <div class="route-panel" aria-label="CoreGate business flow">
-            <div class="route-top"><b>COREGATE BUSINESS FLOW</b><span>Execution, not introduction.</span></div>
-            <div class="route">
-              <div class="route-item"><div class="route-num">01</div><div><b>KOREA</b><span>Brand · Product · Content</span></div></div>
-              <div class="route-item"><div class="route-num">02</div><div><b>MARKET ENTRY</b><span>Research · Localization · Compliance</span></div></div>
-              <div class="route-item"><div class="route-num">03</div><div><b>CONTENT & CREATOR</b><span>Short-form · KOL/KOC · Live</span></div></div>
-              <div class="route-item"><div class="route-num">04</div><div><b>COMMERCE & B2B</b><span>Sales · Buyer · Distribution</span></div></div>
-              <div class="route-item"><div class="route-num">05</div><div><b>CHINA · GLOBAL</b><span>Local Operation · Scale</span></div></div>
-            </div>
-            <div class="channel-row"><span>Douyin</span><span>Xiaohongshu</span><span>TikTok Shop</span><span>Live Commerce</span><span>B2B</span><span>Distribution</span></div>
-          </div>
+      <div class="hero-media"><img src="assets/media/hero-crossborder.webp" alt="" fetchpriority="high"></div>
+      <div class="wrap hero-inner">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">KOREA · CHINA · GLOBAL</p>
+          <h1>
+            <span class="lang-ko">한국 브랜드와 콘텐츠가<em>해외에서 사업이 되도록.</em></span>
+            <span class="lang-en">Turning Korean brands and content<em>into business overseas.</em></span>
+            <span class="lang-zh">让韩国品牌与内容<em>在海外真正成为生意。</em></span>
+          </h1>
+          <p><span class="lang-ko">시장분석과 제안서에서 끝내지 않습니다. 중국 현지 채널, 크리에이터, 이커머스, 라이브커머스, 바이어와 유통까지 하나의 실행팀으로 운영합니다.</span><span class="lang-en">We go beyond market reports. We operate local channels, creators, e-commerce, live commerce, buyers and distribution as one cross-border execution team.</span><span class="lang-zh">我们不止于市场分析与方案。中国本地渠道、达人、电商、直播、买家与流通，由同一执行团队贯通运营。</span></p>
+          <div class="hero-actions"><a class="button white" href="#work"><span class="lang-ko">진행 프로젝트 보기</span><span class="lang-en">VIEW CURRENT WORK</span><span class="lang-zh">查看进行项目</span> ↓</a><a class="button outline" href="#contact"><span class="lang-ko">사업 상담</span><span class="lang-en">START A CONVERSATION</span><span class="lang-zh">业务洽谈</span></a></div>
         </div>
-        <div class="proof-row">
-          <div class="proof"><small>01</small><b>MARKET ENTRY</b><p><span class="lang-ko">국가·시장별 진입 설계</span><span class="lang-en">Country-specific entry design</span><span class="lang-zh">按国家与市场设计进入方案</span></p></div>
-          <div class="proof"><small>02</small><b>LOCAL CONTENT</b><p><span class="lang-ko">현지 소비자 언어로 전환</span><span class="lang-en">Localized consumer communication</span><span class="lang-zh">转化为本地消费者语言</span></p></div>
-          <div class="proof"><small>03</small><b>COMMERCE OPS</b><p><span class="lang-ko">콘텐츠에서 판매까지 운영</span><span class="lang-en">Content-to-sales operation</span><span class="lang-zh">从内容到销售的运营</span></p></div>
-          <div class="proof"><small>04</small><b>B2B & DISTRIBUTION</b><p><span class="lang-ko">바이어·유통 파트너 연결</span><span class="lang-en">Buyer and distributor connection</span><span class="lang-zh">连接买家与经销商</span></p></div>
-        </div>
+        <div class="hero-foot"><div class="hero-tags"><span>CHINA MARKET ENTRY</span><span>GLOBAL COMMERCE</span><span>CREATOR & LIVE</span><span>K-CONTENT</span><span>AI TRADE & B2B</span></div><div class="scroll">SCROLL <i>↓</i></div></div>
       </div>
     </section>
 
-    <section class="section" id="about">
-      <div class="shell about-grid">
-        <div class="about-statement">
-          <p class="eyebrow">WE BUILD THE ROUTE TO GLOBAL MARKETS</p>
-          <h2><span class="lang-ko">제품을 홍보하는 것이 아니라<br>해외에서 사업이 되는 구조를 만듭니다.</span><span class="lang-en">We build the route that turns products into overseas business.</span><span class="lang-zh">我们不是简单推广产品，而是搭建海外业务落地体系。</span></h2>
-          <p><span class="lang-ko">제품과 콘텐츠, 사람과 판매채널을 따로 운영하지 않습니다. 시장 검증부터 현지화, 크리에이터, 이커머스, B2B 유통까지 하나의 흐름으로 설계합니다.</span><span class="lang-en">We do not operate products, content, people, and sales channels in isolation. We design one flow from market validation and localization to creators, e-commerce, and B2B distribution.</span><span class="lang-zh">我们不割裂运营产品、内容、人才与销售渠道，而是从市场验证、本地化到达人、电商和B2B流通进行一体化设计。</span></p>
-        </div>
-        <div class="formula">
-          <article class="formula-card"><small>01</small><h3>PRODUCT</h3><p><span class="lang-ko">시장에 맞는 제품과 가격</span><span class="lang-en">Market-fit product and pricing</span><span class="lang-zh">符合市场的产品与价格</span></p></article>
-          <article class="formula-card"><small>02</small><h3>CONTENT</h3><p><span class="lang-ko">현지 언어와 플랫폼별 콘텐츠</span><span class="lang-en">Localized, platform-fit content</span><span class="lang-zh">本地化与平台化内容</span></p></article>
-          <article class="formula-card"><small>03</small><h3>PEOPLE</h3><p><span class="lang-ko">크리에이터·쇼호스트·바이어</span><span class="lang-en">Creators, hosts, and buyers</span><span class="lang-zh">达人、主播与买家</span></p></article>
-          <article class="formula-card"><small>04</small><h3>COMMERCE</h3><p><span class="lang-ko">온라인 판매와 글로벌 유통</span><span class="lang-en">Online sales and distribution</span><span class="lang-zh">线上销售与全球流通</span></p></article>
-        </div>
-      </div>
-    </section>
+    <div class="marquee" aria-hidden="true"><div class="marquee-track"><span><b>COREGATE GLOBAL</b> — MARKET ENTRY — CONTENT — COMMERCE — DISTRIBUTION — K-CULTURE — BUYER DISCOVERY —</span><span><b>COREGATE GLOBAL</b> — MARKET ENTRY — CONTENT — COMMERCE — DISTRIBUTION — K-CULTURE — BUYER DISCOVERY —</span></div></div>
 
-    <section class="section soft" id="business">
-      <div class="shell">
-        <div class="section-head center">
-          <p class="eyebrow">OUR BUSINESS</p>
-          <h2><span class="lang-ko">해외사업 실행을 위한 5개 핵심 영역</span><span class="lang-en">Five core areas for global execution</span><span class="lang-zh">海外业务落地的五大核心领域</span></h2>
-          <p><span class="lang-ko">시장분석 보고서에서 끝나지 않고, 실제 콘텐츠·판매·유통 운영까지 이어지는 모듈입니다.</span><span class="lang-en">Execution modules that extend beyond market reports into content, sales, and distribution operations.</span><span class="lang-zh">不止于市场报告，而是延伸至内容、销售与流通运营的执行模块。</span></p>
-        </div>
-        <div class="business-grid">
-          <article class="business-card"><div class="no">01 <i></i></div><h3>CHINA MARKET<br>ENTRY & COMMERCE</h3><p><span class="lang-ko">중국 시장 진입 가능성을 분석하고 도우인·샤오홍슈, KOL/KOC, 라이브커머스, 크로스보더 이커머스와 유통구조를 구축합니다.</span><span class="lang-en">We build China entry strategies across Douyin, Xiaohongshu, KOL/KOC, live commerce, CBEC, and distribution.</span><span class="lang-zh">分析进入中国市场的可行性，并搭建抖音、小红书、KOL/KOC、直播、跨境电商与流通体系。</span></p><div class="tag-list"><span>DOUYIN</span><span>XIAOHONGSHU</span><span>KOL / KOC</span><span>CBEC</span></div></article>
-          <article class="business-card"><div class="no">02 <i></i></div><h3>GLOBAL<br>COMMERCE</h3><p><span class="lang-ko">국가별 플랫폼과 소비자 특성에 맞춰 한국 제품의 글로벌 온라인 판매와 라이브커머스 운영체계를 구축합니다.</span><span class="lang-en">We build global online sales and live-commerce systems tailored to each market and platform.</span><span class="lang-zh">根据各国平台和消费者特征，搭建韩国产品的全球线上销售与直播运营体系。</span></p><div class="tag-list"><span>TIKTOK SHOP</span><span>MARKETPLACE</span><span>O2O</span><span>SHORT-FORM</span></div></article>
-          <article class="business-card"><div class="no">03 <i></i></div><h3>CREATOR &<br>LIVE COMMERCE</h3><p><span class="lang-ko">인플루언서, 크리에이터, 쇼호스트와 숏폼·라이브 콘텐츠를 실제 판매 전환 구조로 연결합니다.</span><span class="lang-en">We connect influencers, creators, hosts, short-form, and live content to practical sales conversion.</span><span class="lang-zh">将达人、创作者、主播与短视频、直播内容连接到实际销售转化。</span></p><div class="tag-list"><span>INFLUENCER</span><span>SHOW HOST</span><span>SHORT-FORM</span><span>LIVE</span></div></article>
-          <article class="business-card"><div class="no">04 <i></i></div><h3>K-CONTENT &<br>ENTERTAINMENT</h3><p><span class="lang-ko">K-POP을 중심으로 인증 연계, 교육, 경연, 콘텐츠 제작, 브랜드 PPL과 중국 현지 파트너십을 연결합니다.</span><span class="lang-en">We connect K-POP certification-linked programs, training, competitions, content, PPL, sponsorship, and China partnerships.</span><span class="lang-zh">围绕K-POP连接认证项目、培训、比赛、内容制作、品牌植入与中国本地合作。</span></p><div class="tag-list"><span>K-POP</span><span>CERTIFICATION</span><span>TRAINING</span><span>PPL</span></div></article>
-          <article class="business-card"><div class="no">05 <i></i></div><h3>AI TRADE<br>& B2B</h3><p><span class="lang-ko">AI 기술과 현지 네트워크를 활용해 해외 바이어와 유통사를 발굴하고 글로벌 B2B 진출을 지원합니다.</span><span class="lang-en">We use AI and local networks to discover buyers and distributors and support global B2B entry.</span><span class="lang-zh">利用AI技术与本地商务网络开发海外买家和经销商，支持全球B2B拓展。</span></p><div class="tag-list"><span>BUYER DISCOVERY</span><span>DISTRIBUTOR</span><span>TRADE CONTENT</span><span>MATCHING</span></div></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section dark" id="projects">
-      <div class="shell">
-        <div class="projects-toolbar">
-          <div class="section-head">
-            <p class="eyebrow">CURRENT PROJECTS</p>
-            <h2><span class="lang-ko">계획이 아닌,<br>현재 움직이는 프로젝트</span><span class="lang-en">Projects moving now,<br>not just plans</span><span class="lang-zh">不是概念规划，<br>而是正在推进的项目</span></h2>
-            <p><span class="lang-ko">완료 실적과 준비사업을 구분해 진행상태를 투명하게 표시합니다.</span><span class="lang-en">Project status is clearly identified to distinguish active, completed, and planned work.</span><span class="lang-zh">明确标注项目状态，区分进行中、已完成与筹备项目。</span></p>
-          </div>
-          <button class="btn ghost" id="project-toggle" type="button"><span class="lang-ko">프로젝트 더 보기</span><span class="lang-en">VIEW MORE PROJECTS</span><span class="lang-zh">查看更多项目</span> +</button>
-        </div>
-        <div class="project-grid" id="project-grid"></div>
-        <div id="projects-more"><div class="project-grid" id="project-grid-more"></div></div>
-      </div>
-    </section>
-
-    <section class="section soft" id="process">
-      <div class="shell">
-        <div class="section-head center"><p class="eyebrow">HOW WE WORK</p><h2><span class="lang-ko">발견부터 확장까지, 5단계 실행</span><span class="lang-en">Five steps from discovery to scale</span><span class="lang-zh">从发现到规模化的五步执行</span></h2></div>
-        <div class="process-grid">
-          <article class="process-step"><b>STEP 01</b><h3>DISCOVER</h3><p><span class="lang-ko">시장과 소비자, 경쟁환경을 찾습니다.</span><span class="lang-en">Find the market, consumer, and competitive landscape.</span><span class="lang-zh">发现市场、消费者与竞争环境。</span></p></article>
-          <article class="process-step"><b>STEP 02</b><h3>LOCALIZE</h3><p><span class="lang-ko">제품과 콘텐츠를 현지 시장에 맞춥니다.</span><span class="lang-en">Adapt products and content to the local market.</span><span class="lang-zh">使产品与内容适配本地市场。</span></p></article>
-          <article class="process-step"><b>STEP 03</b><h3>CONNECT</h3><p><span class="lang-ko">크리에이터·바이어·유통사를 연결합니다.</span><span class="lang-en">Connect creators, buyers, and distributors.</span><span class="lang-zh">连接达人、买家与经销商。</span></p></article>
-          <article class="process-step"><b>STEP 04</b><h3>SELL</h3><p><span class="lang-ko">커머스·라이브·B2B 판매를 실행합니다.</span><span class="lang-en">Execute commerce, live, and B2B sales.</span><span class="lang-zh">执行电商、直播与B2B销售。</span></p></article>
-          <article class="process-step"><b>STEP 05</b><h3>SCALE</h3><p><span class="lang-ko">광고·유통·현지 파트너십으로 확장합니다.</span><span class="lang-en">Scale through advertising, distribution, and local partnerships.</span><span class="lang-zh">通过广告、流通和本地合作扩大规模。</span></p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section dark" id="creator">
-      <div class="shell creator-panel">
-        <div class="creator-layout">
-          <div class="creator-copy">
-            <p class="eyebrow">CREATOR & PARTNER NETWORK</p>
-            <h2><span class="lang-ko">콘텐츠를 실제 시장과 판매로 연결합니다.</span><span class="lang-en">Connecting content to markets and sales.</span><span class="lang-zh">将内容连接到真实市场与销售。</span></h2>
-            <p><span class="lang-ko">한국 크리에이터, 쇼호스트와 글로벌 판매채널을 연결해 브랜드 목적에 맞는 콘텐츠와 커머스 구조를 운영합니다.</span><span class="lang-en">We connect Korean creators and show hosts with global sales channels to operate brand-fit content and commerce.</span><span class="lang-zh">连接韩国达人、主播与全球销售渠道，运营符合品牌目标的内容与商业结构。</span></p>
-            <p class="creator-note"><span class="lang-ko">공개된 크리에이터 예시는 캠페인 성격과 일정에 따라 실제 참여 가능 여부가 달라질 수 있습니다.</span><span class="lang-en">Creator availability varies by campaign fit and schedule.</span><span class="lang-zh">公开达人是否可参与，将根据项目匹配度与档期另行确认。</span></p>
-          </div>
-          <div class="creator-grid">
-            <article class="creator-card"><b>우주킹토킹</b><p><span class="lang-ko">맛집·공간·리뷰형 콘텐츠</span><span class="lang-en">Food, place, and review content</span><span class="lang-zh">美食、场所与测评内容</span></p></article>
-            <article class="creator-card"><b>모찌윤</b><p><span class="lang-ko">푸드·라이프스타일 리뷰</span><span class="lang-en">Food and lifestyle reviews</span><span class="lang-zh">美食与生活方式测评</span></p></article>
-            <article class="creator-card"><b>김부자</b><p><span class="lang-ko">식품·선물세트·생활형 콘텐츠</span><span class="lang-en">Food, gifts, and daily-life content</span><span class="lang-zh">食品、礼盒与生活类内容</span></p></article>
-            <article class="creator-card"><b>운동레저인플햇지</b><p><span class="lang-ko">운동·레저·건강 카테고리</span><span class="lang-en">Exercise, leisure, and wellness</span><span class="lang-zh">运动、休闲与健康领域</span></p></article>
-            <article class="creator-card"><b>웅자92</b><p><span class="lang-ko">플레이스·맛집·방문형 리뷰</span><span class="lang-en">Place and visit-based reviews</span><span class="lang-zh">场所、美食与探店测评</span></p></article>
-            <article class="creator-card"><b>badasoop</b><p><span class="lang-ko">라이프스타일·감성형 콘텐츠</span><span class="lang-en">Lifestyle and emotive content</span><span class="lang-zh">生活方式与情绪型内容</span></p></article>
-          </div>
-        </div>
-        <div class="creator-categories">
-          <div class="creator-category"><b>OUTDOOR & SPORTS</b><small>Activity · Wellness</small></div>
-          <div class="creator-category"><b>FASHION & BEAUTY</b><small>Beauty · Lifestyle</small></div>
-          <div class="creator-category"><b>ENTERTAINMENT</b><small>K-Content · Issue</small></div>
-          <div class="creator-category"><b>PLACE</b><small>Visit · Review</small></div>
-          <div class="creator-category"><b>KNOWLEDGE & TECH</b><small>Expert · Explainer</small></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="partners">
-      <div class="shell">
-        <div class="section-head"><p class="eyebrow">PARTNER ECOSYSTEM</p><h2><span class="lang-ko">사업 실행을 위한 파트너 네트워크</span><span class="lang-en">A partner network built for execution</span><span class="lang-zh">面向业务落地的合作伙伴网络</span></h2><p><span class="lang-ko">프로젝트에 필요한 역할을 구분해 적합한 실행 파트너를 연결합니다.</span><span class="lang-en">We connect the right execution partners according to each project's required role.</span><span class="lang-zh">根据项目所需职能，连接合适的执行合作伙伴。</span></p></div>
-        <div class="partner-grid">
-          <article class="partner-type"><small>01</small><h3>CREATOR</h3></article><article class="partner-type"><small>02</small><h3>ENTERTAINMENT</h3></article><article class="partner-type"><small>03</small><h3>CHINA OPERATION</h3></article><article class="partner-type"><small>04</small><h3>E-COMMERCE</h3></article><article class="partner-type"><small>05</small><h3>B2B</h3></article><article class="partner-type"><small>06</small><h3>LOGISTICS</h3></article><article class="partner-type"><small>07</small><h3>MEDIA</h3></article><article class="partner-type"><small>08</small><h3>LOCAL TALENT</h3></article>
-        </div>
-        <div class="partner-rule"><span class="lang-ko">파트너 로고는 계약 또는 공개 가능한 협력관계가 확인된 경우에만 게시합니다. 단순 미팅·협의 단계의 회사는 파트너로 표시하지 않습니다.</span><span class="lang-en">Partner logos are displayed only for confirmed, publicly disclosable relationships. Meetings or preliminary discussions are not represented as partnerships.</span><span class="lang-zh">仅展示已确认并可公开的合作关系。单纯会面或洽谈阶段的公司不标示为合作伙伴。</span></div>
-      </div>
-    </section>
-
-    <section class="section soft" id="commerce">
-      <div class="shell commerce-wrap">
+    <section class="manifesto">
+      <div class="wrap manifesto-grid reveal">
+        <div class="manifesto-index">01 / WHO WE ARE</div>
         <div>
-          <p class="eyebrow">GLOBAL COMMERCE LAB</p>
-          <h2><span class="lang-ko">제품을 올리는 공간이 아니라<br>판매를 검증하는 공간</span><span class="lang-en">Not a product shelf.<br>A commerce validation lab.</span><span class="lang-zh">不是商品陈列区，<br>而是销售验证空间。</span></h2>
-          <p><span class="lang-ko">콘텐츠 반응, 상담 데이터, 라이브 운영과 실제 판매 가능성을 검증한 뒤 판매채널을 단계적으로 연결합니다. 준비되지 않은 구매 링크는 노출하지 않습니다.</span><span class="lang-en">We validate content response, inquiry data, live operations, and sales feasibility before connecting channels. Inactive purchase links are not displayed.</span><span class="lang-zh">先验证内容反馈、咨询数据、直播运营与销售可行性，再分阶段连接销售渠道。不展示未启用的购买链接。</span></p>
-          <div class="commerce-categories"><span>BEAUTY</span><span>WELLNESS</span><span>LIFESTYLE</span><span>K-CONTENT</span><span>O2O</span></div>
-        </div>
-        <div class="commerce-flow">
-          <div><b>01 · PRODUCT REVIEW</b><span>FIT</span></div>
-          <div><b>02 · CONTENT TEST</b><span>RESPONSE</span></div>
-          <div><b>03 · LIVE / CREATOR</b><span>CONVERSION</span></div>
-          <div><b>04 · CHANNEL OPEN</b><span>SALES</span></div>
+          <h2><span class="lang-ko">우리는 해외진출을<br><strong>‘소개’하지 않습니다.</strong><br>시장을 운영합니다.</span><span class="lang-en">We do not simply introduce markets.<br><strong>We operate them.</strong></span><span class="lang-zh">我们不只是“介绍”海外市场，<br><strong>而是直接运营市场。</strong></span></h2>
+          <div class="manifesto-bottom">
+            <p><span class="lang-ko">CoreGate Global은 한국의 제품·콘텐츠·인재를 중국 및 글로벌 소비자와 연결합니다. 시장 진입 전략, 현지화 콘텐츠, 크리에이터, 판매채널, 바이어와 물류가 따로 움직이지 않도록 처음부터 하나의 사업구조로 설계합니다.</span><span class="lang-en">CoreGate Global connects Korean products, content and talent with consumers in China and global markets. Strategy, localized content, creators, sales channels, buyers and distribution are designed as one operating system.</span><span class="lang-zh">CoreGate Global连接韩国产品、内容与人才进入中国及全球市场。从市场策略、本地化内容到达人、销售渠道、买家与物流，统一设计为一套业务体系。</span></p>
+            <div class="manifesto-route"><div class="route-step"><small>01</small><b>DISCOVER</b></div><div class="route-step"><small>02</small><b>LOCALIZE</b></div><div class="route-step"><small>03</small><b>SELL</b></div><div class="route-step"><small>04</small><b>SCALE</b></div></div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="magazine">
-      <div class="shell">
-        <div class="section-head center"><p class="eyebrow">GLOBAL INFLUENCER MAGAZINE</p><h2><span class="lang-ko">콘텐츠에서 커머스로</span><span class="lang-en">From content to commerce</span><span class="lang-zh">从内容到商业转化</span></h2><p><span class="lang-ko">시장 트렌드와 제품 스토리, 크리에이터 리뷰, 실행사례를 축적하는 콘텐츠 허브입니다.</span><span class="lang-en">A content hub for market trends, product stories, creator reviews, and execution cases.</span><span class="lang-zh">沉淀市场趋势、产品故事、达人测评与执行案例的内容中心。</span></p></div>
-        <div class="magazine-grid">
-          <article class="magazine-card"><small>TREND</small><h3><span class="lang-ko">글로벌 뷰티 & 라이프스타일 트렌드</span><span class="lang-en">Global Beauty & Lifestyle Trends</span><span class="lang-zh">全球美妆与生活方式趋势</span></h3><p><span class="lang-ko">국가별 소비와 플랫폼 변화를 분석합니다.</span><span class="lang-en">Market and platform shifts by country.</span><span class="lang-zh">分析各国消费与平台变化。</span></p></article>
-          <article class="magazine-card"><small>PRODUCT STORY</small><h3><span class="lang-ko">제품 스토리텔링</span><span class="lang-en">Product Storytelling</span><span class="lang-zh">产品内容策划</span></h3><p><span class="lang-ko">성분과 브랜드 가치를 이해하기 쉬운 콘텐츠로 전환합니다.</span><span class="lang-en">Turning ingredients and brand value into clear content.</span><span class="lang-zh">将成分与品牌价值转化为易懂内容。</span></p></article>
-          <article class="magazine-card"><small>CREATOR PICK</small><h3><span class="lang-ko">크리에이터 추천 & 리뷰</span><span class="lang-en">Creator Picks & Reviews</span><span class="lang-zh">达人推荐与测评</span></h3><p><span class="lang-ko">콘텐츠 반응을 브랜드 인지도와 판매로 연결합니다.</span><span class="lang-en">Connecting content response to awareness and sales.</span><span class="lang-zh">将内容反馈连接到品牌认知与销售。</span></p></article>
-          <article class="magazine-card"><small>CASE STUDY</small><h3><span class="lang-ko">커머스 실행 사례</span><span class="lang-en">Commerce Case Studies</span><span class="lang-zh">商业执行案例</span></h3><p><span class="lang-ko">시딩, 숏폼, 라이브, 바이어 발굴 과정을 기록합니다.</span><span class="lang-en">Documenting seeding, short-form, live, and buyer discovery.</span><span class="lang-zh">记录种草、短视频、直播与买家开发过程。</span></p></article>
+    <section class="capabilities" id="capabilities">
+      <div class="wrap cap-grid">
+        <div class="cap-intro reveal"><p class="eyebrow">CAPABILITIES</p><h2><span class="lang-ko">전략이 실제 매출과 유통으로 이어지는 영역</span><span class="lang-en">Where strategy becomes sales and distribution</span><span class="lang-zh">让策略真正转化为销售与流通</span></h2><p><span class="lang-ko">필요한 기능만 떼어 판매하지 않습니다. 브랜드 상황에 따라 진입·콘텐츠·커머스·B2B를 조합합니다.</span><span class="lang-en">We combine entry, content, commerce and B2B according to each brand's stage.</span><span class="lang-zh">根据品牌所处阶段，组合市场进入、内容、电商与B2B执行。</span></p></div>
+        <div class="cap-list">
+          <article class="cap-item reveal"><div class="cap-no">01</div><h3>China Market Entry<br>& Commerce</h3><div><p><span class="lang-ko">중국 소비자·경쟁사·가격·채널을 분석하고, 도우인·샤오홍슈 콘텐츠와 KOL/KOC, 라이브커머스, 크로스보더 이커머스, 현지 유통을 연결합니다.</span><span class="lang-en">Market analysis, Douyin and Xiaohongshu content, KOL/KOC, live commerce, CBEC and local distribution.</span><span class="lang-zh">中国消费者、竞品、价格与渠道分析，并连接抖音、小红书、KOL/KOC、直播、跨境电商及本地流通。</span></p><div class="cap-keywords"><span>DOUYIN</span><span>XIAOHONGSHU</span><span>KOL / KOC</span><span>CBEC</span></div></div></article>
+          <article class="cap-item reveal"><div class="cap-no">02</div><h3>Global Commerce<br>& O2O</h3><div><p><span class="lang-ko">한국의 오프라인 공간과 글로벌 인력을 촬영·라이브·판매 거점으로 전환하고, 국가별 TikTok Shop과 글로벌 마켓플레이스 운영으로 확장합니다.</span><span class="lang-en">We transform Korean offline spaces and global talent into content, live and sales hubs, then expand to TikTok Shop and global marketplaces.</span><span class="lang-zh">将韩国线下空间与国际人才转化为内容、直播及销售基地，并扩展至各国TikTok Shop与全球平台。</span></p><div class="cap-keywords"><span>TIKTOK SHOP</span><span>LIVE COMMERCE</span><span>MARKETPLACE</span><span>O2O</span></div></div></article>
+          <article class="cap-item reveal"><div class="cap-no">03</div><h3>Creator, Short-form<br>& Live</h3><div><p><span class="lang-ko">한국 인플루언서와 외국인 크리에이터, 쇼호스트를 브랜드에 맞게 구성하고 콘텐츠가 조회수에 머물지 않고 판매로 이어지도록 운영합니다.</span><span class="lang-en">Korean influencers, global creators and hosts are organized around conversion, not views alone.</span><span class="lang-zh">根据品牌配置韩国达人、国际创作者与主播，让内容不止于曝光，而是连接到销售。</span></p><div class="cap-keywords"><span>CREATOR</span><span>SHORT-FORM</span><span>SHOW HOST</span><span>LIVE</span></div></div></article>
+          <article class="cap-item reveal"><div class="cap-no">04</div><h3>K-Content<br>& Entertainment</h3><div><p><span class="lang-ko">K-POP 인증 연계, 교육, 경연, 중국 참가자 모집, 현지 콘텐츠 운영과 브랜드 PPL·협찬을 하나의 수익모델로 설계합니다.</span><span class="lang-en">K-POP certification-linked programs, training, competitions, participant recruitment, content operations and brand sponsorship.</span><span class="lang-zh">将K-POP认证项目、培训、比赛、学员招募、本地内容运营及品牌赞助整合为可持续商业模式。</span></p><div class="cap-keywords"><span>K-POP</span><span>CERTIFICATION</span><span>TRAINING</span><span>SPONSORSHIP</span></div></div></article>
+          <article class="cap-item reveal"><div class="cap-no">05</div><h3>AI Trade<br>& Global B2B</h3><div><p><span class="lang-ko">AI 기반 바이어·유통사 발굴에 현지 검증과 상담을 결합합니다. 단순 목록 제공이 아니라 후속 접촉, 샘플, 협상과 유통 가능성까지 관리합니다.</span><span class="lang-en">AI buyer discovery is combined with local validation, outreach, samples, negotiation and distributor follow-up.</span><span class="lang-zh">将AI买家与经销商开发结合本地验证、后续联系、样品、谈判与流通跟进。</span></p><div class="cap-keywords"><span>BUYER DISCOVERY</span><span>DISTRIBUTOR</span><span>OUTREACH</span><span>TRADE</span></div></div></article>
         </div>
       </div>
     </section>
 
-    <section class="section dark" id="contact">
-      <div class="shell contact-grid">
-        <div class="contact-copy">
-          <p class="eyebrow">LET'S BUILD THE NEXT MARKET.</p>
-          <h2><span class="lang-ko">다음 시장을<br>함께 설계합니다.</span><span class="lang-en">Let's design<br>your next market.</span><span class="lang-zh">共同设计<br>下一个市场。</span></h2>
-          <p><span class="lang-ko">사업영역과 목표 시장을 알려주시면 검토 후 필요한 실행범위와 다음 단계를 안내합니다.</span><span class="lang-en">Tell us your business area and target market. We will review the scope and recommend the next practical step.</span><span class="lang-zh">请告知业务领域与目标市场，我们将在评估后提出执行范围与下一步建议。</span></p>
-          <a class="contact-direct" href="mailto:zesia@coregateglobal.com">zesia@coregateglobal.com →</a>
+    <section class="work" id="work">
+      <div class="wrap">
+        <div class="work-head reveal"><div><p class="eyebrow">CURRENT WORK</p><h2><span class="lang-ko">지금, 실제로<br>움직이는 사업</span><span class="lang-en">Work that is<br>moving now</span><span class="lang-zh">正在真实推进的<br>业务项目</span></h2></div><p><span class="lang-ko">계획사업과 진행사업을 구분합니다. 아래 프로젝트는 현재 CoreGate Global이 국내외 파트너와 실행구조를 구축하고 있는 사업입니다.</span><span class="lang-en">We distinguish ideas from active work. The projects below are currently being structured with Korean and overseas partners.</span><span class="lang-zh">我们区分计划与实际项目。以下业务正在与韩国及海外合作伙伴共同推进执行体系。</span></p></div>
+        <div class="visual-disclaimer reveal"><span class="lang-ko">※ 프로젝트 이미지는 사업 이해를 돕기 위한 콘셉트 비주얼입니다.</span><span class="lang-en">※ Project imagery is conceptual and provided for business context.</span><span class="lang-zh">※ 项目图片为便于理解业务而制作的概念视觉。</span></div>
+
+        <article class="case reveal">
+          <div class="case-media"><img src="assets/media/kpop-concept.webp" alt="상하이 K-POP 사업 콘셉트 비주얼" loading="lazy"><div class="case-badge">ONGOING · SHANGHAI</div><div class="case-caption"><span>K-POP NEXT STAGE IN SHANGHAI</span><span>CONCEPT VISUAL</span></div></div>
+          <div class="case-copy"><div class="case-no">PROJECT 01 / K-CONTENT</div><h3><span class="lang-ko">상하이 무대에서 시작되는 K-POP 인증·경연·교육 사업</span><span class="lang-en">A K-POP certification, competition and training business starting in Shanghai</span><span class="lang-zh">从上海舞台出发的K-POP认证、比赛与培训业务</span></h3><p><span class="lang-ko">상하이 한풍제 연계 무대를 기반으로 중국 참가자 모집, 경연 운영, 인증 연계, 한국 교육 프로그램과 브랜드 협찬을 연결합니다. 일회성 행사가 아니라 중국 지역 확장이 가능한 K-POP 사업모델을 구축하는 프로젝트입니다.</span><span class="lang-en">Linked to Shanghai's Hanfeng Festival, the project connects participant recruitment, competition operations, certification, Korean training and brand sponsorship into a scalable China model.</span><span class="lang-zh">以上海韩风节联动舞台为基础，连接中国学员招募、比赛运营、认证项目、韩国培训与品牌赞助，打造可向中国各地区扩展的K-POP业务模式。</span></p><div class="case-points"><div><span>CORE PROGRAM</span><span>COMPETITION · CERTIFICATION · TRAINING</span></div><div><span>LOCAL EXECUTION</span><span>CHINA RECRUITMENT · CONTENT · OPERATION</span></div><div><span>BRAND VALUE</span><span>PPL · SPONSORSHIP · SHORT-FORM</span></div></div></div>
+        </article>
+
+        <article class="case reverse reveal">
+          <div class="case-media"><img src="assets/media/beauty-o2o-concept.webp" alt="뷰티 O2O 라이브커머스 콘셉트 비주얼" loading="lazy"><div class="case-badge">ONGOING · SEOUL</div><div class="case-caption"><span>GLOBAL BEAUTY O2O STUDIO</span><span>CONCEPT VISUAL</span></div></div>
+          <div class="case-copy"><div class="case-no">PROJECT 02 / GLOBAL COMMERCE</div><h3><span class="lang-ko">남대문 매장을 글로벌 O2O 커머스 스튜디오로</span><span class="lang-en">Turning a Namdaemun store into a global O2O commerce studio</span><span class="lang-zh">将南大门门店打造为全球O2O商业工作室</span></h3><p><span class="lang-ko">오프라인 판매만을 위한 매장이 아닙니다. 피부상담, 외국인 판매인력, 다국어 콘텐츠, 라이브커머스와 온라인 판매를 한 공간에서 연결해 한국 제품의 글로벌 판매 가능성을 검증합니다.</span><span class="lang-en">The space connects skin consultation, multilingual sales talent, content production, live commerce and online sales to validate global demand for Korean products.</span><span class="lang-zh">该空间连接皮肤咨询、外籍销售人才、多语种内容、直播电商与线上销售，验证韩国产品的全球销售潜力。</span></p><div class="case-points"><div><span>OFFLINE</span><span>STORE · SKIN CONSULTING · EXPERIENCE</span></div><div><span>CONTENT</span><span>MULTILINGUAL STAFF · SHORT-FORM · LIVE</span></div><div><span>COMMERCE</span><span>O2O · GLOBAL SALES · CUSTOMER DATA</span></div></div></div>
+        </article>
+
+        <article class="case reveal">
+          <div class="case-media"><img src="assets/media/creator-commerce-concept.webp" alt="크리에이터 커머스 제작 콘셉트 비주얼" loading="lazy"><div class="case-badge">BEAUTY × CREATOR × COMMERCE</div><div class="case-caption"><span>CONTENT TO CONVERSION</span><span>CONCEPT VISUAL</span></div></div>
+          <div class="case-copy"><div class="case-no">PROJECT 03 / CREATOR COMMERCE</div><h3><span class="lang-ko">제품 촬영에서 끝나지 않는 콘텐츠 커머스</span><span class="lang-en">Content commerce that goes beyond product shoots</span><span class="lang-zh">不止于产品拍摄的内容商业</span></h3><p><span class="lang-ko">브랜드의 핵심 메시지를 숏폼과 라이브에 맞게 현지화하고, 크리에이터·쇼호스트·판매채널을 연결합니다. 콘텐츠 제작비가 단순 노출로 소진되지 않도록 실제 상담과 판매 데이터를 기준으로 다음 집행을 결정합니다.</span><span class="lang-en">Brand messages are localized for short-form and live, then connected to creators, hosts and sales channels. Follow-up decisions are based on inquiries and sales data.</span><span class="lang-zh">将品牌核心信息本地化为短视频与直播内容，连接达人、主播与销售渠道，并根据咨询和销售数据决定下一阶段投入。</span></p><div class="case-points"><div><span>LOCALIZE</span><span>MESSAGE · LANGUAGE · FORMAT</span></div><div><span>CREATE</span><span>SHORT-FORM · LIVE · PRODUCT STORY</span></div><div><span>CONVERT</span><span>TRAFFIC · INQUIRY · SALES</span></div></div></div>
+        </article>
+
+        <article class="proof-case reveal">
+          <div class="proof-copy"><div class="case-no">PROJECT 04 / CHINA SOCIAL COMMERCE</div><h3><span class="lang-ko">중국 플랫폼에서 검증하고 판매로 연결합니다.</span><span class="lang-en">Validated on Chinese platforms. Connected to sales.</span><span class="lang-zh">在中国平台完成验证，并连接到销售。</span></h3><p><span class="lang-ko">도우인·샤오홍슈의 콘텐츠 문법과 소비자 반응을 기준으로 시딩, 계정 운영, 인플루언서, 라이브와 CBEC 진입 순서를 설계합니다. 중국팀과 한국 본사가 같은 자료와 기준으로 움직이도록 실행체계를 만듭니다.</span><span class="lang-en">We design the sequence of seeding, account operations, influencers, live and CBEC based on platform behavior and consumer response.</span><span class="lang-zh">根据抖音与小红书的内容逻辑及消费者反馈，设计种草、账号运营、达人、直播与跨境电商的进入顺序。</span></p><div class="case-points"><div><span>PLATFORMS</span><span>DOUYIN · XIAOHONGSHU</span></div><div><span>VALIDATION</span><span>CONTENT · SEEDING · RESPONSE</span></div><div><span>EXPANSION</span><span>LIVE · CBEC · DISTRIBUTION</span></div></div></div>
+          <div class="proof-visual"><img src="assets/media/china-commerce-concept.webp" alt="중국 소셜커머스 운영 콘셉트 비주얼" loading="lazy"><div class="proof-caption"><span>CHINA SOCIAL COMMERCE</span><span>CONCEPT VISUAL</span></div></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="approach" id="approach">
+      <div class="wrap">
+        <div class="approach-head reveal"><div class="manifesto-index">03 / HOW WE WORK</div><h2><span class="lang-ko">보고서를 넘어서<br>실행이 남도록.</span><span class="lang-en">Beyond reports.<br>Built for execution.</span><span class="lang-zh">超越报告，<br>留下可执行体系。</span></h2></div>
+        <div class="process reveal">
+          <article><small>01 / DISCOVER</small><h3><span class="lang-ko">시장 진단</span><span class="lang-en">Diagnose</span><span class="lang-zh">市场诊断</span></h3><p><span class="lang-ko">소비자·가격·경쟁사·채널을 확인합니다.</span><span class="lang-en">Consumer, price, competitors and channels.</span><span class="lang-zh">消费者、价格、竞品与渠道。</span></p></article>
+          <article><small>02 / LOCALIZE</small><h3><span class="lang-ko">현지화</span><span class="lang-en">Localize</span><span class="lang-zh">本地化</span></h3><p><span class="lang-ko">제품 메시지와 콘텐츠를 시장에 맞춥니다.</span><span class="lang-en">Adapt product messaging and content.</span><span class="lang-zh">调整产品信息与内容。</span></p></article>
+          <article><small>03 / CONNECT</small><h3><span class="lang-ko">실행자 연결</span><span class="lang-en">Connect</span><span class="lang-zh">连接执行者</span></h3><p><span class="lang-ko">크리에이터·바이어·유통사를 구성합니다.</span><span class="lang-en">Creators, buyers and distributors.</span><span class="lang-zh">达人、买家与经销商。</span></p></article>
+          <article><small>04 / SELL</small><h3><span class="lang-ko">판매 실행</span><span class="lang-en">Sell</span><span class="lang-zh">销售执行</span></h3><p><span class="lang-ko">콘텐츠·라이브·B2B 판매를 운영합니다.</span><span class="lang-en">Content, live and B2B sales.</span><span class="lang-zh">内容、直播与B2B销售。</span></p></article>
+          <article><small>05 / SCALE</small><h3><span class="lang-ko">확장</span><span class="lang-en">Scale</span><span class="lang-zh">规模化</span></h3><p><span class="lang-ko">데이터를 기준으로 광고와 유통을 확대합니다.</span><span class="lang-en">Scale advertising and distribution with data.</span><span class="lang-zh">以数据扩大广告与流通。</span></p></article>
         </div>
-        <form class="contact-form" id="contact-form">
-          <input name="company" required data-ph-ko="회사명" data-ph-en="Company" data-ph-zh="公司名称" placeholder="회사명">
-          <input name="name" required data-ph-ko="담당자명" data-ph-en="Name" data-ph-zh="负责人姓名" placeholder="담당자명">
-          <input name="email" type="email" required data-ph-ko="이메일" data-ph-en="Email" data-ph-zh="电子邮箱" placeholder="이메일">
-          <select name="interest" required>
-            <option value="" data-option-ko="문의 분야 선택" data-option-en="Select inquiry type" data-option-zh="请选择咨询领域">문의 분야 선택</option>
-            <option>China Market Entry</option><option>Global Commerce</option><option>Creator / Influencer</option><option>K-Content / K-POP</option><option>B2B / Distribution</option><option>Partnership</option><option>Other</option>
-          </select>
-          <textarea name="message" required data-ph-ko="문의 내용과 목표 시장을 입력해 주세요." data-ph-en="Tell us about your request and target market." data-ph-zh="请输入咨询内容与目标市场。" placeholder="문의 내용과 목표 시장을 입력해 주세요."></textarea>
-          <button class="btn primary" type="submit"><span class="lang-ko">이메일 문의 작성</span><span class="lang-en">COMPOSE EMAIL</span><span class="lang-zh">撰写咨询邮件</span> →</button>
-        </form>
+      </div>
+    </section>
+
+    <section class="network" id="network">
+      <div class="wrap network-grid reveal">
+        <div><p class="eyebrow">ONE NETWORK, MULTIPLE MARKETS</p><h2><span class="lang-ko">시장에 필요한 사람을 연결합니다.</span><span class="lang-en">The right people for each market.</span><span class="lang-zh">连接每个市场真正需要的人。</span></h2></div>
+        <div class="network-copy"><p><span class="lang-ko">한국 크리에이터와 외국인 판매인력, 중국 현지 운영팀, 바이어·유통사, 미디어·엔터테인먼트 파트너를 프로젝트 목적에 맞춰 구성합니다.</span><span class="lang-en">Korean creators, global sales talent, China operators, buyers, distributors, media and entertainment partners are assembled around each project.</span><span class="lang-zh">根据项目目标，配置韩国达人、外籍销售人才、中国本地运营团队、买家、经销商、媒体与娱乐合作伙伴。</span></p><div class="network-list"><div><b>CREATOR & SHOW HOST</b><span>KOREA · GLOBAL TALENT</span></div><div><b>CHINA OPERATION</b><span>CONTENT · COMMERCE · LIVE</span></div><div><b>ENTERTAINMENT & MEDIA</b><span>K-POP · PPL · EVENT</span></div><div><b>B2B & DISTRIBUTION</b><span>BUYER · DISTRIBUTOR · LOGISTICS</span></div></div><div class="network-note"><span class="lang-ko">파트너명과 로고는 계약 또는 공개 가능한 협력관계가 확인된 경우에만 게시합니다. 단순 미팅이나 협의 단계는 파트너로 표시하지 않습니다.</span><span class="lang-en">Names and logos are displayed only for confirmed and publicly disclosable partnerships.</span><span class="lang-zh">仅在合作关系已确认且可公开时展示合作伙伴名称与标识。</span></div></div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="wrap contact-grid">
+        <div class="contact-copy reveal"><p class="eyebrow">START A PROJECT</p><h2><span class="lang-ko">다음 시장을<strong>함께 엽니다.</strong></span><span class="lang-en">Let's open<strong>your next market.</strong></span><span class="lang-zh">共同打开<strong>下一个市场。</strong></span></h2><p><span class="lang-ko">브랜드, 제품, 콘텐츠 또는 프로젝트의 현재 상황과 목표 시장을 알려주시면 진입 가능성과 필요한 실행범위를 검토합니다.</span><span class="lang-en">Tell us your current stage and target market. We will review feasibility and the execution scope required.</span><span class="lang-zh">请告知项目现状与目标市场，我们将评估进入可行性及所需执行范围。</span></p><a class="contact-email" href="mailto:zesia@coregateglobal.com">zesia@coregateglobal.com ↗</a></div>
+        <form class="form reveal" id="contact-form"><input name="company" required data-ph-ko="회사명" data-ph-en="Company" data-ph-zh="公司名称" placeholder="회사명"><input name="name" required data-ph-ko="담당자명" data-ph-en="Name" data-ph-zh="负责人姓名" placeholder="담당자명"><input type="email" name="email" required data-ph-ko="이메일" data-ph-en="Email" data-ph-zh="电子邮箱" placeholder="이메일"><select name="interest" required><option value="">Inquiry Type / 문의 분야</option><option>China Market Entry</option><option>Global Commerce</option><option>Creator / Live Commerce</option><option>K-Content / K-POP</option><option>AI Trade / B2B</option><option>Partnership</option></select><textarea name="message" required data-ph-ko="현재 상황과 목표 시장을 입력해 주세요." data-ph-en="Tell us about your current stage and target market." data-ph-zh="请输入当前情况与目标市场。" placeholder="현재 상황과 목표 시장을 입력해 주세요."></textarea><button class="button" type="submit"><span class="lang-ko">이메일 문의 작성</span><span class="lang-en">COMPOSE INQUIRY</span><span class="lang-zh">撰写咨询邮件</span> ↗</button></form>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="shell">
-      <div class="footer-grid">
-        <div><div class="footer-brand">CoreGate Global</div><p>Market Entry · Commerce · Creator · K-Content · Global B2B</p><p><span class="lang-ko">한국 브랜드와 콘텐츠의 중국 및 글로벌 시장 진입부터 판매·유통까지 연결하는 크로스보더 비즈니스 운영사입니다.</span><span class="lang-en">A cross-border business operator connecting Korean brands and content to China and global markets.</span><span class="lang-zh">连接韩国品牌与内容进入中国及全球市场的跨境业务运营机构。</span></p></div>
-        <div><h3>KOREA OFFICE</h3><p>서울특별시 금천구 디지털로9길 47, 804호<br>가산동, 한신IT타워2차</p><p>zesia@coregateglobal.com</p></div>
-        <div><h3>CHINA OFFICE</h3><p>上海市闵行区莲花南路3110号<br>A栋 A710</p><p>coregateglobal.com</p></div>
-      </div>
-      <div class="copyright">© 2026 CoreGate Global. All rights reserved.</div>
-    </div>
-  </footer>
+  <footer><div class="wrap"><div class="footer"><div><b>CoreGate Global</b><p>Market Entry · Commerce · Creator · K-Content · Global B2B</p></div><div><b>KOREA OFFICE</b><p>서울특별시 금천구 디지털로9길 47, 804호<br>가산동, 한신IT타워2차</p></div><div><b>CHINA OFFICE</b><p>上海市闵行区莲花南路3110号<br>A栋 A710</p></div></div><div class="copyright">© 2026 CoreGate Global. All rights reserved.</div></div></footer>
 
   <script>
-    const projects = [
-      {
-        title:"K-POP NEXT STAGE IN SHANGHAI",category:"K-CONTENT · CHINA",status:"ongoing",
-        description:{
-          ko:"상하이 K-Culture 행사와 연계해 K-POP 경연, 인증 연계 프로그램, 교육 콘텐츠와 브랜드 협찬을 연결하는 프로젝트입니다.",
-          en:"A Shanghai K-culture project connecting K-POP competition, certification-linked programs, training content, and brand sponsorship.",
-          zh:"结合上海K-Culture活动，连接K-POP比赛、认证项目、培训内容与品牌赞助。"
-        },tags:["K-POP","CERTIFICATION","EVENT"]
-      },
-      {
-        title:"MARINAVI GLOBAL LIVE COMMERCE",category:"BEAUTY · O2O",status:"ongoing",
-        description:{
-          ko:"서울 남대문 오프라인 공간을 기반으로 외국인 판매·콘텐츠 인력과 글로벌 라이브커머스를 연결하는 O2O 운영모델을 구축하고 있습니다.",
-          en:"Building an O2O model connecting a Namdaemun retail space, multilingual sales talent, content, and global live commerce.",
-          zh:"以首尔南大门线下空间为基础，连接外籍销售与内容人才以及全球直播电商，搭建O2O运营模式。"
-        },tags:["BEAUTY","LIVE COMMERCE","O2O"]
-      },
-      {
-        title:"CHINA SOCIAL COMMERCE",category:"CHINA MARKET",status:"ongoing",
-        description:{
-          ko:"한국 브랜드의 중국 진출을 위해 도우인·샤오홍슈 콘텐츠, 시딩, 인플루언서와 크로스보더 이커머스 운영을 진행합니다.",
-          en:"Operating Douyin and Xiaohongshu content, seeding, influencers, and cross-border e-commerce for Korean brands entering China.",
-          zh:"面向进入中国市场的韩国品牌，运营抖音、小红书内容、种草、达人与跨境电商。"
-        },tags:["DOUYIN","XIAOHONGSHU","CBEC"]
-      },
-      {
-        title:"GLOBAL TIKTOK COMMERCE",category:"GLOBAL COMMERCE",status:"planned",
-        description:{
-          ko:"한국 내 글로벌 인재와 크리에이터 네트워크를 기반으로 국가별 TikTok Shop과 글로벌 이커머스 판매 인프라 구축을 준비하고 있습니다.",
-          en:"Preparing country-specific TikTok Shop and global e-commerce infrastructure using international talent and creator networks in Korea.",
-          zh:"基于在韩国际人才与达人网络，筹备各国TikTok Shop及全球电商销售基础设施。"
-        },tags:["TIKTOK SHOP","CREATOR","GLOBAL"]
-      },
-      {
-        title:"GLOBAL B2B BUYER NETWORK",category:"AI TRADE · B2B",status:"ongoing",
-        description:{
-          ko:"AI 기반 바이어 발굴과 현지 비즈니스 네트워크를 결합해 유통사 탐색, 바이어 매칭과 후속상담 구조를 운영합니다.",
-          en:"Combining AI buyer discovery with local business networks for distributor search, matching, and follow-up.",
-          zh:"结合AI买家开发与本地商务网络，运营经销商搜索、买家匹配与后续洽谈。"
-        },tags:["AI BUYER DISCOVERY","DISTRIBUTOR","TRADE"]
-      }
-    ];
-
-    let currentLang = "ko";
-    const projectGrid = document.getElementById("project-grid");
-    const projectGridMore = document.getElementById("project-grid-more");
-    const statusText = {ko:{ongoing:"진행중",planned:"준비중",completed:"완료"},en:{ongoing:"ONGOING",planned:"PLANNED",completed:"COMPLETED"},zh:{ongoing:"进行中",planned:"筹备中",completed:"已完成"}};
-
-    function projectCard(project){
-      return `<article class="project-card">
-        <div class="project-meta"><span class="project-category">${project.category}</span><span class="status ${project.status}">${statusText[currentLang][project.status]}</span></div>
-        <h3>${project.title}</h3><p>${project.description[currentLang]}</p>
-        <div class="project-tags">${project.tags.map(tag=>`<span>${tag}</span>`).join("")}</div>
-      </article>`;
-    }
-
-    function renderProjects(){
-      projectGrid.innerHTML = projects.slice(0,4).map(projectCard).join("");
-      projectGridMore.innerHTML = projects.slice(4).map(projectCard).join("");
-    }
+    const header=document.getElementById("header");
+    const menu=document.getElementById("menu");
+    const toggle=document.querySelector(".menu-toggle");
+    const revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("visible");revealObserver.unobserve(entry.target)}}),{threshold:.12});
+    document.querySelectorAll(".reveal").forEach(el=>revealObserver.observe(el));
+    window.addEventListener("scroll",()=>header.classList.toggle("scrolled",scrollY>30),{passive:true});
+    toggle.addEventListener("click",()=>{const open=menu.classList.toggle("open");toggle.setAttribute("aria-expanded",open);document.body.classList.toggle("menu-open",open)});
+    menu.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{menu.classList.remove("open");document.body.classList.remove("menu-open");toggle.setAttribute("aria-expanded","false")}));
 
     function setLanguage(lang){
-      currentLang = lang === "zh-CN" ? "zh" : lang;
-      document.documentElement.lang = lang;
-      document.querySelectorAll("[data-lang-button]").forEach(button=>button.classList.toggle("active",button.dataset.langButton===lang));
-      document.querySelectorAll("[data-ph-ko]").forEach(field=>field.placeholder=field.dataset["ph"+(currentLang==="zh"?"Zh":currentLang==="en"?"En":"Ko")]);
-      document.querySelectorAll("[data-option-ko]").forEach(option=>option.textContent=option.dataset["option"+(currentLang==="zh"?"Zh":currentLang==="en"?"En":"Ko")]);
-      renderProjects();
+      document.documentElement.lang=lang;
+      document.querySelectorAll("[data-lang]").forEach(b=>b.classList.toggle("active",b.dataset.lang===lang));
+      const key=lang==="en"?"En":lang==="zh-CN"?"Zh":"Ko";
+      document.querySelectorAll("[data-ph-ko]").forEach(el=>el.placeholder=el.dataset["ph"+key]);
       localStorage.setItem("cg-language",lang);
     }
-
-    document.querySelectorAll("[data-lang-button]").forEach(button=>button.addEventListener("click",()=>setLanguage(button.dataset.langButton)));
-
-    const menu = document.getElementById("main-menu");
-    const menuToggle = document.querySelector(".menu-toggle");
-    menuToggle.addEventListener("click",()=>{
-      const open = menu.classList.toggle("open");
-      menuToggle.setAttribute("aria-expanded",String(open));
-      document.body.classList.toggle("menu-open",open);
-    });
-    menu.querySelectorAll("a").forEach(link=>link.addEventListener("click",()=>{menu.classList.remove("open");document.body.classList.remove("menu-open");menuToggle.setAttribute("aria-expanded","false")}));
-
-    const more = document.getElementById("projects-more");
-    document.getElementById("project-toggle").addEventListener("click",()=>{
-      const open=more.classList.toggle("open");
-      document.getElementById("project-toggle").setAttribute("aria-expanded",String(open));
-      if(open) more.scrollIntoView({behavior:"smooth",block:"nearest"});
-    });
+    document.querySelectorAll("[data-lang]").forEach(b=>b.addEventListener("click",()=>setLanguage(b.dataset.lang)));
+    setLanguage(localStorage.getItem("cg-language")||"ko");
 
     document.getElementById("contact-form").addEventListener("submit",event=>{
       event.preventDefault();
-      const data=new FormData(event.currentTarget);
-      const subject=encodeURIComponent("[CoreGate Global] "+data.get("interest")+" / "+data.get("company"));
-      const body=encodeURIComponent("Company: "+data.get("company")+"\nName: "+data.get("name")+"\nEmail: "+data.get("email")+"\nInterest: "+data.get("interest")+"\n\n"+data.get("message"));
-      window.location.href="mailto:zesia@coregateglobal.com?subject="+subject+"&body="+body;
+      const d=new FormData(event.currentTarget);
+      const subject=encodeURIComponent("[CoreGate Global] "+d.get("interest")+" / "+d.get("company"));
+      const body=encodeURIComponent("Company: "+d.get("company")+"\nName: "+d.get("name")+"\nEmail: "+d.get("email")+"\nInterest: "+d.get("interest")+"\n\n"+d.get("message"));
+      location.href="mailto:zesia@coregateglobal.com?subject="+subject+"&body="+body;
     });
-
-    setLanguage(localStorage.getItem("cg-language")||"ko");
   </script>
 </body>
 </html>
