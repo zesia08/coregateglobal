@@ -78,6 +78,21 @@
     .about-body{display:grid;grid-template-columns:1fr 1fr;gap:36px;margin-top:44px;padding-top:28px;border-top:1px solid var(--line)}
     .about-body p{margin:0;color:#5d5b56;font-size:16px;line-height:1.9}
 
+    .leadership{padding:0 0 125px;background:#fff}
+    .leader-panel{display:grid;grid-template-columns:.72fr 1.28fr;background:#1c1c1c;color:#fff}
+    .leader-title{padding:58px 50px;border-right:1px solid #3a3a3a}
+    .leader-title small{color:#e76f68;font-size:11px;font-weight:900;letter-spacing:.1em}
+    .leader-title h2{margin:92px 0 12px;font-size:clamp(38px,4.4vw,60px);line-height:1.12;letter-spacing:-.06em}
+    .leader-title p{margin:0;color:#aaa;font-size:13px;font-weight:800;letter-spacing:.08em}
+    .leader-body{padding:58px 55px}
+    .leader-body>p{max-width:720px;margin:0;color:#ccc9c4;font-size:17px;line-height:1.95}
+    .leader-roles{display:grid;grid-template-columns:repeat(3,1fr);margin-top:48px;border-top:1px solid #444}
+    .leader-role{min-height:150px;padding:23px 18px 20px 0;border-right:1px solid #3f3f3f}
+    .leader-role+.leader-role{padding-left:20px}.leader-role:last-child{border-right:0}
+    .leader-role small{color:#e76f68;font-size:10px;font-weight:900;letter-spacing:.08em}
+    .leader-role b{display:block;margin-top:25px;font-size:15px;line-height:1.5}
+    .leader-role a{display:inline-block;margin-top:12px;color:#aaa;font-size:11px;border-bottom:1px solid #666}
+
     .services{padding:125px 0;background:var(--soft)}
     .head{display:flex;align-items:end;justify-content:space-between;gap:60px;margin-bottom:58px}
     .head-copy{max-width:470px;margin:0;color:var(--muted);font-size:16px;line-height:1.82}
@@ -122,6 +137,28 @@
     .strength-item{display:grid;grid-template-columns:50px .62fr 1fr;gap:22px;padding:28px 0;border-bottom:1px solid #ccc8bf;align-items:start}
     .strength-item small{color:var(--red);font-weight:900}.strength-item h3{margin:0;font-size:20px}.strength-item p{margin:0;color:#68655f;font-size:14px;line-height:1.75}
 
+    .partners{padding:125px 0;background:#fff}
+    .partner-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #aaa;border-left:1px solid var(--line)}
+    .partner-card{min-height:245px;padding:28px;display:flex;flex-direction:column;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff;transition:.2s}
+    a.partner-card:hover{background:var(--cream)}
+    .partner-card small{color:var(--red);font-size:10px;font-weight:900;letter-spacing:.08em}
+    .partner-card h3{margin:46px 0 13px;font-size:24px;letter-spacing:-.04em}
+    .partner-card p{margin:0;color:#6d6a64;font-size:14px;line-height:1.75}
+    .partner-link{margin-top:auto;padding-top:24px;color:#87847e;font-size:10px;font-weight:850;letter-spacing:.08em}
+
+    .association{padding:125px 0;background:#191919;color:#fff;overflow:hidden}
+    .association-top{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px;align-items:start}
+    .association-badge{display:inline-flex;margin-bottom:25px;padding:9px 12px;border:1px solid #e76f68;color:#e76f68;font-size:10px;font-weight:900;letter-spacing:.08em}
+    .association h2{margin:0;font-size:clamp(40px,5vw,67px);line-height:1.13;letter-spacing:-.06em}
+    .association-intro{margin:49px 0 0;color:#c5c2bd;font-size:17px;line-height:1.9}
+    .association-note{margin-top:20px;color:#7f7d79;font-size:12px;line-height:1.7}
+    .association-flow{display:grid;grid-template-columns:repeat(3,1fr);margin-top:65px;border-top:1px solid #555;border-left:1px solid #444}
+    .association-group{min-height:260px;padding:27px;border-right:1px solid #444;border-bottom:1px solid #444}
+    .association-group small{color:#e76f68;font-size:10px;font-weight:900;letter-spacing:.1em}
+    .association-group h3{margin:48px 0 19px;font-size:21px}
+    .chip-row{display:flex;flex-wrap:wrap;gap:9px}
+    .chip-row span{padding:9px 11px;background:#292929;color:#d1cfcb;font-size:11px}
+
     .process{padding:125px 0;background:#fff}
     .process-row{display:grid;grid-template-columns:repeat(5,1fr);margin-top:55px;border-top:1px solid #aaa}
     .process-step{min-height:270px;padding:25px 22px 30px 0;border-right:1px solid var(--line)}
@@ -139,6 +176,9 @@
     .form input,.form select,.form textarea{width:100%;padding:16px 4px;border:0;border-bottom:1px solid #555;background:transparent;color:#fff;outline:none}
     .form input::placeholder,.form textarea::placeholder{color:#777}.form option{color:#111}
     .form textarea{grid-column:1/-1;min-height:135px;resize:vertical}.form button{grid-column:1/-1;margin-top:14px;border:0}
+    .form .full{grid-column:1/-1}.form-note{grid-column:1/-1;margin:2px 0 0;color:#8d8b86;font-size:11px;line-height:1.65}
+    .consent{grid-column:1/-1;display:flex;align-items:flex-start;gap:9px;margin-top:6px;color:#b5b2ad;font-size:12px;line-height:1.6}
+    .consent input{flex:0 0 auto;width:auto;margin-top:4px;accent-color:var(--red)}
 
     footer{padding:40px 0;background:#111;color:#8f8d89}
     .footer-grid{display:grid;grid-template-columns:1.35fr 1fr 1fr;gap:45px;font-size:12px;line-height:1.75}
@@ -150,22 +190,26 @@
       .menu{position:fixed;display:none;inset:72px 0 auto;background:#fff;flex-direction:column;align-items:stretch;gap:0;padding:18px var(--pad) 25px;border-bottom:1px solid var(--line)}.menu.open{display:flex}.menu a{padding:15px 0;border-bottom:1px solid var(--line)}.menu a:after{display:none}
       .nav-tools{margin-left:auto}.contact-top{display:none}.toggle{display:block}
       .scope-row{grid-template-columns:1fr 1fr}.scope-title{grid-column:1/-1;border-right:0;border-bottom:1px solid var(--line);padding-left:22px}.scope-item:nth-child(odd){border-right:0}
-      .about-grid,.strength-grid,.contact-grid{grid-template-columns:1fr;gap:43px}
+      .about-grid,.strength-grid,.contact-grid,.association-top{grid-template-columns:1fr;gap:43px}
+      .leader-panel{grid-template-columns:1fr}.leader-title{border-right:0;border-bottom:1px solid #3a3a3a}.leader-title h2{margin-top:55px}
       .service-grid{grid-template-columns:1fr 1fr}.service,.service:nth-child(4),.service:nth-child(5){grid-column:span 1}
       .service:last-child{grid-column:1/-1}
       .project-feature{grid-template-columns:1fr}.feature-media{min-height:560px}.feature-copy{min-height:590px}
       .strength-item{grid-template-columns:45px .65fr 1fr}
+      .partner-grid{grid-template-columns:1fr 1fr}.association-flow{grid-template-columns:1fr 1fr}.association-group:last-child{grid-column:1/-1}
       .process-row{grid-template-columns:1fr 1fr}.process-step:nth-child(2n){border-right:0}
     }
     @media(max-width:680px){
       .brand{font-size:18px}.langs{gap:7px}.hero-copy{min-height:610px}.hero-copy-inner{width:calc(100% - var(--pad)*2);margin:auto}.hero h1{font-size:44px}.hero-desc{font-size:16px}.hero-actions{flex-direction:column}.hero-visual{height:520px}.hero-caption{left:20px;right:20px;bottom:20px;display:block}.hero-caption span{display:block;margin-top:7px}
       .scope-row{grid-template-columns:1fr}.scope-title,.scope-item{min-height:84px;border-right:0;border-bottom:1px solid var(--line);padding-left:0}.scope-item:last-child{border-bottom:0}
-      .about,.services,.projects,.strength,.process,.contact{padding:90px 0}.about-grid{gap:28px}.about-body{grid-template-columns:1fr;gap:22px}
+      .about,.services,.projects,.strength,.partners,.association,.process,.contact{padding:90px 0}.leadership{padding-bottom:90px}.about-grid{gap:28px}.about-body{grid-template-columns:1fr;gap:22px}
+      .leader-title,.leader-body{padding:38px 24px}.leader-title h2{margin-top:45px}.leader-roles{grid-template-columns:1fr}.leader-role{min-height:auto;border-right:0;border-bottom:1px solid #3f3f3f;padding:22px 0!important}.leader-role:last-child{border-bottom:0}.leader-role b{margin-top:14px}
       .head{display:block}.head-copy{margin-top:25px}.service-grid{grid-template-columns:1fr}.service,.service:nth-child(4),.service:nth-child(5),.service:last-child{grid-column:1}.service{min-height:340px}
       .feature-media{min-height:430px}.feature-copy{min-height:560px;padding:35px 24px}.project-cards{grid-template-columns:1fr}.card-media{height:400px}.card-copy{padding:27px 23px 31px}
       .strength-item{grid-template-columns:38px 1fr;gap:15px}.strength-item p{grid-column:2}
+      .partner-grid,.association-flow{grid-template-columns:1fr}.association-group:last-child{grid-column:auto}.association-intro{margin-top:0}.partner-card{min-height:220px}
       .process-row{grid-template-columns:1fr}.process-step{min-height:210px;border-right:0;border-bottom:1px solid var(--line);padding-left:0!important}.process-step h3{margin-top:48px}
-      .footer-grid,.form{grid-template-columns:1fr}.form textarea,.form button{grid-column:auto}
+      .footer-grid,.form{grid-template-columns:1fr}.form textarea,.form button,.form .full,.form-note,.consent{grid-column:auto}
     }
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none}.hero-slide{animation:none}.hero-slide:first-child{opacity:1}}
   </style>
@@ -178,7 +222,8 @@
         <a href="#about"><span class="lang-ko">회사소개</span><span class="lang-en">About</span><span class="lang-zh">公司介绍</span></a>
         <a href="#services"><span class="lang-ko">사업영역</span><span class="lang-en">Services</span><span class="lang-zh">业务领域</span></a>
         <a href="#projects"><span class="lang-ko">프로젝트</span><span class="lang-en">Projects</span><span class="lang-zh">项目案例</span></a>
-        <a href="#strength"><span class="lang-ko">운영역량</span><span class="lang-en">Strength</span><span class="lang-zh">运营能力</span></a>
+        <a href="#partners"><span class="lang-ko">협력 네트워크</span><span class="lang-en">Network</span><span class="lang-zh">合作网络</span></a>
+        <a href="#association"><span class="lang-ko">협회</span><span class="lang-en">Association</span><span class="lang-zh">协会</span></a>
       </nav>
       <div class="nav-tools">
         <div class="langs"><button class="active" data-lang="ko">KR</button><button data-lang="en">EN</button><button data-lang="zh-CN">CN</button></div>
@@ -212,7 +257,7 @@
       <div class="hero-visual" aria-label="CoreGate Global project scenes">
         <div class="hero-slide"><img src="assets/media/kpop-content.webp" alt="한국 콘텐츠 제작 현장"></div>
         <div class="hero-slide"><video src="assets/media/marinavi-loop.mp4" autoplay muted loop playsinline poster="assets/media/marinavi-product.webp"></video></div>
-        <div class="hero-slide"><img src="assets/media/china-campaign.webp" alt="중국 소셜커머스 캠페인"></div>
+        <div class="hero-slide"><img src="assets/media/china-social-commerce-original.webp" alt="CoreGate Global 중국 소셜커머스 운영 이미지"></div>
         <div class="hero-caption"><span>CONTENT · COMMERCE · DISTRIBUTION</span><span>SEOUL / SHANGHAI</span></div>
       </div>
     </section>
@@ -239,6 +284,24 @@
           <div class="about-body">
             <p><span class="lang-ko">CoreGate Global은 한국의 제품·콘텐츠·인재가 중국과 글로벌 시장에서 실제로 판매될 수 있도록 시장조사, 현지화, 콘텐츠 제작과 판매채널을 연결합니다.</span><span class="lang-en">CoreGate Global connects research, localization, content and sales channels so Korean products, content and talent can sell in China and global markets.</span><span class="lang-zh">CoreGate Global连接市场调研、本地化、内容制作与销售渠道，让韩国产品、内容与人才进入中国及全球市场。</span></p>
             <p><span class="lang-ko">전략 보고서나 단순 인플루언서 섭외에서 끝내지 않습니다. 한국 본사와 현지 운영팀이 같은 목표와 자료로 움직이도록 프로젝트를 설계하고 관리합니다.</span><span class="lang-en">We go beyond reports and influencer sourcing. Projects are managed so headquarters and local operators work with the same goals and data.</span><span class="lang-zh">我们不止于报告或达人邀约，而是让韩国总部与本地团队基于相同目标和资料共同执行。</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="leadership" id="leadership">
+      <div class="wrap leader-panel reveal">
+        <div class="leader-title">
+          <small>CHINA BUSINESS LEADERSHIP</small>
+          <h2><span class="lang-ko">김병현</span><span class="lang-en">Byunghyun Kim</span><span class="lang-zh">金炳炫</span></h2>
+          <p><span class="lang-ko">중국사업 총괄</span><span class="lang-en">CHINA BUSINESS DIRECTOR</span><span class="lang-zh">中国业务总负责人</span></p>
+        </div>
+        <div class="leader-body">
+          <p><span class="lang-ko">중국 현장에서 약 20년간 유통, 광고, 시장개발과 사업 운영을 수행해 온 실무형 전문가입니다. 한국과 중국 시장을 기반으로 브랜드의 현지 진입, 디지털 무역, 인플루언서 커머스, 라이브커머스와 AI 기반 B2B 유통을 연결합니다.</span><span class="lang-en">A hands-on China specialist with approximately 20 years of experience in distribution, advertising, market development and business operations. He connects market entry, digital trade, creator commerce, live commerce and AI-powered B2B distribution across Korea and China.</span><span class="lang-zh">拥有约20年中国市场实战经验，专注于流通、广告、市场开发与项目运营，连接韩中市场进入、数字贸易、达人电商、直播电商及AI驱动的B2B流通。</span></p>
+          <div class="leader-roles">
+            <div class="leader-role"><small>COREGATE GLOBAL</small><b><span class="lang-ko">중국사업 기획·협상·현지 운영 총괄</span><span class="lang-en">China strategy, negotiation and operations</span><span class="lang-zh">中国业务策划、谈判与本地运营统筹</span></b></div>
+            <div class="leader-role"><small>STORYN MEDIA</small><b><span class="lang-ko">중국 공식 대행</span><span class="lang-en">Official China Agency</span><span class="lang-zh">中国官方代理</span></b><a href="https://storyn.co.kr/" target="_blank" rel="noopener">OFFICIAL SITE ↗</a></div>
+            <div class="leader-role"><small>CONNECT AI</small><b><span class="lang-ko">중국 대표</span><span class="lang-en">China Representative</span><span class="lang-zh">中国代表</span></b><a href="https://www.connectaikorea.biz/" target="_blank" rel="noopener">OFFICIAL SITE ↗</a></div>
           </div>
         </div>
       </div>
@@ -281,7 +344,7 @@
             <div class="card-copy"><small>BEAUTY / O2O COMMERCE</small><h3><span class="lang-ko">MARINAVI GLOBAL<br>LIVE COMMERCE</span><span class="lang-en">Marinavi Global<br>Live Commerce</span><span class="lang-zh">Marinavi全球<br>直播电商</span></h3><p><span class="lang-ko">남대문 오프라인 공간을 피부상담, 외국인 판매인력, 다국어 콘텐츠와 글로벌 라이브커머스가 연결되는 O2O 거점으로 구축합니다.</span><span class="lang-en">A Namdaemun O2O hub connecting beauty consultation, multilingual talent, content and live commerce.</span><span class="lang-zh">将南大门空间打造为连接皮肤咨询、国际销售人才、多语内容与全球直播电商的O2O基地。</span></p><div class="card-tags"><span>STORE</span><span>SKIN CONSULTING</span><span>LIVE</span><span>GLOBAL SALES</span></div></div>
           </article>
           <article class="project-card reveal">
-            <div class="card-media"><img src="assets/media/china-proof.webp" alt="중국 소셜커머스 운영 화면"><div class="project-badge">CHINA OPERATION</div></div>
+            <div class="card-media"><img src="assets/media/china-social-commerce-original.webp" alt="CoreGate Global 중국 소셜커머스 전용 이미지"><div class="project-badge">CHINA OPERATION</div></div>
             <div class="card-copy"><small>DOUYIN / XIAOHONGSHU / CBEC</small><h3><span class="lang-ko">CHINA SOCIAL<br>COMMERCE</span><span class="lang-en">China Social<br>Commerce</span><span class="lang-zh">中国社交<br>电商运营</span></h3><p><span class="lang-ko">플랫폼별 콘텐츠 반응을 기준으로 시딩, 계정 운영, 인플루언서, 라이브와 CBEC 진입 순서를 설계하고 한국 본사와 중국팀의 실행 기준을 통일합니다.</span><span class="lang-en">Seeding, account operations, influencers, live and CBEC sequenced by platform response.</span><span class="lang-zh">根据平台反应设计种草、账号、达人、直播与跨境电商的进入顺序。</span></p><div class="card-tags"><span>SEEDING</span><span>ACCOUNT</span><span>CREATOR</span><span>CBEC</span></div></div>
           </article>
         </div>
@@ -296,6 +359,37 @@
           <article class="strength-item"><small>02</small><h3><span class="lang-ko">콘텐츠에서 판매까지</span><span class="lang-en">Content to Commerce</span><span class="lang-zh">从内容到销售</span></h3><p><span class="lang-ko">조회수만 확인하지 않고 상담, 장바구니, 주문과 재구매로 이어지는 흐름을 함께 설계합니다.</span><span class="lang-en">We design for inquiries, carts, orders and repeat sales, not views alone.</span><span class="lang-zh">不只关注浏览量，更设计咨询、加购、下单与复购路径。</span></p></article>
           <article class="strength-item"><small>03</small><h3><span class="lang-ko">프로젝트별 맞춤팀</span><span class="lang-en">Project-based Teams</span><span class="lang-zh">项目定制团队</span></h3><p><span class="lang-ko">크리에이터, 쇼호스트, 중국 운영자, 바이어와 유통사를 프로젝트 목적에 맞춰 구성합니다.</span><span class="lang-en">Creators, hosts, operators, buyers and distributors assembled by project.</span><span class="lang-zh">根据项目目标配置达人、主播、运营人员、买家与经销商。</span></p></article>
           <article class="strength-item"><small>04</small><h3><span class="lang-ko">단계별 보고와 판단</span><span class="lang-en">Clear Reporting</span><span class="lang-zh">阶段报告与判断</span></h3><p><span class="lang-ko">진행상황, 비용, 소비자 반응과 다음 집행 여부를 단계별로 공유합니다.</span><span class="lang-en">Progress, cost, market response and next decisions are shared by stage.</span><span class="lang-zh">按阶段共享进度、费用、消费者反应及下一步执行判断。</span></p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="partners" id="partners">
+      <div class="wrap">
+        <div class="head reveal">
+          <div><p class="section-label">COLLABORATION NETWORK</p><h2 class="section-title"><span class="lang-ko">함께 실행해 온<br>협력 네트워크</span><span class="lang-en">A network built<br>through execution</span><span class="lang-zh">在共同执行中建立的<br>合作网络</span></h2></div>
+          <p class="head-copy"><span class="lang-ko">실제 협업과 프로젝트 수행을 중심으로 각 기관의 전문성을 연결합니다. 협력 범위는 프로젝트에 따라 달라질 수 있습니다.</span><span class="lang-en">We connect the expertise of organizations with whom we have worked on real projects. Scope varies by engagement.</span><span class="lang-zh">以实际合作及项目执行为基础连接各机构的专业能力，具体合作范围依项目而定。</span></p>
+        </div>
+        <div class="partner-grid reveal">
+          <a class="partner-card" href="https://storyn.co.kr/" target="_blank" rel="noopener"><small>OFFICIAL CHINA AGENCY</small><h3>StoryN Media</h3><p><span class="lang-ko">인플루언서 시딩, 콘텐츠 제작과 캠페인 실행 협력</span><span class="lang-en">Influencer seeding, content and campaign execution</span><span class="lang-zh">达人种草、内容制作与营销执行合作</span></p><span class="partner-link">OFFICIAL SITE ↗</span></a>
+          <a class="partner-card" href="https://www.connectaikorea.biz/" target="_blank" rel="noopener"><small>CHINA REPRESENTATIVE</small><h3>Connect AI</h3><p><span class="lang-ko">AI 기반 바이어 발굴, 브랜드 모집과 B2B 사업 협력</span><span class="lang-en">AI buyer discovery, brand sourcing and B2B cooperation</span><span class="lang-zh">AI买家开发、品牌招募与B2B业务合作</span></p><span class="partner-link">OFFICIAL SITE ↗</span></a>
+          <a class="partner-card" href="https://fix-up.kr/" target="_blank" rel="noopener"><small>CHINA PROJECT PARTNER</small><h3>Fix-up</h3><p><span class="lang-ko">중국 참가자 모집과 현지 프로젝트 운영 협력</span><span class="lang-en">China participant recruitment and local operations</span><span class="lang-zh">中国参与者招募与本地项目运营合作</span></p><span class="partner-link">OFFICIAL SITE ↗</span></a>
+          <a class="partner-card" href="https://www.marinavi.co.kr/" target="_blank" rel="noopener"><small>O2O COMMERCE PROJECT</small><h3>Marinavi</h3><p><span class="lang-ko">글로벌 뷰티 O2O 및 라이브커머스 사업 협력</span><span class="lang-en">Global beauty O2O and live-commerce project</span><span class="lang-zh">全球美妆O2O及直播电商项目合作</span></p><span class="partner-link">OFFICIAL SITE ↗</span></a>
+          <div class="partner-card"><small>K-POP EDUCATION</small><h3><span class="lang-ko">한국예술학교</span><span class="lang-en">Korea Arts School</span><span class="lang-zh">韩国艺术学校</span></h3><p><span class="lang-ko">K-POP 교육·인증 연계 및 프로그램 협력</span><span class="lang-en">K-POP education, certification and program cooperation</span><span class="lang-zh">K-POP教育、认证及项目合作</span></p><span class="partner-link">PROJECT COLLABORATION</span></div>
+          <div class="partner-card"><small>K-CONTENT PARTNER</small><h3><span class="lang-ko">배드보스컴퍼니</span><span class="lang-en">BadBoss Company</span><span class="lang-zh">BadBoss Company</span></h3><p><span class="lang-ko">K-POP 콘텐츠, 경연과 전문 심사 협력</span><span class="lang-en">K-POP content, competition and professional judging</span><span class="lang-zh">K-POP内容、比赛与专业评审合作</span></p><span class="partner-link">PROJECT COLLABORATION</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="association" id="association">
+      <div class="wrap">
+        <div class="association-top reveal">
+          <div><span class="association-badge"><span class="lang-ko">설립 추진</span><span class="lang-en">IN PREPARATION</span><span class="lang-zh">筹备成立</span></span><p class="section-label">GLOBAL CREATOR COMMERCE ASSOCIATION</p><h2><span class="lang-ko">글로벌크리에이터<br>커머스협회</span><span class="lang-en">Global Creator<br>Commerce Association</span><span class="lang-zh">全球创作者<br>商业协会</span></h2></div>
+          <div><p class="association-intro"><span class="lang-ko">크리에이터의 콘텐츠가 국경을 넘어 실제 판매와 유통으로 이어지는 국제 협력 기반을 구축합니다. 이탈리아, 인도, 홍콩, 일본, 중국을 우선 시장으로 연결하고, 현지 크리에이터·브랜드·플랫폼·유통 파트너가 함께 참여하는 실행형 네트워크를 목표로 합니다.</span><span class="lang-en">We are building an international network where creator content becomes real cross-border commerce and distribution. Initial markets are Italy, India, Hong Kong, Japan and China, connecting local creators, brands, platforms and distribution partners.</span><span class="lang-zh">构建让创作者内容跨越国境并转化为实际销售与流通的国际合作网络，优先连接意大利、印度、香港、日本和中国的创作者、品牌、平台及流通伙伴。</span></p><p class="association-note"><span class="lang-ko">※ 본 협회는 현재 설립 추진 단계이며, 정식 출범 일정과 참여 방식은 준비 완료 후 별도로 안내합니다.</span><span class="lang-en">※ The association is currently in preparation. Launch timing and participation details will be announced separately.</span><span class="lang-zh">※ 协会目前处于筹备阶段，正式成立时间及参与方式将另行公布。</span></p></div>
+        </div>
+        <div class="association-flow reveal">
+          <div class="association-group"><small>01 · PRIORITY MARKETS</small><h3><span class="lang-ko">우선 추진 국가·지역</span><span class="lang-en">Priority markets</span><span class="lang-zh">优先市场</span></h3><div class="chip-row"><span>ITALY</span><span>INDIA</span><span>HONG KONG</span><span>JAPAN</span><span>CHINA</span></div></div>
+          <div class="association-group"><small>02 · CONTENT CHANNELS</small><h3><span class="lang-ko">콘텐츠·크리에이터 채널</span><span class="lang-en">Creator channels</span><span class="lang-zh">内容与创作者渠道</span></h3><div class="chip-row"><span>TIKTOK</span><span>XIAOHONGSHU</span><span>DOUYIN</span></div></div>
+          <div class="association-group"><small>03 · COMMERCE ROUTES</small><h3><span class="lang-ko">판매·유통 연계</span><span class="lang-en">Commerce routes</span><span class="lang-zh">销售与流通渠道</span></h3><div class="chip-row"><span>TIKTOK SHOP</span><span>SHOPEE</span><span>AMAZON</span><span>RAKUTEN</span><span>LOCAL MARKETPLACES</span></div></div>
         </div>
       </div>
     </section>
@@ -316,14 +410,23 @@
 
     <section class="contact" id="contact">
       <div class="wrap contact-grid">
-        <div class="contact-copy reveal"><p class="section-label">PROJECT INQUIRY</p><h2><span class="lang-ko">다음 시장을<strong>함께 엽니다.</strong></span><span class="lang-en">Let's open<strong>your next market.</strong></span><span class="lang-zh">共同打开<strong>下一个市场。</strong></span></h2><p><span class="lang-ko">브랜드, 제품 또는 프로젝트의 현재 상황과 목표 시장을 알려주시면 진입 가능성과 필요한 실행범위를 검토합니다.</span><span class="lang-en">Tell us your current stage and target market. We will review feasibility and execution scope.</span><span class="lang-zh">请告知项目现状与目标市场，我们将评估可行性与执行范围。</span></p><a class="contact-email" href="mailto:zesia@coregateglobal.com">zesia@coregateglobal.com</a></div>
-        <form class="form reveal" id="contact-form">
-          <input name="company" required data-ph-ko="회사명" data-ph-en="Company" data-ph-zh="公司名称" placeholder="회사명">
-          <input name="name" required data-ph-ko="담당자명" data-ph-en="Name" data-ph-zh="负责人姓名" placeholder="담당자명">
-          <input type="email" name="email" required placeholder="Email">
-          <select name="interest" required><option value="">문의 분야 선택</option><option>China Market Entry</option><option>Global Commerce</option><option>Creator / Live Commerce</option><option>K-Content / K-POP</option><option>AI Trade / B2B</option><option>Partnership</option></select>
-          <textarea name="message" required data-ph-ko="현재 상황과 목표 시장을 입력해 주세요." data-ph-en="Tell us about your current stage and target market." data-ph-zh="请输入当前情况与目标市场。" placeholder="현재 상황과 목표 시장을 입력해 주세요."></textarea>
-          <button class="btn red" type="submit"><span class="lang-ko">이메일 문의 작성</span><span class="lang-en">Compose Inquiry</span><span class="lang-zh">撰写咨询邮件</span></button>
+        <div class="contact-copy reveal"><p class="section-label">PRIVATE BUSINESS INQUIRY</p><h2><span class="lang-ko">구체적인 문의가<strong>빠른 답을 만듭니다.</strong></span><span class="lang-en">Clear details lead to<strong>a faster response.</strong></span><span class="lang-zh">清晰的需求带来<strong>更快速的回复。</strong></span></h2><p><span class="lang-ko">회사와 제품, 목표 시장, 일정과 예산 범위를 남겨주시면 담당자가 검토 후 이메일로 회신합니다. 접수 내용은 홈페이지에 공개되지 않습니다.</span><span class="lang-en">Share your company, product, target market, timing and budget range. Our team will review and reply by email. Submissions are not displayed publicly.</span><span class="lang-zh">请填写公司、产品、目标市场、时间及预算范围。负责人审核后将通过邮件回复，咨询内容不会公开显示。</span></p><a class="contact-email" href="mailto:zesia@coregateglobal.com">zesia@coregateglobal.com</a></div>
+        <form class="form reveal" id="contact-form" action="https://formsubmit.co/zesia@coregateglobal.com" method="POST">
+          <input type="hidden" name="_subject" value="[CoreGate Global] New Business Inquiry">
+          <input type="hidden" name="_template" value="table">
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none">
+          <input name="company" required autocomplete="organization" data-ph-ko="회사명 *" data-ph-en="Company *" data-ph-zh="公司名称 *" placeholder="회사명 *">
+          <input name="name" required autocomplete="name" data-ph-ko="담당자명 *" data-ph-en="Name *" data-ph-zh="负责人姓名 *" placeholder="담당자명 *">
+          <input type="email" name="email" required autocomplete="email" placeholder="Email *">
+          <input type="tel" name="phone" autocomplete="tel" data-ph-ko="연락처" data-ph-en="Phone" data-ph-zh="联系电话" placeholder="연락처">
+          <select name="interest" required aria-label="문의 분야"><option value="" data-txt-ko="문의 분야 선택 *" data-txt-en="Inquiry type *" data-txt-zh="咨询领域 *">문의 분야 선택 *</option><option>China Market Entry</option><option>Global Commerce</option><option>Creator / Live Commerce</option><option>K-Content / K-POP</option><option>AI Trade / B2B</option><option>Global Creator Commerce Association</option><option>Partnership</option><option>Other</option></select>
+          <input name="target_market" required data-ph-ko="목표 국가·시장 *" data-ph-en="Target country / market *" data-ph-zh="目标国家或市场 *" placeholder="목표 국가·시장 *">
+          <select name="budget_range" required aria-label="예산 범위"><option value="" data-txt-ko="예산 범위 선택 *" data-txt-en="Budget range *" data-txt-zh="预算范围 *">예산 범위 선택 *</option><option>₩5M – ₩10M</option><option>₩10M – ₩30M</option><option>₩30M – ₩100M</option><option>₩100M+</option><option>Discussion required</option></select>
+          <input name="launch_timing" data-ph-ko="희망 시작 시기" data-ph-en="Preferred start date" data-ph-zh="期望启动时间" placeholder="희망 시작 시기">
+          <textarea name="message" required data-ph-ko="제품·서비스, 현재 상황, 목표와 필요한 업무를 구체적으로 입력해 주세요. *" data-ph-en="Describe your product, current stage, goals and required scope. *" data-ph-zh="请具体说明产品、现状、目标及所需业务范围。*" placeholder="제품·서비스, 현재 상황, 목표와 필요한 업무를 구체적으로 입력해 주세요. *"></textarea>
+          <label class="consent"><input type="checkbox" name="privacy_consent" value="Agreed" required><span><span class="lang-ko">문의 답변을 위한 개인정보 수집·이용에 동의합니다. 수집 항목: 회사명, 이름, 이메일, 연락처, 문의 내용 / 이용 목적: 문의 검토 및 회신 / 보유 기간: 처리 완료 후 3년 이내 파기</span><span class="lang-en">I consent to the collection and use of my information to review and answer this inquiry. Data is retained for up to three years after completion.</span><span class="lang-zh">我同意为审核及回复咨询而收集并使用所填写的信息，处理完成后最长保存三年。</span></span></label>
+          <p class="form-note"><span class="lang-ko">필수 항목(*)을 입력한 뒤 접수해 주세요. 스팸 방지를 위한 확인 절차가 표시될 수 있습니다.</span><span class="lang-en">Complete all required fields (*). A spam-prevention check may appear.</span><span class="lang-zh">请填写所有必填项目（*），提交时可能出现反垃圾验证。</span></p>
+          <button class="btn red" type="submit"><span class="lang-ko">비공개 문의 접수</span><span class="lang-en">Submit Private Inquiry</span><span class="lang-zh">提交非公开咨询</span></button>
         </form>
       </div>
     </section>
@@ -331,7 +434,7 @@
 
   <footer>
     <div class="wrap">
-      <div class="footer-grid"><div><b>CoreGate Global</b><p>Market Entry · Commerce · Creator · K-Content · Global B2B</p></div><div><b>KOREA OFFICE</b><p>서울특별시 금천구 디지털로9길 47, 804호<br>가산동, 한신IT타워2차</p></div><div><b>CHINA OFFICE</b><p>上海市闵行区莲花南路3110号<br>A栋 A710</p></div></div>
+      <div class="footer-grid"><div><b>CoreGate Global</b><p>Market Entry · Commerce · Creator · K-Content · Global B2B</p></div><div><b>KOREA OFFICE</b><p>서울특별시 마포구 월드컵로 196<br>B105층 C51호</p></div><div><b>CHINA OFFICE</b><p>上海市闵行区莲花南路3110号<br>A栋 A710</p></div></div>
       <div class="copyright">© 2026 CoreGate Global. All rights reserved.</div>
     </div>
   </footer>
@@ -347,16 +450,11 @@
       document.querySelectorAll("[data-lang]").forEach(b=>b.classList.toggle("active",b.dataset.lang===lang));
       const key=lang==="en"?"En":lang==="zh-CN"?"Zh":"Ko";
       document.querySelectorAll("[data-ph-ko]").forEach(el=>el.placeholder=el.dataset["ph"+key]);
+      document.querySelectorAll("[data-txt-ko]").forEach(el=>el.textContent=el.dataset["txt"+key]);
       localStorage.setItem("cg-language",lang)
     }
     document.querySelectorAll("[data-lang]").forEach(b=>b.addEventListener("click",()=>setLanguage(b.dataset.lang)));
     setLanguage(localStorage.getItem("cg-language")||"ko");
-    document.getElementById("contact-form").addEventListener("submit",event=>{
-      event.preventDefault();const d=new FormData(event.currentTarget);
-      const subject=encodeURIComponent("[CoreGate Global] "+d.get("interest")+" / "+d.get("company"));
-      const body=encodeURIComponent("Company: "+d.get("company")+"\nName: "+d.get("name")+"\nEmail: "+d.get("email")+"\nInterest: "+d.get("interest")+"\n\n"+d.get("message"));
-      location.href="mailto:zesia@coregateglobal.com?subject="+subject+"&body="+body
-    });
   </script>
 </body>
 </html>
