@@ -36,8 +36,8 @@ html[lang="zh-CN"] .lang-zh { display: initial; }
 
 .site-header { position: fixed; z-index: 100; inset: 0 0 auto; height: 80px; background: rgba(242, 240, 233, .94); border-bottom: 1px solid rgba(25, 27, 26, .18); backdrop-filter: blur(12px); }
 .nav-row { height: 100%; display: flex; align-items: center; }
-.wordmark { display: inline-flex; align-items: center; min-width: 225px; }
-.wordmark img { width: 205px; height: auto; }
+.wordmark { display: inline-flex; align-items: center; min-width: 218px; }
+.wordmark img { width: 198px; height: auto; }
 .primary-nav { display: flex; align-self: stretch; gap: 30px; margin-left: auto; }
 .primary-nav a { position: relative; display: grid; place-items: center; font-size: 12px; font-weight: 700; }
 .primary-nav a::after { content: ""; position: absolute; left: 0; right: 100%; bottom: 18px; height: 1px; background: var(--ink); transition: right .2s ease; }
@@ -161,7 +161,7 @@ html[lang="zh-CN"] .lang-zh { display: initial; }
 
 .site-footer { padding: 62px 0 22px; background: #090a09; color: #858983; }
 .footer-grid { display: grid; grid-template-columns: 1.35fr .9fr .75fr auto; gap: 50px; }
-.footer-brand img { width: 168px; height: auto; filter: brightness(0) invert(1); opacity: .92; }
+.footer-brand img { width: 154px; height: auto; padding: 10px 14px; border-radius: 18px; background: #f4f1e8; }
 .footer-grid strong { color: #d8dad5; font-size: 9px; letter-spacing: .12em; }
 .footer-grid p { margin-top: 15px; font-size: 11px; line-height: 1.8; }
 .footer-links { display: flex; flex-direction: column; gap: 10px; font-size: 10px; }
@@ -192,7 +192,7 @@ html[lang="zh-CN"] .lang-zh { display: initial; }
   html { scroll-padding-top: 68px; }
   .site-header { height: 68px; }
   .wordmark { min-width: 0; }
-  .wordmark img { width: 166px; }
+  .wordmark img { width: 150px; }
   .nav-tools { gap: 14px; }
   .language { gap: 5px; }
   .nav-contact { display: none; }
