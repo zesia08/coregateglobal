@@ -108,8 +108,10 @@ html[lang="zh-CN"] .lang-zh { display: initial; }
 .work { border-radius: 64px 64px 0 0; background: var(--ink); color: var(--white); overflow: hidden; }
 .section-heading-light .section-index p { color: #9fa29b; }
 .section-heading-light .heading-note { max-width: 620px; margin-top: 17px; color: #9fa29b; font-size: 12px; line-height: 1.7; }
+.section-more { display: inline-flex; gap: 16px; margin-top: 20px; padding-bottom: 6px; border-bottom: 1px solid #777b75; color: #d5d8d2; font-size: 10px; font-weight: 800; }
 .case-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(20px, 2.4vw, 34px); margin-top: 42px; }
 .case-card { min-width: 0; padding: 12px 12px 24px; border: 1px solid #383b38; border-radius: 38px; background: #212321; }
+.case-card-link { display: flex; flex-direction: column; height: 100%; }
 .case-card figure { aspect-ratio: 4 / 3; overflow: hidden; border-radius: 25px; background: #2c2e2c; }
 .case-card figure img { height: 100%; object-fit: cover; transition: transform .55s ease; }
 .case-card:nth-child(2) figure img { object-fit: cover; }
@@ -118,6 +120,7 @@ html[lang="zh-CN"] .lang-zh { display: initial; }
 .case-meta { display: flex; justify-content: space-between; gap: 20px; margin: 15px 10px 0; padding-bottom: 11px; border-bottom: 1px solid #444744; color: #a9aca6; font-size: 8px; font-weight: 850; letter-spacing: .13em; }
 .case-card h3 { margin: 16px 10px 0; font-size: clamp(22px, 2.2vw, 31px); line-height: 1.3; letter-spacing: -.035em; }
 .case-card p { margin: 10px 10px 0; color: #aeb0ab; font-size: 13px; line-height: 1.72; }
+.case-card-cta { display: inline-flex; align-items: center; justify-content: space-between; gap: 20px; margin: auto 10px 0; padding-top: 18px; color: #f0f2ed; font-size: 9px; font-weight: 800; letter-spacing: .04em; }
 
 .kotra-feature { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(330px, .7fr); gap: 12px; margin-top: 42px; padding: 12px; border: 1px solid #3b3e3b; border-radius: 48px; background: #242624; }
 .kotra-feature > figure { min-height: 460px; overflow: hidden; border-radius: 36px 110px 36px 36px; background: #181a18; }
@@ -128,6 +131,9 @@ html[lang="zh-CN"] .lang-zh { display: initial; }
 .kotra-copy > p { margin-top: 19px; color: #b9bcb6; font-size: 14px; line-height: 1.8; }
 .kotra-scope { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
 .kotra-scope > span { padding: 9px 12px; border: 1px solid #555955; border-radius: var(--radius-pill); color: #d5d8d2; font-size: 9px; font-weight: 750; }
+.case-entry { display: inline-flex; justify-content: space-between; gap: 20px; margin-top: 28px; padding-bottom: 7px; border-bottom: 1px solid #686c68; color: #f1f3ef; font-size: 10px; font-weight: 800; }
+.kotra-feature, .case-card { transition: border-color .25s ease, transform .25s ease; }
+.kotra-feature:hover, .case-card:hover { border-color: #656965; transform: translateY(-2px); }
 
 .creator-records { background: var(--paper-deep); }
 .record-heading { display: grid; grid-template-columns: minmax(170px, .34fr) minmax(0, 1fr); gap: clamp(30px, 5vw, 78px); align-items: end; }
@@ -144,6 +150,8 @@ html[lang="zh-CN"] .lang-zh { display: initial; }
 .record-collaboration .record-copy > p { color: #b8bbb5; }
 .record-keywords { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
 .record-keywords span { padding: 9px 12px; border: 1px solid #444744; border-radius: var(--radius-pill); color: #c7cac4; font-size: 8px; font-weight: 850; letter-spacing: .09em; }
+.record-detail-link { display: inline-flex; justify-content: space-between; gap: 20px; align-self: flex-start; margin-top: 28px; padding-bottom: 7px; border-bottom: 1px solid #616561; color: #f0f2ed; font-size: 10px; font-weight: 800; }
+.record-detail-dark { border-color: #999b95; color: var(--ink); }
 .collaboration-media { display: grid; grid-template-columns: minmax(0, 1fr) clamp(140px, 14vw, 210px); grid-template-rows: 42fr 58fr; gap: 12px; min-width: 0; min-height: 560px; }
 .collaboration-media figure { overflow: hidden; background: #2a2d2a; }
 .collaboration-media img { height: 100%; object-fit: cover; }
@@ -322,4 +330,5 @@ html[lang="zh-CN"] .lang-zh { display: initial; }
   html { scroll-behavior: auto; }
   .reveal { opacity: 1; transform: none; transition: none; }
   .case-card figure img { transition: none; }
+  .kotra-feature, .case-card { transition: none; }
 }
