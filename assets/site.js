@@ -1,3 +1,5 @@
+document.documentElement.classList.add("js");
+
 const menu = document.getElementById("primary-nav");
 const toggle = document.querySelector(".menu-toggle");
 
@@ -28,7 +30,21 @@ const observer = new IntersectionObserver(
   { threshold: 0.08 }
 );
 
-document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
+const revealElements = [...document.querySelectorAll(".reveal")];
+revealElements.forEach((element) => observer.observe(element));
+
+function revealInViewport() {
+  revealElements.forEach((element) => {
+    const rect = element.getBoundingClientRect();
+    if (rect.top < window.innerHeight * 1.08 && rect.bottom > 0) {
+      element.classList.add("is-visible");
+      observer.unobserve(element);
+    }
+  });
+}
+
+requestAnimationFrame(revealInViewport);
+window.addEventListener("load", revealInViewport, { once: true });
 
 function setLanguage(language) {
   document.documentElement.lang = language;
