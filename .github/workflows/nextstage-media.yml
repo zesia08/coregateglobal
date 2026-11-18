@@ -1,0 +1,35 @@
+name: Import K-POP NEXT STAGE original footage stills
+on:
+  push:
+    paths:
+      - '.github/workflows/nextstage-media.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  import-original-stills:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download actual frame previews from supplied videos
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p assets/media
+          curl -L --fail --retry 3 --max-time 90 "https://media.canva.com/v2/files/uri:ifs%3A%2F%2FV%2FjKvordZUsfBt_TGYPfw6rAxU4eZPY65mTiyBvcTMQyI.jpg?csig=AAAAAAAAAAAAAAAAAAAAAMtuYn18zNVXQhxWJr5VrUhMNk771NDv1BXWI-Gr0CQJ&exp=1795026900&signer=video-rpc&token=AAIAAVYAL2pLdm9yZFpVc2ZCdF9UR1lQZnc2ckF4VTRlWlBZNjVtVGl5QnZjVE1ReUkuanBnAAAAAAGh7_DUIKhFF-B83kYv6LykNCYmujrstiiJb6bfi3m6968hSExp" -o assets/media/nextstage-real-1.jpg
+          curl -L --fail --retry 3 --max-time 90 "https://media.canva.com/v2/files/uri:ifs%3A%2F%2FV%2F_1ydMOjA9wh9SVknIzAw2RCWdDrEn39v0-viKBeaJ-s.jpg?csig=AAAAAAAAAAAAAAAAAAAAAC9w6x5qbUJPoYi0cdLpPAyCBvTVkpPc0hDKYXm9DgJL&exp=1795026240&signer=video-rpc&token=AAIAAVYAL18xeWRNT2pBOXdoOVNWa25JekF3MlJDV2REckVuMzl2MC12aUtCZWFKLXMuanBnAAAAAAGh7-bCADlXvWL3ICd_05bObLWtVH_h2UZHa-2hZmjzMbkN1lmI" -o assets/media/nextstage-real-2.jpg
+          curl -L --fail --retry 3 --max-time 90 "https://media.canva.com/v2/files/uri:ifs%3A%2F%2FV%2FCQsZRxDfvT0bdWFh3x4Dl9lB1oJkAAZRxZY6k0qHcmM.jpg?csig=AAAAAAAAAAAAAAAAAAAAAJGRDz7M6ZN75fq7Hi3cYH_K0m65drerzFIof8b5UOUy&exp=1795027260&signer=video-rpc&token=AAIAAVYAL0NRc1pSeERmdlQwYmRXRmgzeDREbDlsQjFvSmtBQVpSeFpZNmswcUhjbU0uanBnAAAAAAGh7_ZSYF2t2uPwqXjASdtLnm-Ya8i8nLIob93_1RN_VWUJbqJ6" -o assets/media/nextstage-real-3.jpg
+          for f in assets/media/nextstage-real-*.jpg; do
+            test $(stat -c %s "$f") -gt 10000
+            file "$f" | grep -E 'JPEG|image'
+          done
+      - name: Commit the original thumbnails
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/media/nextstage-real-*.jpg
+          if ! git diff --cached --quiet; then
+            git commit -m "Add actual NEXT STAGE event video frames"
+            git push
+          fi
