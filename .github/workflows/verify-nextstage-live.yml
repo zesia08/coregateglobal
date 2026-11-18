@@ -1,0 +1,25 @@
+name: Verify K-POP NEXT STAGE live publication
+on:
+  push:
+    paths:
+      - '.github/workflows/verify-nextstage-live.yml'
+  workflow_dispatch:
+jobs:
+  verify-live:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check actual public project and media files
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -fsSL --retry 4 --retry-delay 4 "https://www.coregateglobal.com/projects/shanghai-kcontent-event.html" -o /tmp/project.html
+          grep -q 'nextstage-live-gallery' /tmp/project.html
+          grep -q 'nextstage-video-frame-recap.mp4' /tmp/project.html
+          curl -fsSL --retry 4 --retry-delay 4 "https://www.coregateglobal.com/" -o /tmp/home.html
+          grep -q 'nextstage-home-media' /tmp/home.html
+          curl -fsSL --retry 4 --retry-delay 4 "https://www.coregateglobal.com/assets/media/nextstage-real-1.jpg" -o /tmp/frame.jpg
+          file /tmp/frame.jpg | grep -q 'JPEG image'
+          curl -fsSL --retry 4 --retry-delay 4 "https://www.coregateglobal.com/assets/media/nextstage-video-frame-recap.mp4" -o /tmp/montage.mp4
+          file /tmp/montage.mp4 | grep -q 'ISO Media'
+          test $(stat -c %s /tmp/montage.mp4) -gt 100000
+          echo "PASS: homepage, project page, original frames and video frame recap public"
