@@ -22,6 +22,8 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg
           ffmpeg -hide_banner -loglevel warning -y \
             -loop 1 -framerate 24 -t 4 -i assets/media/nextstage-real-1.jpg \
             -loop 1 -framerate 24 -t 4 -i assets/media/nextstage-real-2.jpg \
