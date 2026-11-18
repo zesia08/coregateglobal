@@ -1,4 +1,4 @@
-name: Import K-POP NEXT STAGE original footage stills
+name: Build original-media NEXT STAGE event gallery
 on:
   push:
     paths:
@@ -7,29 +7,34 @@ on:
 permissions:
   contents: write
 jobs:
-  import-original-stills:
+  produce:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Download actual frame previews from supplied videos
+      - name: Verify real event video frame assets
         shell: bash
         run: |
           set -euo pipefail
-          mkdir -p assets/media
-          curl -L --fail --retry 3 --max-time 90 "https://media.canva.com/v2/files/uri:ifs%3A%2F%2FV%2FjKvordZUsfBt_TGYPfw6rAxU4eZPY65mTiyBvcTMQyI.jpg?csig=AAAAAAAAAAAAAAAAAAAAAMtuYn18zNVXQhxWJr5VrUhMNk771NDv1BXWI-Gr0CQJ&exp=1795026900&signer=video-rpc&token=AAIAAVYAL2pLdm9yZFpVc2ZCdF9UR1lQZnc2ckF4VTRlWlBZNjVtVGl5QnZjVE1ReUkuanBnAAAAAAGh7_DUIKhFF-B83kYv6LykNCYmujrstiiJb6bfi3m6968hSExp" -o assets/media/nextstage-real-1.jpg
-          curl -L --fail --retry 3 --max-time 90 "https://media.canva.com/v2/files/uri:ifs%3A%2F%2FV%2F_1ydMOjA9wh9SVknIzAw2RCWdDrEn39v0-viKBeaJ-s.jpg?csig=AAAAAAAAAAAAAAAAAAAAAC9w6x5qbUJPoYi0cdLpPAyCBvTVkpPc0hDKYXm9DgJL&exp=1795026240&signer=video-rpc&token=AAIAAVYAL18xeWRNT2pBOXdoOVNWa25JekF3MlJDV2REckVuMzl2MC12aUtCZWFKLXMuanBnAAAAAAGh7-bCADlXvWL3ICd_05bObLWtVH_h2UZHa-2hZmjzMbkN1lmI" -o assets/media/nextstage-real-2.jpg
-          curl -L --fail --retry 3 --max-time 90 "https://media.canva.com/v2/files/uri:ifs%3A%2F%2FV%2FCQsZRxDfvT0bdWFh3x4Dl9lB1oJkAAZRxZY6k0qHcmM.jpg?csig=AAAAAAAAAAAAAAAAAAAAAJGRDz7M6ZN75fq7Hi3cYH_K0m65drerzFIof8b5UOUy&exp=1795027260&signer=video-rpc&token=AAIAAVYAL0NRc1pSeERmdlQwYmRXRmgzeDREbDlsQjFvSmtBQVpSeFpZNmswcUhjbU0uanBnAAAAAAGh7_ZSYF2t2uPwqXjASdtLnm-Ya8i8nLIob93_1RN_VWUJbqJ6" -o assets/media/nextstage-real-3.jpg
-          for f in assets/media/nextstage-real-*.jpg; do
-            test $(stat -c %s "$f") -gt 10000
-            file "$f" | grep -E 'JPEG|image'
+          for n in 1 2 3; do
+            file "assets/media/nextstage-real-$n.jpg" | grep -q JPEG
           done
-      - name: Commit the original thumbnails
+      - name: Produce short silent photo-motion recap from original video frames
+        shell: bash
+        run: |
+          set -euo pipefail
+          ffmpeg -hide_banner -loglevel warning -y \
+            -loop 1 -framerate 24 -t 4 -i assets/media/nextstage-real-1.jpg \
+            -loop 1 -framerate 24 -t 4 -i assets/media/nextstage-real-2.jpg \
+            -loop 1 -framerate 24 -t 4 -i assets/media/nextstage-real-3.jpg \
+            -filter_complex "[0:v]scale=1280:720,setsar=1,zoompan=z='min(zoom+0.0005,1.06)':d=1:s=1280x720:fps=24,format=yuv420p,fade=t=out:st=3.65:d=0.35[v0];[1:v]scale=1280:720,setsar=1,zoompan=z='min(zoom+0.0005,1.06)':d=1:s=1280x720:fps=24,format=yuv420p,fade=t=in:st=0:d=0.25,fade=t=out:st=3.65:d=0.35[v1];[2:v]scale=1280:720,setsar=1,zoompan=z='min(zoom+0.0005,1.06)':d=1:s=1280x720:fps=24,format=yuv420p,fade=t=in:st=0:d=0.25[v2];[v0][v1][v2]concat=n=3:v=1:a=0,format=yuv420p[out]" \
+            -map "[out]" -c:v libx264 -preset veryfast -crf 25 -movflags +faststart -pix_fmt yuv420p \
+            -an assets/media/nextstage-video-frame-recap.mp4
+          test $(stat -c %s assets/media/nextstage-video-frame-recap.mp4) -gt 100000
+          file assets/media/nextstage-video-frame-recap.mp4
+      - name: Commit media recap
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/media/nextstage-real-*.jpg
-          if ! git diff --cached --quiet; then
-            git commit -m "Add actual NEXT STAGE event video frames"
-            git push
-          fi
+          git add assets/media/nextstage-video-frame-recap.mp4
+          git diff --cached --quiet || (git commit -m "Add NEXT STAGE on-site video frame recap" && git push)
