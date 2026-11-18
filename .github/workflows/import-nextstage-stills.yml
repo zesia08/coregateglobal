@@ -1,0 +1,27 @@
+name: Import original K-POP NEXT STAGE video stills
+on:
+  push:
+    paths:
+      - '.github/workflows/import-nextstage-stills.yml'
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Save authentic video preview frames
+        run: |
+          mkdir -p assets/media
+          curl --fail --location --retry 2 --max-time 40 "https://media.canva.com/v2/files/uri:ifs%3A%2F%2FV%2FjKvordZUsfBt_TGYPfw6rAxU4eZPY65mTiyBvcTMQyI.jpg?csig=AAAAAAAAAAAAAAAAAAAAAHi6Rm8D-dCrt-Fv-CJ9sr-7-rQ8lyL854IBrjCDH7GJ&exp=1795008900&signer=video-rpc&token=AAIAAVYAL2pLdm9yZFpVc2ZCdF9UR1lQZnc2ckF4VTRlWlBZNjVtVGl5QnZjVE1ReUkuanBnAAAAAAGh7t4roKJ44TO9HJp0KdN4IY4IzLb-zdWpCw8sDdXy5l4i2DUW" -o assets/media/nextstage-video-still-1.jpg
+          file assets/media/nextstage-video-still-1.jpg
+          curl --fail --location --retry 2 --max-time 40 "https://media.canva.com/v2/files/uri:ifs%3A%2F%2FV%2F_1ydMOjA9wh9SVknIzAw2RCWdDrEn39v0-viKBeaJ-s.jpg?csig=AAAAAAAAAAAAAAAAAAAAAPnmZrAYG3crr7t7UYFVrCabDgY4pmBzACqcR6xb4AjW&exp=1795008240&signer=video-rpc&token=AAIAAVYAL18xeWRNT2pBOXdoOVNWa25JekF3MlJDV2REckVuMzl2MC12aUtCZWFKLXMuanBnAAAAAAGh7tQZgAsDjyO_3OabeuNbnUzSvvyzQ_PZFmgRxg7ciG6-eadd" -o assets/media/nextstage-video-still-2.jpg
+          file assets/media/nextstage-video-still-2.jpg
+          curl --fail --location --retry 2 --max-time 40 "https://media.canva.com/v2/files/uri:ifs%3A%2F%2FV%2FCQsZRxDfvT0bdWFh3x4Dl9lB1oJkAAZRxZY6k0qHcmM.jpg?csig=AAAAAAAAAAAAAAAAAAAAAHIXSCeU6Ak4_58LAbnedxiAA8HgDyAc1Fkz2xePqqbW&exp=1795009260&signer=video-rpc&token=AAIAAVYAL0NRc1pSeERmdlQwYmRXRmgzeDREbDlsQjFvSmtBQVpSeFpZNmswcUhjbU0uanBnAAAAAAGh7uOp4AFjiFRx5Em4ScVULVZgjnnbgrGRM9kKPZMWNLhu9XFe" -o assets/media/nextstage-video-still-3.jpg
+          file assets/media/nextstage-video-still-3.jpg
+      - name: Commit verified still files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/media/nextstage-video-still-*.jpg
+          git diff --cached --quiet || (git commit -m "Add original NEXT STAGE video preview frames" && git push)
