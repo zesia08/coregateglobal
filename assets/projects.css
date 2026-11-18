@@ -147,3 +147,21 @@
 @media (prefers-reduced-motion: reduce) {
   .gallery-item img, .archive-card img { transition: none; }
 }
+
+/* Original event media, separately identified from concept archive */
+.nextstage-live-gallery {background:#111511;padding:clamp(68px,8vw,110px) 0;color:#fff;}
+.nextstage-live-gallery-head {display:grid;grid-template-columns:minmax(200px,.32fr) minmax(0,1fr);gap:55px;align-items:start;}
+.nextstage-live-gallery-head .case-index {color:#d69b8d;}
+.nextstage-live-gallery-head h2 {font-size:clamp(32px,4.5vw,62px);line-height:1.1;letter-spacing:-.05em;}
+.nextstage-live-gallery-head h2+p {max-width:730px;color:#bfc2b9;font-size:13px;line-height:1.85;margin-top:22px;}
+.nextstage-feature-video {margin-top:46px;}
+.nextstage-feature-video video {display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#060706;border-radius:22px;max-height:690px;}
+.nextstage-feature-video figcaption {margin-top:14px;color:#d5b0a4;letter-spacing:.13em;font-size:10px;font-weight:800;}
+.nextstage-stills-gallery {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px;margin-top:30px;}
+.nextstage-stills-gallery figure {min-width:0;}
+.nextstage-stills-gallery .gallery-item {border:0;padding:0;width:100%;aspect-ratio:16/10;overflow:hidden;border-radius:14px;background:#252825;cursor:zoom-in;}
+.nextstage-stills-gallery img {width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease;}
+.nextstage-stills-gallery .gallery-item:hover img {transform:scale(1.05);}
+.nextstage-stills-gallery figcaption {margin-top:12px;color:#e6e2da;font-size:11px;font-weight:800;letter-spacing:.08em;}
+.nextstage-stills-gallery small {display:block;color:#aeb0a9;font-size:9px;font-weight:600;margin-top:4px;}
+@media(max-width:760px){.nextstage-live-gallery-head {grid-template-columns:1fr;gap:18px}.nextstage-live-gallery-head h2 {font-size:36px}.nextstage-feature-video {margin-top:28px}.nextstage-feature-video video {border-radius:14px}.nextstage-stills-gallery {gap:10px}.nextstage-stills-gallery .gallery-item {border-radius:9px}.nextstage-stills-gallery figcaption {font-size:8px}.nextstage-stills-gallery small {font-size:7px;letter-spacing:0}}
