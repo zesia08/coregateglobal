@@ -1,0 +1,62 @@
+/* K-POP NEXT STAGE / case study enhancements.
+   Scoped to this project only; original website navigation and layouts stay untouched. */
+.kpop-case-study .project-hero h1{font-size:clamp(40px,4.5vw,64px);line-height:1.12;}
+.kpop-case-study .project-lead{font-size:15px;line-height:1.85;}
+.kpop-case-study .project-cover{border-radius:36px;aspect-ratio:4/3;}
+.kpop-case-study .project-cover img{width:100%;height:100%;object-fit:cover;}
+.kpop-case-study .case-hero-action{display:inline-flex;align-items:center;gap:24px;margin-top:28px;border-bottom:1px solid var(--ink);padding-bottom:8px;font-size:12px;font-weight:800;}
+.kpop-case-study .case-hero-action span{color:var(--brick);font-size:18px;}
+.kpop-case-study .scope-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;}
+.kpop-case-study .scope-grid article{min-height:170px;border-radius:19px;padding:24px 25px;}
+.kpop-case-study .scope-grid h3{margin-top:16px;font-size:18px;}
+.kpop-case-study .scope-grid p{font-size:13px;line-height:1.7;}
+.kpop-case-study .case-work-phases{margin-top:32px;border-top:1px solid #d0d1c9;}
+.kpop-case-study .case-phase{display:grid;grid-template-columns:122px minmax(0,1fr);gap:20px;border-bottom:1px solid #d7d8d2;padding:24px 0;}
+.kpop-case-study .case-phase>span{color:var(--brick);font-size:10px;letter-spacing:.1em;font-weight:850;padding-top:5px;}
+.kpop-case-study .case-phase h3{margin:0;color:#292b27;font-size:18px;letter-spacing:-.03em;}
+.kpop-case-study .case-phase p{margin:10px 0 0;color:#676a63;font-size:13px;line-height:1.78;}
+.kpop-case-study .case-results-section{background:#f6f5ef;padding:clamp(75px,8vw,115px) 0;}
+.kpop-case-study .case-results-intro{display:grid;grid-template-columns:minmax(170px,.28fr) minmax(0,1fr);gap:clamp(35px,6vw,92px);}
+.kpop-case-study .case-results-intro h2{font-size:clamp(32px,3.9vw,51px);letter-spacing:-.05em;line-height:1.2;margin:0;}
+.kpop-case-study .case-results-intro p:not(.case-index){max-width:800px;margin-top:22px;color:#62655f;font-size:14px;line-height:1.9;}
+.kpop-case-study .case-proof-grid{margin-top:46px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid #c7c8c0;border-bottom:1px solid #c7c8c0;}
+.kpop-case-study .case-proof-grid>div{padding:31px 23px 29px;border-right:1px solid #d3d5cc;}
+.kpop-case-study .case-proof-grid>div:first-child{padding-left:0;}
+.kpop-case-study .case-proof-grid>div:last-child{border-right:0;}
+.kpop-case-study .case-proof-grid strong{display:block;font-size:clamp(30px,3.4vw,45px);letter-spacing:-.06em;font-weight:750;white-space:nowrap;line-height:1.2;}
+.kpop-case-study .case-proof-grid strong span{font-size:.32em;letter-spacing:.05em;color:var(--brick);}
+.kpop-case-study .case-proof-grid>div>span{display:block;margin-top:18px;color:#62655f;font-size:12px;line-height:1.6;}
+.kpop-case-study .case-proof-disclaimer{margin-top:20px;color:#777970;font-size:11px;line-height:1.8;}
+.kpop-case-study .gallery-section{background:#1e201d;}
+.kpop-case-study .gallery-item{border-radius:22px;}
+.kpop-case-study .case-brand-section{padding:clamp(75px,8vw,112px) 0;background:#fff;}
+.kpop-case-study .case-brand-layout{display:grid;grid-template-columns:minmax(170px,.28fr) minmax(0,1fr);gap:clamp(35px,6vw,92px);}
+.kpop-case-study .case-brand-layout h2{font-size:clamp(32px,4vw,55px);line-height:1.16;letter-spacing:-.052em;margin:0;}
+.kpop-case-study .case-brand-layout p:not(.case-index){max-width:800px;margin-top:22px;color:#585b55;font-size:15px;line-height:1.88;}
+.kpop-case-study .project-outcome{background:#e9e7df;}
+.kpop-case-study .outcome-panel{background:#f7f6f0;color:#1c211d;border:1px solid #d7d4c9;border-radius:28px;}
+.kpop-case-study .outcome-panel .case-index{color:var(--brick);}
+.kpop-case-study .outcome-panel p{color:#5b5e57;font-size:14px;}
+.kpop-case-study .project-cta h2{font-size:clamp(28px,3.2vw,44px);line-height:1.25;}
+@media(max-width:1050px){
+ .kpop-case-study .case-proof-grid strong{font-size:32px;}
+ .kpop-case-study .case-proof-grid>div{padding-inline:15px;}
+}
+@media(max-width:760px){
+ .kpop-case-study .project-hero h1{font-size:42px;}
+ .kpop-case-study .project-cover{border-radius:24px;}
+ .kpop-case-study .case-work-phases{margin-top:25px;}
+ .kpop-case-study .case-phase{grid-template-columns:1fr;gap:7px;padding:21px 0;}
+ .kpop-case-study .case-phase h3{font-size:17px;}
+ .kpop-case-study .scope-grid{grid-template-columns:1fr;}
+ .kpop-case-study .scope-grid article{min-height:0;}
+ .kpop-case-study .case-results-intro,.kpop-case-study .case-brand-layout{grid-template-columns:1fr;gap:25px;}
+ .kpop-case-study .case-proof-grid{grid-template-columns:1fr;margin-top:34px;}
+ .kpop-case-study .case-proof-grid>div,.kpop-case-study .case-proof-grid>div:first-child{padding:25px 0;border-right:0;border-bottom:1px solid #d5d5ce;}
+ .kpop-case-study .case-proof-grid>div:last-child{border-bottom:0;}
+ .kpop-case-study .case-proof-grid strong{font-size:37px;}
+ .kpop-case-study .case-proof-grid strong span{font-size:.35em;}
+ .kpop-case-study .case-proof-grid>div>span{margin-top:9px;}
+ .kpop-case-study .case-brand-layout h2,.kpop-case-study .case-results-intro h2{font-size:35px;}
+ .kpop-case-study .outcome-panel{border-radius:21px;}
+}
